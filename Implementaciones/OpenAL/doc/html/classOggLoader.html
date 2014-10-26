@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminOpenAL: Referencia de la Clase OggLoader</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase OggLoader</h1><!-- doxytag: class="OggLoader" -->Clase que permite cargar un archivo .ogg y convertirlo a un buffer OpenAL.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="OggLoader_8h-source.html">OggLoader.h</a>&gt;</code>
+<p>
+<a href="classOggLoader-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggLoader.html#70a27e3b8c9c63bf8144872a150b8dde">OggLoader</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggLoader.html#341a71844293b35d7ea527b9d3552598">~OggLoader</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggLoader.html#af492c4ec62ec056e2f012adf9982da9">loadFile</a> (string path)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggLoader.html#70bab324e219b0a2020c7591536e5284">loadFileOntoBuffer</a> (ALuint buffer)  throw (string)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase que permite cargar un archivo .ogg y convertirlo a un buffer OpenAL. 
+<p>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000001">Tareas Pendientes:</a></b></dt><dd>Optimizar la carga para que no sea tan lenta </dd></dl>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo </dd></dl>
+
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="70a27e3b8c9c63bf8144872a150b8dde"></a><!-- doxytag: member="OggLoader::OggLoader" ref="70a27e3b8c9c63bf8144872a150b8dde" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OggLoader::OggLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase. 
+</div>
+</div><p>
+<a class="anchor" name="341a71844293b35d7ea527b9d3552598"></a><!-- doxytag: member="OggLoader::~OggLoader" ref="341a71844293b35d7ea527b9d3552598" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OggLoader::~OggLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="af492c4ec62ec056e2f012adf9982da9"></a><!-- doxytag: member="OggLoader::loadFile" ref="af492c4ec62ec056e2f012adf9982da9" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OggLoader::loadFile           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo que carga un archivo .ogg y lo convierte a un buffer OpenAL <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Cadena con el archivo </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>buffer del archivo en OpenAL </dd></dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Cadenas</em>&nbsp;</td><td>con excepciÃ³n derivada de la carga del archivo o errores en OpenAL </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="70bab324e219b0a2020c7591536e5284"></a><!-- doxytag: member="OggLoader::loadFileOntoBuffer" ref="70bab324e219b0a2020c7591536e5284" args="(ALuint buffer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OggLoader::loadFileOntoBuffer           </td>
+          <td>(</td>
+          <td class="paramtype">ALuint&nbsp;</td>
+          <td class="paramname"> <em>buffer</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo privado que se encarga de la carga del archivo <pre> El archivo ya fue cargado </pre> <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Buffer generado </dd></dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Cadena</em>&nbsp;</td><td>con el error en caso de haber sido cargado </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="OggLoader_8h-source.html">OggLoader.h</a><li>OggLoader.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:26:53 2008 para SoundAdminOpenAL por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

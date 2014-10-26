@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>FileMixerPortaudio: Fichero Fuente Source.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>Source.h</h1><a href="Source_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SOURCE_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SOURCE_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;sndfile.hh&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="keyword">using namespace </span>std;
+<a name="l00014"></a><a class="code" href="classSource.html">00014</a> <span class="keyword">class </span><a class="code" href="classSource.html">Source</a>{
+<a name="l00015"></a>00015         
+<a name="l00016"></a>00016 <span class="keyword">protected</span>:
+<a name="l00021"></a><a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">00021</a>         <span class="keywordtype">float</span> <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[3];
+<a name="l00022"></a>00022         
+<a name="l00026"></a><a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">00026</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a>;
+<a name="l00027"></a>00027         
+<a name="l00031"></a><a class="code" href="classSource.html#edeabb528fdfd36b234ee5cea72dd129">00031</a>         string <a class="code" href="classSource.html#edeabb528fdfd36b234ee5cea72dd129">id</a>;
+<a name="l00032"></a>00032         
+<a name="l00036"></a><a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">00036</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a>;
+<a name="l00037"></a>00037         
+<a name="l00042"></a><a class="code" href="classSource.html#9973df2546860fb3b4eb81ff542d2251">00042</a>         <span class="keywordtype">int</span> <a class="code" href="classSource.html#9973df2546860fb3b4eb81ff542d2251">phase</a>;
+<a name="l00043"></a>00043 
+<a name="l00047"></a><a class="code" href="classSource.html#fbe8d4a7f4cf73ffc8e9732d1f566546">00047</a>         <span class="keywordtype">float</span> <a class="code" href="classSource.html#fbe8d4a7f4cf73ffc8e9732d1f566546">gain</a>;
+<a name="l00048"></a>00048         
+<a name="l00052"></a><a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">00052</a>         <span class="keywordtype">int</span> <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>;
+<a name="l00053"></a>00053 
+<a name="l00057"></a><a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">00057</a>         SndfileHandle *<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>;
+<a name="l00058"></a>00058         
+<a name="l00062"></a><a class="code" href="classSource.html#96b6caf9aef2d23e3ed2373e89e69d55">00062</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#96b6caf9aef2d23e3ed2373e89e69d55">printFileInfo</a>(){
+<a name="l00063"></a>00063                 <span class="keywordflow">if</span>(<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>){
+<a name="l00064"></a>00064                         cout &lt;&lt; <span class="stringliteral">"Canales: "</span> &lt;&lt; <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;channels() &lt;&lt; endl;
+<a name="l00065"></a>00065                         cout &lt;&lt; <span class="stringliteral">"Formato: "</span> &lt;&lt; <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;format() &lt;&lt; endl;
+<a name="l00066"></a>00066                         cout &lt;&lt; <span class="stringliteral">"Formato como String: "</span> &lt;&lt; <a class="code" href="classSource.html#e14a55d69c81b96b2a0916ed8e43d167">getFormatAsString</a>(<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;format()); 
+<a name="l00067"></a>00067                         cout &lt;&lt; <span class="stringliteral">"Frames: "</span> &lt;&lt; <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;frames() &lt;&lt; endl;
+<a name="l00068"></a>00068                         cout &lt;&lt; <span class="stringliteral">"Sample rate: "</span> &lt;&lt; <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;samplerate() &lt;&lt; endl;
+<a name="l00069"></a>00069                         
+<a name="l00070"></a>00070                 }
+<a name="l00071"></a>00071         }
+<a name="l00072"></a>00072 
+<a name="l00078"></a><a class="code" href="classSource.html#e14a55d69c81b96b2a0916ed8e43d167">00078</a>         string <a class="code" href="classSource.html#e14a55d69c81b96b2a0916ed8e43d167">getFormatAsString</a>(<span class="keywordtype">int</span> format){
+<a name="l00079"></a>00079                 string str;
+<a name="l00080"></a>00080                 <span class="keywordflow">switch</span>(format &amp; SF_FORMAT_TYPEMASK){
+<a name="l00081"></a>00081                         <span class="keywordflow">case</span> SF_FORMAT_AIFF: str = <span class="stringliteral">"AIFF"</span>;
+<a name="l00082"></a>00082                         <span class="keywordflow">break</span>;
+<a name="l00083"></a>00083                         <span class="keywordflow">case</span> SF_FORMAT_ALAW: str = <span class="stringliteral">"ALAW"</span>;
+<a name="l00084"></a>00084                         <span class="keywordflow">break</span>;
+<a name="l00085"></a>00085                         <span class="keywordflow">case</span> SF_FORMAT_WAVEX: str = <span class="stringliteral">"WAVEX"</span>;
+<a name="l00086"></a>00086                         <span class="keywordflow">break</span>;
+<a name="l00087"></a>00087                         <span class="keywordflow">case</span> SF_FORMAT_AU: str = <span class="stringliteral">"AU"</span>;
+<a name="l00088"></a>00088                         <span class="keywordflow">break</span>;
+<a name="l00089"></a>00089                         <span class="keywordflow">case</span> SF_FORMAT_FLAC: str = <span class="stringliteral">"flac"</span>;
+<a name="l00090"></a>00090                         <span class="keywordflow">break</span>;
+<a name="l00091"></a>00091                         <span class="keywordflow">case</span> SF_FORMAT_WAV: str = <span class="stringliteral">"WAV"</span>;
+<a name="l00092"></a>00092                         <span class="keywordflow">break</span>;
+<a name="l00093"></a>00093                         <span class="keywordflow">default</span>: 
+<a name="l00094"></a>00094                                 str = <span class="stringliteral">"formato desconocido\n"</span>;
+<a name="l00095"></a>00095                 }
+<a name="l00096"></a>00096                 <span class="keywordflow">switch</span>(format &amp; SF_FORMAT_SUBMASK){
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098                         <span class="keywordflow">case</span> SF_FORMAT_DWVW_12: str += <span class="stringliteral">" 12 bits DWVW\n"</span>;
+<a name="l00099"></a>00099                         <span class="keywordflow">break</span>;
+<a name="l00100"></a>00100                         <span class="keywordflow">case</span> SF_FORMAT_DWVW_16: str += <span class="stringliteral">" 16 bits DWVW\n"</span>;
+<a name="l00101"></a>00101                         <span class="keywordflow">break</span>;
+<a name="l00102"></a>00102                         <span class="keywordflow">case</span> SF_FORMAT_DWVW_24: str += <span class="stringliteral">" 24 bits DWVW\n"</span>;
+<a name="l00103"></a>00103                         <span class="keywordflow">break</span>;
+<a name="l00104"></a>00104                         <span class="keywordflow">case</span> SF_FORMAT_DPCM_16: str += <span class="stringliteral">" 16 Bits DPCM\n"</span>;
+<a name="l00105"></a>00105                         <span class="keywordflow">break</span>;
+<a name="l00106"></a>00106                         <span class="keywordflow">case</span> SF_FORMAT_DOUBLE: str += <span class="stringliteral">" 32 bit double\n"</span>;
+<a name="l00107"></a>00107                         <span class="keywordflow">break</span>;
+<a name="l00108"></a>00108                         <span class="keywordflow">case</span> SF_FORMAT_FLOAT: str += <span class="stringliteral">" float\n"</span>;
+<a name="l00109"></a>00109                         <span class="keywordflow">break</span>;
+<a name="l00110"></a>00110                         <span class="keywordflow">case</span> SF_FORMAT_DPCM_8: str += <span class="stringliteral">" 8 Bits DPCM\n"</span>;
+<a name="l00111"></a>00111                         <span class="keywordflow">break</span>;
+<a name="l00112"></a>00112                         <span class="keywordflow">case</span> SF_FORMAT_PCM_16: str += <span class="stringliteral">" 16 bits PCM\n"</span>;
+<a name="l00113"></a>00113                         <span class="keywordflow">break</span>;
+<a name="l00114"></a>00114                         <span class="keywordflow">case</span> SF_FORMAT_PCM_24: str += <span class="stringliteral">" 24 bits PCM\n"</span>;
+<a name="l00115"></a>00115                         <span class="keywordflow">break</span>;
+<a name="l00116"></a>00116                         <span class="keywordflow">case</span> SF_FORMAT_PCM_S8: str += <span class="stringliteral">" 8 bits PCM con signo\n"</span>;
+<a name="l00117"></a>00117                         <span class="keywordflow">break</span>;
+<a name="l00118"></a>00118                         <span class="keywordflow">case</span> SF_FORMAT_PCM_U8: str += <span class="stringliteral">" 8 bits PCM sin signo\n"</span>;
+<a name="l00119"></a>00119                         <span class="keywordflow">break</span>;
+<a name="l00120"></a>00120                         <span class="keywordflow">default</span>: str += <span class="stringliteral">" bitrate desconocido\n"</span>;
+<a name="l00121"></a>00121                         <span class="keywordflow">break</span>;
+<a name="l00122"></a>00122                 }
+<a name="l00123"></a>00123                 <span class="keywordflow">return</span> str;
+<a name="l00124"></a>00124         }
+<a name="l00125"></a>00125         
+<a name="l00126"></a>00126 <span class="keyword">public</span>:
+<a name="l00127"></a>00127         
+<a name="l00133"></a><a class="code" href="classSource.html#9183f78e8c5272523b4a51660ec9a6c6">00133</a>         <a class="code" href="classSource.html#9183f78e8c5272523b4a51660ec9a6c6">Source</a>(string nuID){
+<a name="l00134"></a>00134                 <span class="keywordtype">id</span> = nuID;
+<a name="l00135"></a>00135                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[0] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[1] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[2] = 0.0;
+<a name="l00136"></a>00136                 <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a> = <span class="keyword">false</span>;
+<a name="l00137"></a>00137                 <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a> = <span class="keyword">false</span>;
+<a name="l00138"></a>00138                 <a class="code" href="classSource.html#fbe8d4a7f4cf73ffc8e9732d1f566546">gain</a> = 0.0;
+<a name="l00139"></a>00139                 <a class="code" href="classSource.html#9973df2546860fb3b4eb81ff542d2251">phase</a> = <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a> = 0;
+<a name="l00140"></a>00140                 <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a> = NULL;
+<a name="l00141"></a>00141         }
+<a name="l00142"></a>00142         
+<a name="l00146"></a><a class="code" href="classSource.html#d78297e3d514281fedd1d727e80bf158">00146</a>         <span class="keyword">virtual</span> <a class="code" href="classSource.html#d78297e3d514281fedd1d727e80bf158">~Source</a>(){
+<a name="l00147"></a>00147                 <span class="keywordtype">id</span> = <span class="stringliteral">""</span>;
+<a name="l00148"></a>00148                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[0] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[1] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[2] = 0.0;
+<a name="l00149"></a>00149                 <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a> = <span class="keyword">false</span>;
+<a name="l00150"></a>00150                 <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a> = <span class="keyword">false</span>;
+<a name="l00151"></a>00151                 <a class="code" href="classSource.html#fbe8d4a7f4cf73ffc8e9732d1f566546">gain</a> = 0.0;
+<a name="l00152"></a>00152                 <a class="code" href="classSource.html#9973df2546860fb3b4eb81ff542d2251">phase</a> = <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a> = 0;
+<a name="l00153"></a>00153         }
+<a name="l00154"></a>00154         
+<a name="l00161"></a><a class="code" href="classSource.html#29e19697cfcf24677e2e8b1384a254dc">00161</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#29e19697cfcf24677e2e8b1384a254dc">update</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z){
+<a name="l00162"></a>00162                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[0] = x;
+<a name="l00163"></a>00163                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[1] = y;
+<a name="l00164"></a>00164                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[2] = z;
+<a name="l00165"></a>00165         }
+<a name="l00166"></a>00166         
+<a name="l00170"></a><a class="code" href="classSource.html#ca0d557b92da64f8ebe47a748873a334">00170</a>         <span class="keywordtype">float</span>* <a class="code" href="classSource.html#ca0d557b92da64f8ebe47a748873a334">getPosition</a>(){
+<a name="l00171"></a>00171                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>;
+<a name="l00172"></a>00172         }
+<a name="l00173"></a>00173         
+<a name="l00177"></a><a class="code" href="classSource.html#26e4855659b0cc869a214d7d9bd87665">00177</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#26e4855659b0cc869a214d7d9bd87665">togglePlaying</a>(){
+<a name="l00178"></a>00178                 <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a> = !<a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a>;
+<a name="l00179"></a>00179         }
+<a name="l00180"></a>00180         
+<a name="l00184"></a><a class="code" href="classSource.html#fd1dd9595ee66c7d82b425bbbada37e4">00184</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#fd1dd9595ee66c7d82b425bbbada37e4">isPlaying</a>(){
+<a name="l00185"></a>00185                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a>;
+<a name="l00186"></a>00186         }
+<a name="l00187"></a>00187         
+<a name="l00191"></a><a class="code" href="classSource.html#b9d5c107cadd7536a378fec819676f6e">00191</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#b9d5c107cadd7536a378fec819676f6e">setId</a>(string nuID){
+<a name="l00192"></a>00192                 <span class="keywordtype">id</span> = nuID;
+<a name="l00193"></a>00193         }
+<a name="l00194"></a>00194         
+<a name="l00198"></a><a class="code" href="classSource.html#f908dcd687c83597ae5e72ac5f4fd331">00198</a>         string <a class="code" href="classSource.html#f908dcd687c83597ae5e72ac5f4fd331">getId</a>(){
+<a name="l00199"></a>00199                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#edeabb528fdfd36b234ee5cea72dd129">id</a>;
+<a name="l00200"></a>00200         }
+<a name="l00201"></a>00201         
+<a name="l00205"></a><a class="code" href="classSource.html#2b8b62d46d2aba2f9c35d5e6f564b527">00205</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#2b8b62d46d2aba2f9c35d5e6f564b527">isAmbient</a>(){
+<a name="l00206"></a>00206                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a>;
+<a name="l00207"></a>00207         }
+<a name="l00208"></a>00208         
+<a name="l00213"></a><a class="code" href="classSource.html#abeb73ab7977dc9fd5a0da256df30c46">00213</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#abeb73ab7977dc9fd5a0da256df30c46">setAmbient</a>(<span class="keywordtype">bool</span> amb){
+<a name="l00214"></a>00214                 <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a> = amb;
+<a name="l00215"></a>00215         }
+<a name="l00216"></a>00216 
+<a name="l00221"></a><a class="code" href="classSource.html#545bdac20fd72cb1b3573e9a368b215c">00221</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#545bdac20fd72cb1b3573e9a368b215c">setGain</a>(<span class="keywordtype">float</span> nGain){
+<a name="l00222"></a>00222                 <a class="code" href="classSource.html#fbe8d4a7f4cf73ffc8e9732d1f566546">gain</a> = nGain;
+<a name="l00223"></a>00223         }
+<a name="l00224"></a>00224 
+<a name="l00228"></a><a class="code" href="classSource.html#36882dbbf88d3cfea9d7a8fd303b812c">00228</a>         <span class="keywordtype">float</span> <a class="code" href="classSource.html#36882dbbf88d3cfea9d7a8fd303b812c">getGain</a>(){
+<a name="l00229"></a>00229                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#fbe8d4a7f4cf73ffc8e9732d1f566546">gain</a>;
+<a name="l00230"></a>00230         }
+<a name="l00231"></a>00231         
+<a name="l00235"></a><a class="code" href="classSource.html#be2b0e06a5493a32f568cf379b92f973">00235</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#be2b0e06a5493a32f568cf379b92f973">setPhase</a>(<span class="keywordtype">int</span> nuPh){
+<a name="l00236"></a>00236                 <a class="code" href="classSource.html#9973df2546860fb3b4eb81ff542d2251">phase</a> = nuPh;
+<a name="l00237"></a>00237         }
+<a name="l00238"></a>00238 
+<a name="l00242"></a><a class="code" href="classSource.html#ad6640d1737cab21eb55f3cda0a4969d">00242</a>         <span class="keywordtype">int</span> <a class="code" href="classSource.html#ad6640d1737cab21eb55f3cda0a4969d">getPhase</a>(){
+<a name="l00243"></a>00243                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#9973df2546860fb3b4eb81ff542d2251">phase</a>;
+<a name="l00244"></a>00244         }
+<a name="l00245"></a>00245         
+<a name="l00250"></a><a class="code" href="classSource.html#32c40c0d7c01b2e3404a08d576ec099d">00250</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#32c40c0d7c01b2e3404a08d576ec099d">setAdvance</a>(<span class="keywordtype">int</span> advance){
+<a name="l00251"></a>00251                 <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a> = advance;
+<a name="l00252"></a>00252         }
+<a name="l00253"></a>00253         
+<a name="l00257"></a><a class="code" href="classSource.html#8cc89d0796baf71110f633dc7d313f9f">00257</a>         <span class="keywordtype">int</span> <a class="code" href="classSource.html#8cc89d0796baf71110f633dc7d313f9f">getAdvance</a>(){
+<a name="l00258"></a>00258                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>;
+<a name="l00259"></a>00259         }
+<a name="l00260"></a>00260 
+<a name="l00265"></a><a class="code" href="classSource.html#b7fe97ad6cfe31e9055da9b9c589bad7">00265</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#b7fe97ad6cfe31e9055da9b9c589bad7">setFile</a>(SndfileHandle *handle){
+<a name="l00266"></a>00266                 <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a> = handle;
+<a name="l00267"></a>00267                 <a class="code" href="classSource.html#96b6caf9aef2d23e3ed2373e89e69d55">printFileInfo</a>();
+<a name="l00268"></a>00268         }
+<a name="l00269"></a>00269 
+<a name="l00276"></a><a class="code" href="classSource.html#bc15b554532d4c8c3985ee51894982ca">00276</a>         <span class="keywordtype">int</span> <a class="code" href="classSource.html#bc15b554532d4c8c3985ee51894982ca">readFromFile</a>(<span class="keywordtype">float</span> *output, <span class="keywordtype">int</span> framesToRead){
+<a name="l00277"></a>00277                 
+<a name="l00278"></a>00278                 <span class="keywordtype">int</span> read = 0;
+<a name="l00279"></a>00279                 <span class="keywordtype">int</span> left = framesToRead;
+<a name="l00280"></a>00280 <span class="comment">//              int items = file-&gt;read(output, framesToRead);</span>
+<a name="l00281"></a>00281                 <span class="keywordtype">int</span> format = <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;format();
+<a name="l00282"></a>00282                 <span class="keywordtype">bool</span> bit16 = <span class="keyword">false</span>;
+<a name="l00283"></a>00283                 <span class="keywordflow">switch</span>(format &amp; SF_FORMAT_SUBMASK){
+<a name="l00284"></a>00284                         <span class="keywordflow">case</span> SF_FORMAT_PCM_16: 
+<a name="l00285"></a>00285                                 bit16 = <span class="keyword">true</span>;
+<a name="l00286"></a>00286                                 <span class="keywordflow">break</span>;
+<a name="l00287"></a>00287                         <span class="keywordflow">case</span> SF_FORMAT_PCM_24:
+<a name="l00288"></a>00288                                 bit16 = <span class="keyword">false</span>;
+<a name="l00289"></a>00289                                 <span class="keywordflow">break</span>;
+<a name="l00290"></a>00290                         <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;
+<a name="l00291"></a>00291                 }
+<a name="l00292"></a>00292                 <span class="keywordflow">if</span>(bit16){
+<a name="l00293"></a>00293                         <span class="keywordtype">char</span> *salida = <span class="keyword">new</span> <span class="keywordtype">char</span>[framesToRead*<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;channels()*<span class="keyword">sizeof</span>(short)];
+<a name="l00294"></a>00294                         <span class="keywordflow">while</span>(left &gt; 0){
+<a name="l00295"></a>00295                                 <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;seek(<a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>, SEEK_SET);
+<a name="l00296"></a>00296 
+<a name="l00297"></a>00297                                 <span class="keywordflow">if</span>(left &gt; (<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;frames() - <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>)){
+<a name="l00298"></a>00298                                         left = <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;frames() - <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>;
+<a name="l00299"></a>00299                                         <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a> = 0;
+<a name="l00300"></a>00300                                 }
+<a name="l00301"></a>00301                                 <span class="keywordflow">else</span>{
+<a name="l00302"></a>00302                                         read = left;
+<a name="l00303"></a>00303                                         <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a> += read;
+<a name="l00304"></a>00304                                 }
+<a name="l00305"></a>00305                                 <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;readf((<span class="keywordtype">short</span>*)salida, read);
+<a name="l00306"></a>00306                                 left -= read;
+<a name="l00307"></a>00307                         }       
+<a name="l00308"></a>00308                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ch = 0; ch &lt; <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;channels(); ch++)
+<a name="l00309"></a>00309                                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; read; i++)
+<a name="l00310"></a>00310                                         output[i] = (((<span class="keywordtype">short</span>*)salida)[<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;channels()*i+ch]+0.5)/float(1&lt;&lt;15);
+<a name="l00311"></a>00311 <span class="comment">//                      cout &lt;&lt; "Convirtiendo 16 bit" &lt;&lt; endl;</span>
+<a name="l00312"></a>00312                         <span class="keyword">delete</span>[] salida;
+<a name="l00313"></a>00313                 }
+<a name="l00314"></a>00314 <span class="comment">//              else if(bit8){</span>
+<a name="l00315"></a>00315 <span class="comment">//                      char *salida = new char[framesToRead*file-&gt;channels()];</span>
+<a name="l00316"></a>00316 <span class="comment">//                      while(left &gt; 0){</span>
+<a name="l00317"></a>00317 <span class="comment">//                              file-&gt;seek(adv, SEEK_SET);</span>
+<a name="l00318"></a>00318 <span class="comment">//</span>
+<a name="l00319"></a>00319 <span class="comment">//                              if(left &gt; (file-&gt;frames() - adv)){</span>
+<a name="l00320"></a>00320 <span class="comment">//                                      left = file-&gt;frames() - adv;</span>
+<a name="l00321"></a>00321 <span class="comment">//                                      adv = 0;</span>
+<a name="l00322"></a>00322 <span class="comment">//                              }</span>
+<a name="l00323"></a>00323 <span class="comment">//                              else{</span>
+<a name="l00324"></a>00324 <span class="comment">//                                      read = left;</span>
+<a name="l00325"></a>00325 <span class="comment">//                                      adv += read;</span>
+<a name="l00326"></a>00326 <span class="comment">//                              }</span>
+<a name="l00327"></a>00327 <span class="comment">//                              file-&gt;readRaw(salida, read);</span>
+<a name="l00328"></a>00328 <span class="comment">//                              left -= read;</span>
+<a name="l00329"></a>00329 <span class="comment">//                      }       </span>
+<a name="l00330"></a>00330 <span class="comment">//                      for(int ch = 0; ch &lt; file-&gt;channels(); ch++)</span>
+<a name="l00331"></a>00331 <span class="comment">//                              for(int i = 0; i &lt; read; i++)</span>
+<a name="l00332"></a>00332 <span class="comment">//                                      output[i] = (salida[file-&gt;channels()*i+ch]+0.5)/float(1&lt;&lt;7);</span>
+<a name="l00333"></a>00333 <span class="comment">//                      delete []salida;</span>
+<a name="l00334"></a>00334 <span class="comment">//              }</span>
+<a name="l00335"></a>00335                 <span class="keywordflow">else</span>{
+<a name="l00336"></a>00336                         <span class="keywordtype">char</span> *salida = <span class="keyword">new</span> <span class="keywordtype">char</span>[framesToRead*<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;channels()*<span class="keyword">sizeof</span>(float)];
+<a name="l00337"></a>00337                         <span class="keywordflow">while</span>(left &gt; 0){
+<a name="l00338"></a>00338                                 <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;seek(<a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>, SEEK_SET);
+<a name="l00339"></a>00339 
+<a name="l00340"></a>00340                                 <span class="keywordflow">if</span>(left &gt; (<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;frames() - <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>)){
+<a name="l00341"></a>00341                                         left = <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;frames() - <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a>;
+<a name="l00342"></a>00342                                         <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a> = 0;
+<a name="l00343"></a>00343                                         cout &lt;&lt; <span class="stringliteral">"Restart"</span> &lt;&lt; endl;
+<a name="l00344"></a>00344                                 }
+<a name="l00345"></a>00345                                 <span class="keywordflow">else</span>{
+<a name="l00346"></a>00346                                         read = left;
+<a name="l00347"></a>00347                                         <a class="code" href="classSource.html#c893db68b4567daacd74c4d605515364">adv</a> += read;
+<a name="l00348"></a>00348                                 }
+<a name="l00349"></a>00349                                 <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;readf((<span class="keywordtype">float</span>*)salida, read);
+<a name="l00350"></a>00350                                 left -= read;
+<a name="l00351"></a>00351                         }
+<a name="l00352"></a>00352                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ch = 0; ch &lt; <a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;channels(); ch++)
+<a name="l00353"></a>00353                                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; read; i++)
+<a name="l00354"></a>00354                                         output[i] = ((<span class="keywordtype">float</span>*)salida)[i*<a class="code" href="classSource.html#e8774f52bc45760d1932881480f16f65">file</a>-&gt;channels() + ch];
+<a name="l00355"></a>00355 <span class="comment">//                      cout &lt;&lt; "Convirtiendo 24 bit" &lt;&lt; endl;</span>
+<a name="l00356"></a>00356                         <span class="keyword">delete</span> []salida;
+<a name="l00357"></a>00357                 }
+<a name="l00358"></a>00358 <span class="comment">//              while(left &gt; 0){</span>
+<a name="l00359"></a>00359 <span class="comment">//                      file-&gt;seek(adv, SEEK_SET);</span>
+<a name="l00360"></a>00360 <span class="comment">//      </span>
+<a name="l00361"></a>00361 <span class="comment">//                      if(left &gt; (file-&gt;frames() - adv)){</span>
+<a name="l00362"></a>00362 <span class="comment">//                              left = file-&gt;frames() - adv;</span>
+<a name="l00363"></a>00363 <span class="comment">//                              adv = 0;</span>
+<a name="l00364"></a>00364 <span class="comment">//                      }</span>
+<a name="l00365"></a>00365 <span class="comment">//                      else{</span>
+<a name="l00366"></a>00366 <span class="comment">//                              read = left;</span>
+<a name="l00367"></a>00367 <span class="comment">//                              adv += read;</span>
+<a name="l00368"></a>00368 <span class="comment">//                      }</span>
+<a name="l00369"></a>00369 <span class="comment">//                      file-&gt;read(output, read);</span>
+<a name="l00370"></a>00370 <span class="comment">//                      left -= read;</span>
+<a name="l00371"></a>00371 <span class="comment">//              }</span>
+<a name="l00372"></a>00372 <span class="comment">//              cout &lt;&lt; "LeÃ­do por la fuente " &lt;&lt; id &lt;&lt; ": " &lt;&lt; read &lt;&lt; endl;</span>
+<a name="l00373"></a>00373 <span class="comment">//              cout &lt;&lt; "PosiciÃ³n: " &lt;&lt; adv &lt;&lt; endl;</span>
+<a name="l00374"></a>00374                 <span class="keywordflow">return</span> read;
+<a name="l00375"></a>00375 <span class="comment">//              return items;</span>
+<a name="l00376"></a>00376         }
+<a name="l00377"></a>00377 };
+<a name="l00378"></a>00378 
+<a name="l00379"></a>00379 <span class="preprocessor">#endif </span><span class="comment">/*SOURCE_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:57:08 2008 para FileMixerPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

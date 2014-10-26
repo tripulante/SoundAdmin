@@ -1,0 +1,4 @@
+base referer
+rect $SoundAdministratorOpenAL_8h.html 358,56 574,80
+rect $SoundLoaderAL_8h.html 172,56 308,80
+rect $SourceStructAL_8h-source.html 172,104 308,128

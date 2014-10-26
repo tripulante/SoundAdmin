@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminOpenAL: Fichero Fuente Source.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>Source.h</h1><a href="Source_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SOURCE_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SOURCE_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="keyword">using namespace </span>std;
+<a name="l00014"></a><a class="code" href="classSource.html">00014</a> <span class="keyword">class </span><a class="code" href="classSource.html">Source</a>{
+<a name="l00015"></a>00015         
+<a name="l00016"></a>00016 <span class="keyword">protected</span>:
+<a name="l00021"></a><a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">00021</a>         <span class="keywordtype">float</span> <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[3];
+<a name="l00022"></a>00022         
+<a name="l00026"></a><a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">00026</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a>;
+<a name="l00027"></a>00027         
+<a name="l00031"></a><a class="code" href="classSource.html#edeabb528fdfd36b234ee5cea72dd129">00031</a>         string <a class="code" href="classSource.html#edeabb528fdfd36b234ee5cea72dd129">id</a>;
+<a name="l00032"></a>00032         
+<a name="l00036"></a><a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">00036</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">public</span>:
+<a name="l00039"></a>00039         
+<a name="l00045"></a><a class="code" href="classSource.html#9183f78e8c5272523b4a51660ec9a6c6">00045</a>         <a class="code" href="classSource.html#9183f78e8c5272523b4a51660ec9a6c6">Source</a>(string nuID){
+<a name="l00046"></a>00046                 <span class="keywordtype">id</span> = nuID;
+<a name="l00047"></a>00047                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[0] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[1] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[2] = 0.0;
+<a name="l00048"></a>00048                 <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a> = <span class="keyword">false</span>;
+<a name="l00049"></a>00049                 <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a> = <span class="keyword">false</span>;
+<a name="l00050"></a>00050         }
+<a name="l00051"></a>00051         
+<a name="l00055"></a><a class="code" href="classSource.html#d78297e3d514281fedd1d727e80bf158">00055</a>         <span class="keyword">virtual</span> <a class="code" href="classSource.html#d78297e3d514281fedd1d727e80bf158">~Source</a>(){
+<a name="l00056"></a>00056                 <span class="keywordtype">id</span> = <span class="stringliteral">""</span>;
+<a name="l00057"></a>00057                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[0] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[1] = <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[2] = 0.0;
+<a name="l00058"></a>00058                 <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a> = <span class="keyword">false</span>;
+<a name="l00059"></a>00059                 <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a> = <span class="keyword">false</span>;
+<a name="l00060"></a>00060         }
+<a name="l00061"></a>00061         
+<a name="l00068"></a><a class="code" href="classSource.html#29e19697cfcf24677e2e8b1384a254dc">00068</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#29e19697cfcf24677e2e8b1384a254dc">update</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z){
+<a name="l00069"></a>00069                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[0] = x;
+<a name="l00070"></a>00070                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[1] = y;
+<a name="l00071"></a>00071                 <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>[2] = z;
+<a name="l00072"></a>00072         }
+<a name="l00073"></a>00073         
+<a name="l00077"></a><a class="code" href="classSource.html#ca0d557b92da64f8ebe47a748873a334">00077</a>         <span class="keywordtype">float</span>* <a class="code" href="classSource.html#ca0d557b92da64f8ebe47a748873a334">getPosition</a>(){
+<a name="l00078"></a>00078                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#b13cde4346e7c8e034a19902e07ae512">pos</a>;
+<a name="l00079"></a>00079         }
+<a name="l00080"></a>00080         
+<a name="l00084"></a><a class="code" href="classSource.html#26e4855659b0cc869a214d7d9bd87665">00084</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#26e4855659b0cc869a214d7d9bd87665">togglePlaying</a>(){
+<a name="l00085"></a>00085                 <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a> = !<a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a>;
+<a name="l00086"></a>00086         }
+<a name="l00087"></a>00087         
+<a name="l00091"></a><a class="code" href="classSource.html#fd1dd9595ee66c7d82b425bbbada37e4">00091</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#fd1dd9595ee66c7d82b425bbbada37e4">isPlaying</a>(){
+<a name="l00092"></a>00092                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#fb35e4614e32df11aa8d9e31bdeabda4">playing</a>;
+<a name="l00093"></a>00093         }
+<a name="l00094"></a>00094         
+<a name="l00098"></a><a class="code" href="classSource.html#b9d5c107cadd7536a378fec819676f6e">00098</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#b9d5c107cadd7536a378fec819676f6e">setId</a>(string nuID){
+<a name="l00099"></a>00099                 <span class="keywordtype">id</span> = nuID;
+<a name="l00100"></a>00100         }
+<a name="l00101"></a>00101         
+<a name="l00105"></a><a class="code" href="classSource.html#f908dcd687c83597ae5e72ac5f4fd331">00105</a>         string <a class="code" href="classSource.html#f908dcd687c83597ae5e72ac5f4fd331">getId</a>(){
+<a name="l00106"></a>00106                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#edeabb528fdfd36b234ee5cea72dd129">id</a>;
+<a name="l00107"></a>00107         }
+<a name="l00108"></a>00108         
+<a name="l00112"></a><a class="code" href="classSource.html#2b8b62d46d2aba2f9c35d5e6f564b527">00112</a>         <span class="keywordtype">bool</span> <a class="code" href="classSource.html#2b8b62d46d2aba2f9c35d5e6f564b527">isAmbient</a>(){
+<a name="l00113"></a>00113                 <span class="keywordflow">return</span> <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a>;
+<a name="l00114"></a>00114         }
+<a name="l00115"></a>00115         
+<a name="l00120"></a><a class="code" href="classSource.html#abeb73ab7977dc9fd5a0da256df30c46">00120</a>         <span class="keywordtype">void</span> <a class="code" href="classSource.html#abeb73ab7977dc9fd5a0da256df30c46">setAmbient</a>(<span class="keywordtype">bool</span> amb){
+<a name="l00121"></a>00121                 <a class="code" href="classSource.html#10b232ba8344d069f12ae0f36e3f376f">ambient</a> = amb;
+<a name="l00122"></a>00122         }
+<a name="l00123"></a>00123 };
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125 <span class="preprocessor">#endif </span><span class="comment">/*SOURCE_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:26:53 2008 para SoundAdminOpenAL por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

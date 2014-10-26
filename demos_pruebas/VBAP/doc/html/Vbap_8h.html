@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>VBAP: Referencia del Archivo Vbap.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>Referencia del Archivo Vbap.h</h1><code>#include &lt;iostream&gt;</code><br>
+<code>#include &lt;sstream&gt;</code><br>
+<code>#include &lt;string&gt;</code><br>
+<code>#include &lt;fstream&gt;</code><br>
+<code>#include &lt;utility&gt;</code><br>
+<code>#include &lt;vector&gt;</code><br>
+<code>#include &lt;gmtl/gmtl.h&gt;</code><br>
+<code>#include &lt;gmtl/Math.h&gt;</code><br>
+<code>#include &lt;gmtl/Matrix.h&gt;</code><br>
+<code>#include &lt;gmtl/MatrixOps.h&gt;</code><br>
+<code>#include &lt;gmtl/Vec.h&gt;</code><br>
+<code>#include &lt;algorithm&gt;</code><br>
+<code>#include &quot;<a class="el" href="Speaker_8h-source.html">Speaker.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Triangle_8h-source.html">Triangle.h</a>&quot;</code><br>
+
+<p>
+Dependencia gráfica adjunta para Vbap.h:<p><center><img src="Vbap_8h__incl.png" border="0" usemap="#Vbap.h_map" alt=""></center>
+<map name="Vbap.h_map">
+<area href="Speaker_8h.html" shape="rect" coords="320,208,405,232" alt="">
+<area href="Triangle_8h.html" shape="rect" coords="147,283,235,307" alt="">
+</map>
+
+<p>
+<a href="Vbap_8h-source.html">Ir al código fuente de este archivo.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Clases</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspeakDist.html">speakDist</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVbap.html">Vbap</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase principal del sistema. Recibe la elevaciÃ³n de los Ã¡ngulos y <br>
+ el No. de speakers y calcula las matrices.  <a href="classVbap.html#_details">Más...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="Vbap_8h.html#d6bd39c07a48342422620114d92f6b96">MIN_VOL_PER_SIDE</a>&nbsp;&nbsp;&nbsp;(0.01)</td></tr>
+
+<tr><td colspan="2"><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="Vbap_8h.html#270eb169093f6c62c7e6521056ef2bc7">sortFunction</a> (<a class="el" href="structspeakDist.html">speakDist</a> a, <a class="el" href="structspeakDist.html">speakDist</a> b)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+<hr><h2>Documentación de las definiciones</h2>
+<a class="anchor" name="d6bd39c07a48342422620114d92f6b96"></a><!-- doxytag: member="Vbap.h::MIN_VOL_PER_SIDE" ref="d6bd39c07a48342422620114d92f6b96" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_VOL_PER_SIDE&nbsp;&nbsp;&nbsp;(0.01)          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Define la relaciÃ³n mÃ­nima entre el volÃºmen del sÃ³lido generado por los triÃ¡ngulos y su perÃ­metro para descartarlos. 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="270eb169093f6c62c7e6521056ef2bc7"></a><!-- doxytag: member="Vbap.h::sortFunction" ref="270eb169093f6c62c7e6521056ef2bc7" args="(speakDist a, speakDist b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sortFunction           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structspeakDist.html">speakDist</a>&nbsp;</td>
+          <td class="paramname"> <em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structspeakDist.html">speakDist</a>&nbsp;</td>
+          <td class="paramname"> <em>b</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+funciÃ³n estÃ¡tica que actua como comparador para ordenar usando algoritmos de STL <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>a</em>&nbsp;</td><td>Estructura a comparar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>b</em>&nbsp;</td><td>Estructura a comparar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>(a.distance &lt; b.distance) </dd></dl>
+
+</div>
+</div><p>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 18:07:36 2008 para VBAP por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

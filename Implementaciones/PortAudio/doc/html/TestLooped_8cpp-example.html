@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminPortaudio: TestLooped.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>TestLooped.cpp</h1>Archivo de prueba que permite verificar lo siguiente: <dl>
+<dt>Asociar / Disociar una fuente a un archivo </dt>
+<dd></dd>
+<dt>Reproducir una fuente en loop / Reproducirla una vez </dt>
+<dd></dd>
+<dt>Destruir una archivo / Disociar las fuentes asociadas </dt>
+<dd></dd>
+</dl>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo</dd></dl>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="pruebas_8h.html">pruebas.h</a>"</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#if PRUEBA == 0</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#include "../soundadmin/SoundAdminPortaudio.h"</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">using namespace </span>std;
+<a name="l00017"></a>00017 
+<a name="l00021"></a>00021 <a name="_a0"></a><a class="code" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a>* testadmin;
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *argv[]){
+<a name="l00024"></a>00024         
+<a name="l00025"></a>00025         <span class="keywordflow">if</span>(argc != 4){
+<a name="l00026"></a>00026                 cout &lt;&lt; <span class="stringliteral">"No hay suficientes argumentos"</span> &lt;&lt; endl;
+<a name="l00027"></a>00027                 cout &lt;&lt; <span class="stringliteral">"./Uniandes3DAudio &lt;Nombre Archivo Prueba&gt; "</span> &lt;&lt; endl;
+<a name="l00028"></a>00028                 cout &lt;&lt; <span class="stringliteral">"&lt;numspeakers&gt; &lt;archivoConfiguracion&gt;"</span>&lt;&lt; endl;
+<a name="l00029"></a>00029         }
+<a name="l00030"></a>00030         
+<a name="l00031"></a>00031         <span class="keywordflow">try</span>{
+<a name="l00032"></a>00032                 <span class="keywordtype">int</span> channels = 0;
+<a name="l00033"></a>00033                 string file(argv[1]);
+<a name="l00034"></a>00034                 stringstream values(stringstream::in | stringstream::out);
+<a name="l00035"></a>00035                 values &lt;&lt; argv[2];
+<a name="l00036"></a>00036                 cout &lt;&lt; values.str() &lt;&lt; endl;
+<a name="l00037"></a>00037                 values &gt;&gt; channels;
+<a name="l00038"></a>00038                 <span class="keywordflow">if</span>(channels &lt; 2){
+<a name="l00039"></a>00039                         channels = 2;
+<a name="l00040"></a>00040                         cout &lt;&lt; <span class="stringliteral">"Canales incompletos: Trabajando en Stereo"</span> &lt;&lt; endl;
+<a name="l00041"></a>00041                 }
+<a name="l00042"></a>00042                 testadmin = <a name="a1"></a><a class="code" href="classSoundAdminPortaudio.html#85b8c3b8ff8dc16ecce4367ef9ccf52b">SoundAdminPortaudio::getSoundAdminInstance</a>();
+<a name="l00043"></a>00043                 testadmin-&gt;<a name="a2"></a><a class="code" href="classSoundAdminPortaudio.html#008cfb924650055a9d96758a8ebc3407">setConfiguration</a>(SoundAdminPortaudio::SR_44100_HZ, channels, argv[3],
+<a name="l00044"></a>00044                                 SoundAdminPortaudio::DISTRIBUTED);
+<a name="l00045"></a>00045                 <span class="keywordflow">if</span>(!testadmin-&gt;<a name="a3"></a><a class="code" href="classSoundAdminPortaudio.html#5ea76f4ec44c3106771148adf7eb6459">addFile</a>(<span class="stringliteral">"testFile"</span>, file)){
+<a name="l00046"></a>00046                         <span class="keywordflow">throw</span> string(<span class="stringliteral">"No se pudo cargar el archivo..."</span>);
+<a name="l00047"></a>00047                 }
+<a name="l00048"></a>00048                 testadmin-&gt;<a name="a4"></a><a class="code" href="classSoundAdminPortaudio.html#2118e86787ad7e259435d91fdd8ce3f6">createSource</a>(<span class="stringliteral">"testsrc"</span>, <span class="stringliteral">"testFile"</span>, <span class="keyword">false</span>);
+<a name="l00049"></a>00049                 testadmin-&gt;<a name="a5"></a><a class="code" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a>(<span class="stringliteral">"testsrc"</span>,<span class="keyword">false</span>);
+<a name="l00050"></a>00050                 <span class="keywordtype">char</span> c;
+<a name="l00051"></a>00051                 <span class="keywordflow">while</span>(c != <span class="charliteral">'o'</span>){
+<a name="l00052"></a>00052                         cin &gt;&gt; c;
+<a name="l00053"></a>00053                         <span class="keywordflow">switch</span>(c){
+<a name="l00054"></a>00054                         <span class="keywordflow">case</span> <span class="charliteral">'a'</span>: 
+<a name="l00055"></a>00055                                 testadmin-&gt;<a name="a6"></a><a class="code" href="classSoundAdminPortaudio.html#35155c23e238a71e9fefb9e3c4ab9a4d">attachSource</a>(<span class="stringliteral">"testsrc"</span>, <span class="stringliteral">"testFile"</span>);
+<a name="l00056"></a>00056                                 cout &lt;&lt; <span class="stringliteral">"Fuente asociada"</span> &lt;&lt; endl;
+<a name="l00057"></a>00057                                 <span class="keywordflow">break</span>;
+<a name="l00058"></a>00058                         <span class="keywordflow">case</span> <span class="charliteral">'d'</span>: 
+<a name="l00059"></a>00059                                 testadmin-&gt;<a name="a7"></a><a class="code" href="classSoundAdminPortaudio.html#f6a65365c3f4d2a80174e21cf4aadf06">detachSource</a>(<span class="stringliteral">"testsrc"</span>);
+<a name="l00060"></a>00060                                 cout &lt;&lt; <span class="stringliteral">"Fuente Disociada"</span> &lt;&lt; endl;
+<a name="l00061"></a>00061                                 <span class="keywordflow">break</span>;
+<a name="l00062"></a>00062                         <span class="keywordflow">case</span> <span class="charliteral">'w'</span>: 
+<a name="l00063"></a>00063                                 <span class="keywordflow">if</span>(testadmin-&gt;<a name="a8"></a><a class="code" href="classSoundAdminPortaudio.html#580cff808436bab69263e2d6132a72d9">deleteFile</a>(<span class="stringliteral">"testFile"</span>))
+<a name="l00064"></a>00064                                         cout &lt;&lt; <span class="stringliteral">"archivo borrado"</span> &lt;&lt; endl;
+<a name="l00065"></a>00065                                 <span class="keywordflow">else</span>
+<a name="l00066"></a>00066                                         cout &lt;&lt; <span class="stringliteral">"archivo no se pudo borrar"</span> &lt;&lt; endl;
+<a name="l00067"></a>00067                                 <span class="keywordflow">break</span>;
+<a name="l00068"></a>00068                         <span class="keywordflow">case</span> <span class="charliteral">'p'</span>: 
+<a name="l00069"></a>00069                                 <span class="keywordflow">if</span>(testadmin-&gt;<a name="a9"></a><a class="code" href="classSoundAdminPortaudio.html#1e1e56635744c07b619436f151f7a761">isPlaying</a>(<span class="stringliteral">"testsrc"</span>))
+<a name="l00070"></a>00070                                         testadmin-&gt;<a name="a10"></a><a class="code" href="classSoundAdminPortaudio.html#62f24d2c840c6f6d5146eb2c977828a1">pauseSource</a>(<span class="stringliteral">"testsrc"</span>);
+<a name="l00071"></a>00071                                 <span class="keywordflow">else</span>
+<a name="l00072"></a>00072                                         <span class="keywordflow">if</span>(testadmin-&gt;<a name="a11"></a><a class="code" href="classSoundAdminPortaudio.html#851003ef4b756821366f6b324141622f">isLooped</a>(<span class="stringliteral">"testsrc"</span>))
+<a name="l00073"></a>00073                                                 testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a>(<span class="stringliteral">"testsrc"</span>);
+<a name="l00074"></a>00074                                         <span class="keywordflow">else</span>
+<a name="l00075"></a>00075                                                 testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a>(<span class="stringliteral">"testsrc"</span>, <span class="keyword">false</span>);
+<a name="l00076"></a>00076                                         <span class="keywordflow">break</span>;
+<a name="l00077"></a>00077                         <span class="keywordflow">case</span> <span class="charliteral">'f'</span>: 
+<a name="l00078"></a>00078                                 <span class="keywordflow">if</span>(testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#5ea76f4ec44c3106771148adf7eb6459">addFile</a>(<span class="stringliteral">"testFile"</span>, file))
+<a name="l00079"></a>00079                                         cout &lt;&lt; <span class="stringliteral">"archivo creado"</span> &lt;&lt; endl;
+<a name="l00080"></a>00080                                 <span class="keywordflow">else</span>
+<a name="l00081"></a>00081                                         cout &lt;&lt; <span class="stringliteral">"archivo no se pudo crear"</span> &lt;&lt; endl;
+<a name="l00082"></a>00082                                 <span class="keywordflow">break</span>;
+<a name="l00083"></a>00083                         <span class="keywordflow">case</span> <span class="charliteral">'s'</span>: 
+<a name="l00084"></a>00084                                 <span class="keywordflow">if</span>(testadmin-&gt;<a name="a12"></a><a class="code" href="classSoundAdminPortaudio.html#95036cb4625436d1924b544d7af13b11">destroySource</a>(<span class="stringliteral">"testsrc"</span>))
+<a name="l00085"></a>00085                                         cout &lt;&lt; <span class="stringliteral">"Fuente destruida"</span> &lt;&lt; endl;
+<a name="l00086"></a>00086                                 <span class="keywordflow">else</span>
+<a name="l00087"></a>00087                                         cout &lt;&lt; <span class="stringliteral">"Fuente no se pudo destruir"</span> &lt;&lt; endl;
+<a name="l00088"></a>00088                                 <span class="keywordflow">break</span>;
+<a name="l00089"></a>00089                         <span class="keywordflow">case</span> <span class="charliteral">'r'</span>: 
+<a name="l00090"></a>00090                                 testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#2118e86787ad7e259435d91fdd8ce3f6">createSource</a>(<span class="stringliteral">"testsrc"</span>, <span class="stringliteral">"testFile"</span>, <span class="keyword">false</span>); <span class="keywordflow">break</span>;
+<a name="l00091"></a>00091                         <span class="keywordflow">case</span> <span class="charliteral">'y'</span>: 
+<a name="l00092"></a>00092                                 <span class="keywordflow">if</span>(testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#1e1e56635744c07b619436f151f7a761">isPlaying</a>(<span class="stringliteral">"testsrc"</span>))
+<a name="l00093"></a>00093                                         testadmin-&gt;<a name="a13"></a><a class="code" href="classSoundAdminPortaudio.html#048d5c2f78df2cdd1f173d811e2fadc0">stopSource</a>(<span class="stringliteral">"testsrc"</span>);
+<a name="l00094"></a>00094                                 <span class="keywordflow">else</span>
+<a name="l00095"></a>00095                                         <span class="keywordflow">if</span>(testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#851003ef4b756821366f6b324141622f">isLooped</a>(<span class="stringliteral">"testsrc"</span>))
+<a name="l00096"></a>00096                                                 testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a>(<span class="stringliteral">"testsrc"</span>);
+<a name="l00097"></a>00097                                         <span class="keywordflow">else</span>
+<a name="l00098"></a>00098                                                 testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a>(<span class="stringliteral">"testsrc"</span>, <span class="keyword">false</span>);
+<a name="l00099"></a>00099                                 <span class="keywordflow">break</span>;
+<a name="l00100"></a>00100                         <span class="keywordflow">case</span> <span class="charliteral">'l'</span>: 
+<a name="l00101"></a>00101                                 <span class="keywordflow">if</span>(!testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#851003ef4b756821366f6b324141622f">isLooped</a>(<span class="stringliteral">"testsrc"</span>))
+<a name="l00102"></a>00102                                         testadmin-&gt;<a name="a14"></a><a class="code" href="classSoundAdminPortaudio.html#be9c200b28334df0993d263a24ec7968">loopSource</a>(<span class="stringliteral">"testsrc"</span>, <span class="keyword">true</span>);
+<a name="l00103"></a>00103                                 <span class="keywordflow">else</span>
+<a name="l00104"></a>00104                                         testadmin-&gt;<a class="code" href="classSoundAdminPortaudio.html#be9c200b28334df0993d263a24ec7968">loopSource</a>(<span class="stringliteral">"testsrc"</span>, <span class="keyword">false</span>);
+<a name="l00105"></a>00105                         <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;
+<a name="l00106"></a>00106                         }
+<a name="l00107"></a>00107                 }
+<a name="l00108"></a>00108         }
+<a name="l00109"></a>00109         <span class="keywordflow">catch</span>(string s){
+<a name="l00110"></a>00110                 cout &lt;&lt; s &lt;&lt; endl;
+<a name="l00111"></a>00111         }
+<a name="l00112"></a>00112         <span class="keywordflow">return</span> 0;
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="preprocessor">#endif</span>
+</pre></div> <hr size="1"><address style="align: right;"><small>Generado el Tue Jan 15 15:01:24 2008 para SoundAdminPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

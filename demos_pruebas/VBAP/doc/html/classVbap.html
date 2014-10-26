@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>VBAP: Referencia de la Clase Vbap</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase Vbap</h1><!-- doxytag: class="Vbap" -->Clase principal del sistema. Recibe la elevaciÃ³n de los Ã¡ngulos y <br>
+ el No. de speakers y calcula las matrices.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="Vbap_8h-source.html">Vbap.h</a>&gt;</code>
+<p>
+Diagrama de colaboración para Vbap:<p><center><img src="classVbap__coll__graph.png" border="0" usemap="#Vbap__coll__map" alt="Collaboration graph"></center>
+<map name="Vbap__coll__map">
+<area href="classSpeaker.html" shape="rect" coords="6,7,80,31" alt="">
+</map>
+<center><font size="2">[<a href="graph_legend.html">leyenda</a>]</font></center><a href="classVbap-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVbap.html#6b7e7c41a599b59cb50ce00daa1b65d1">Vbap</a> (int numspeak)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVbap.html#1a478b11c78131a8e509f2f555db5291">~Vbap</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVbap.html#7a564627022c2c94b16275697b2458ea">createSpeakers</a> (const char *configFilePath)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVbap.html#e53b9fd5e72d710955d2042e65c018da">createAllTriangles</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVbap.html#6af0713ce7d6932ab110ce5389034d82">removeTriangles</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">pair&lt; Vec3f, int * &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVbap.html#bf935446aae4108969cc93968826c898">selectTriangle</a> (float x, float y, float z)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase principal del sistema. Recibe la elevaciÃ³n de los Ã¡ngulos y <br>
+ el No. de speakers y calcula las matrices. 
+<p>
+<dl class="note" compact><dt><b>Nota:</b></dt><dd>Implementa el algoritmo VBAP, desarrollado por Ville Pulkki y se basa en una implementaciÃ³n previa desarrollada por Pullki </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+
+<p>
+<a class="el" href="main_8cpp-example.html#_a0">main.cpp</a>.</dl>
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="6b7e7c41a599b59cb50ce00daa1b65d1"></a><!-- doxytag: member="Vbap::Vbap" ref="6b7e7c41a599b59cb50ce00daa1b65d1" args="(int numspeak)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vbap::Vbap           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>numspeak</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase 
+</div>
+</div><p>
+<a class="anchor" name="1a478b11c78131a8e509f2f555db5291"></a><!-- doxytag: member="Vbap::~Vbap" ref="1a478b11c78131a8e509f2f555db5291" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vbap::~Vbap           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="7a564627022c2c94b16275697b2458ea"></a><!-- doxytag: member="Vbap::createSpeakers" ref="7a564627022c2c94b16275697b2458ea" args="(const char *configFilePath)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vbap::createSpeakers           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>configFilePath</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea los speakers a partir de un archivo de configuraciÃ³n <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a1">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="e53b9fd5e72d710955d2042e65c018da"></a><!-- doxytag: member="Vbap::createAllTriangles" ref="e53b9fd5e72d710955d2042e65c018da" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vbap::createAllTriangles           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea todos los triÃ¡ngulos posibles con un Ã¡rea razonable <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a2">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="6af0713ce7d6932ab110ce5389034d82"></a><!-- doxytag: member="Vbap::removeTriangles" ref="6af0713ce7d6932ab110ce5389034d82" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vbap::removeTriangles           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Remueve los triÃ¡ngulos inÃºtiles <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a3">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="bf935446aae4108969cc93968826c898"></a><!-- doxytag: member="Vbap::selectTriangle" ref="bf935446aae4108969cc93968826c898" args="(float x, float y, float z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pair&lt; Vec3f, int * &gt; * Vbap::selectTriangle           </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>z</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Selecciona un triÃ¡ngulo del conjunto de acuerdo a las posiciones entregadas <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>PosiciÃ³n en x de la fuente a manejar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>posiciÃ³n en y de la fuente a manejar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>z</em>&nbsp;</td><td>posiciÃ³n en z de la fuente a manejar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Par con la ganancia de la fuente y los parlantes asociados a la misma </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a4">main.cpp</a>.</dl>
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="Vbap_8h-source.html">Vbap.h</a><li>Vbap.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 18:07:36 2008 para VBAP por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

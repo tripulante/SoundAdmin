@@ -1,0 +1,4 @@
+bateria;drumloop;/root/joh-palm/audioTestFiles/free_drumloop_44.wav
+onda;sinewave;/root/joh-palm/audioTestFiles/sine_44.wav
+All My Friends_Pavement;pavement;/root/joh-palm/audioTestFiles/out.wav
+ruido blanco;whitenoise;/root/joh-palm/audioTestFiles/03.wav

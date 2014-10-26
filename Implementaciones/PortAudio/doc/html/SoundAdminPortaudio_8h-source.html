@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminPortaudio: Fichero Fuente SoundAdminPortaudio.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>SoundAdminPortaudio.h</h1><a href="SoundAdminPortaudio_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00008"></a>00008 <span class="preprocessor">#ifndef SOUNDADMINPORTAUDIO_H_</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define SOUNDADMINPORTAUDIO_H_</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="comment">//inclusiones de la clase</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;portaudio.h&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;memory&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;gmtl/gmtl.h&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "../vbap/Vbap.h"</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include "<a class="code" href="Listener_8h.html">Listener.h</a>"</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include "<a class="code" href="Source_8h.html">Source.h</a>"</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include "<a class="code" href="AudioFileLoader_8h.html">AudioFileLoader.h</a>"</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="comment">//define para pruebas sinusoidales</span>
+<a name="l00023"></a>00023 <span class="comment">//#define TABLE_SIZE   (400)</span>
+<a name="l00024"></a>00024 <span class="comment">//#ifndef M_PI</span>
+<a name="l00025"></a>00025 <span class="comment">//#define M_PI  (3.14159265)</span>
+<a name="l00026"></a>00026 <span class="comment">//#endif</span>
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="keyword">using namespace </span>gmtl;
+<a name="l00029"></a>00029 <span class="keyword">using namespace </span>std; 
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 
+<a name="l00040"></a><a class="code" href="classSoundAdminPortaudio.html">00040</a> <span class="keyword">class </span><a class="code" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a>
+<a name="l00041"></a>00041 {
+<a name="l00042"></a>00042 <span class="keyword">public</span>:
+<a name="l00046"></a><a class="code" href="classSoundAdminPortaudio.html#26db4fc1dc741cf01b173270d0ed7f8a">00046</a>         <span class="keyword">enum</span> <a class="code" href="classSoundAdminPortaudio.html#26db4fc1dc741cf01b173270d0ed7f8a">SampleRate</a> {
+<a name="l00047"></a>00047                 SR_8000_HZ, 
+<a name="l00048"></a>00048                 SR_11025_HZ,
+<a name="l00049"></a>00049                 SR_16000_HZ,
+<a name="l00050"></a>00050                 SR_22050_HZ, 
+<a name="l00051"></a>00051                 SR_44100_HZ, 
+<a name="l00052"></a>00052                 SR_48000_HZ,
+<a name="l00053"></a>00053                 SR_96000_HZ
+<a name="l00054"></a>00054         };
+<a name="l00055"></a>00055 
+<a name="l00059"></a><a class="code" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">00059</a>         <span class="keyword">enum</span> <a class="code" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">SoundDistribution</a> {MONO, STEREO, DISTRIBUTED};
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="keyword">private</span>: 
+<a name="l00062"></a>00062 
+<a name="l00066"></a>00066         <span class="keyword">static</span> auto_ptr&lt;SoundAdminPortaudio&gt; singletonInstance;
+<a name="l00067"></a>00067 
+<a name="l00071"></a>00071         <span class="keyword">friend</span> <span class="keywordtype">int</span> <a class="code" href="classSoundAdminPortaudio.html#0659390b1a52653311d29aa4b46f5916">portaudioCallback</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *inputBuffer, <span class="keywordtype">void</span> *outputBuffer,
+<a name="l00072"></a>00072                         <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer, <span class="keyword">const</span> PaStreamCallbackTimeInfo* timeInfo,
+<a name="l00073"></a>00073                         PaStreamCallbackFlags statusFlags, <span class="keywordtype">void</span> *userData );
+<a name="l00074"></a>00074 
+<a name="l00078"></a>00078         PaStream *stream;
+<a name="l00079"></a>00079 
+<a name="l00083"></a>00083         <a class="code" href="classListener.html">Listener</a> *listener;
+<a name="l00084"></a>00084 
+<a name="l00088"></a>00088         map&lt;string, Source*&gt; sources;
+<a name="l00089"></a>00089 
+<a name="l00093"></a>00093         <span class="keywordtype">int</span> numspeakers;
+<a name="l00094"></a>00094 
+<a name="l00098"></a>00098         <a class="code" href="classVbap.html">Vbap</a> *panning_algorithm;
+<a name="l00099"></a>00099 
+<a name="l00103"></a>00103         <a class="code" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">SoundDistribution</a> distribution;
+<a name="l00104"></a>00104 
+<a name="l00108"></a>00108         <span class="comment">//      float sine[TABLE_SIZE];</span>
+<a name="l00109"></a>00109 
+<a name="l00113"></a>00113         <a class="code" href="classAudioFileLoader.html">AudioFileLoader</a> *loader;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115         <span class="comment">//Funciones privadas</span>
+<a name="l00116"></a>00116 
+<a name="l00120"></a>00120         <span class="keywordtype">void</span> stopAllSources();
+<a name="l00121"></a>00121 
+<a name="l00127"></a>00127         vector&lt;int&gt;* getSupportedSampleRates(<span class="keywordtype">int</span> deviceNumber);
+<a name="l00128"></a>00128 
+<a name="l00134"></a>00134         vector&lt;int&gt;* availableDevices(<span class="keywordtype">int</span> numChannels, <span class="keywordtype">int</span> samplerate);
+<a name="l00135"></a>00135 
+<a name="l00139"></a>00139         <span class="comment">//      void initializeSineTable();</span>
+<a name="l00140"></a>00140 
+<a name="l00145"></a>00145         <span class="keywordtype">void</span> startReproduction() throw (string);
+<a name="l00146"></a>00146 
+<a name="l00150"></a>00150         <span class="comment">//      void workWithSinusoidalSources(float **output, int framesPerBuffer);</span>
+<a name="l00151"></a>00151 
+<a name="l00155"></a>00155         <a class="code" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a>();
+<a name="l00156"></a>00156         
+<a name="l00157"></a>00157         <span class="comment">//Funciones de inicializaciÃ³n del sistema</span>
+<a name="l00158"></a>00158 
+<a name="l00164"></a>00164         <span class="keywordtype">void</span> closeAdministrator() throw (string);
+<a name="l00165"></a>00165         
+<a name="l00170"></a>00170         <span class="keywordtype">void</span> initializeAdministrator() throw (string);
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172 public:
+<a name="l00173"></a>00173 
+<a name="l00177"></a>00177         virtual ~<a class="code" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a>();
+<a name="l00178"></a>00178 
+<a name="l00183"></a>00183         static SoundAdminPortaudio* <a class="code" href="classSoundAdminPortaudio.html#85b8c3b8ff8dc16ecce4367ef9ccf52b">getSoundAdminInstance</a>();    
+<a name="l00184"></a>00184 
+<a name="l00201"></a>00201         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#008cfb924650055a9d96758a8ebc3407">setConfiguration</a>(<a class="code" href="classSoundAdminPortaudio.html#26db4fc1dc741cf01b173270d0ed7f8a">SampleRate</a> sr, <span class="keywordtype">int</span> numSpeak, const <span class="keywordtype">char</span> *configFile, 
+<a name="l00202"></a>00202                         <a class="code" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">SoundDistribution</a> distr) throw (string);
+<a name="l00203"></a>00203 
+<a name="l00204"></a>00204 
+<a name="l00205"></a>00205         <span class="comment">//CreaciÃ³n y manejo de fuentes</span>
+<a name="l00214"></a>00214 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#2118e86787ad7e259435d91fdd8ce3f6">createSource</a>(string <span class="keywordtype">id</span>, string fileDesc = "", <span class="keywordtype">bool</span> amb = false);
+<a name="l00215"></a>00215 
+<a name="l00222"></a>00222         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#95036cb4625436d1924b544d7af13b11">destroySource</a>(string <span class="keywordtype">id</span>);
+<a name="l00223"></a>00223 
+<a name="l00230"></a>00230         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> loop = true);
+<a name="l00231"></a>00231 
+<a name="l00237"></a>00237         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#1e1e56635744c07b619436f151f7a761">isPlaying</a>(string <span class="keywordtype">id</span>);
+<a name="l00238"></a>00238 
+<a name="l00243"></a>00243         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#62f24d2c840c6f6d5146eb2c977828a1">pauseSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00244"></a>00244 
+<a name="l00250"></a>00250         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#048d5c2f78df2cdd1f173d811e2fadc0">stopSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00251"></a>00251 
+<a name="l00257"></a>00257         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#be9c200b28334df0993d263a24ec7968">loopSource</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> loop);
+<a name="l00258"></a>00258         
+<a name="l00264"></a>00264         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#851003ef4b756821366f6b324141622f">isLooped</a>(string <span class="keywordtype">id</span>);
+<a name="l00265"></a>00265         
+<a name="l00272"></a>00272         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#f6a65365c3f4d2a80174e21cf4aadf06">detachSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00273"></a>00273 
+<a name="l00281"></a>00281         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#35155c23e238a71e9fefb9e3c4ab9a4d">attachSource</a>(string <span class="keywordtype">id</span>, string desc);
+<a name="l00282"></a>00282 
+<a name="l00289"></a>00289         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#8b8e7fe67e424ddc15c66b08f3754229">useSourceAsAmbient</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> ambient);
+<a name="l00290"></a>00290 
+<a name="l00296"></a>00296         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#483e5ac17e1a48556462eaf7806c155a">isAmbient</a>(string <span class="keywordtype">id</span>);
+<a name="l00297"></a>00297 
+<a name="l00306"></a>00306         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#33a0890c9ed09df943164420e170df32">updateSource</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
+<a name="l00307"></a>00307         
+<a name="l00316"></a>00316         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#b997d46746216cdf19787e990ab5843a">getSourcePosition</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">float</span>&amp; x, <span class="keywordtype">float</span>&amp; y, <span class="keywordtype">float</span>&amp; z);
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318         <span class="comment">// Movimiento del Listener (Escucha) en el espacio</span>
+<a name="l00319"></a>00319 
+<a name="l00325"></a>00325         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#bfa6f3ac4b92c207fb53eb4ae145faca">updateListener</a>(Vec3f pos, Vec3f up);
+<a name="l00326"></a>00326         
+<a name="l00332"></a>00332         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#74447ab77d227e94941ea9720827b8dd">getListenerInfo</a>(Vec3f &amp;pos, Vec3f &amp;up);
+<a name="l00333"></a>00333 
+<a name="l00334"></a>00334         <span class="comment">//Actualizaciones adicionales de las fuentes</span>
+<a name="l00335"></a>00335 
+<a name="l00342"></a>00342         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#0e5d7efdf8f4758604b0fd4275612828">setPitchBend</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">float</span> bend);
+<a name="l00343"></a>00343 
+<a name="l00350"></a>00350         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#94bcc727ca2f53344f1615d0b220661d">getPitchBend</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">float</span>&amp; bend);
+<a name="l00351"></a>00351         
+<a name="l00358"></a>00358         <span class="keywordtype">void</span> <a class="code" href="classSoundAdminPortaudio.html#14e3ddfba7b9df7b87cff2409ef36f7d">setVolume</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">float</span> gain);
+<a name="l00359"></a>00359         
+<a name="l00366"></a>00366         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#bbc0008eb4018389514326089147a313">getVolume</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">float</span>&amp; gain);
+<a name="l00367"></a>00367 
+<a name="l00368"></a>00368         <span class="comment">//cambio de coordenadas de una fuente respecto al listener</span>
+<a name="l00369"></a>00369 
+<a name="l00375"></a>00375         <span class="comment">//      Vec3f changeCoordinatesFromListener(Vec3f src);</span>
+<a name="l00376"></a>00376 
+<a name="l00377"></a>00377         <span class="comment">//manejo de archivos</span>
+<a name="l00378"></a>00378 
+<a name="l00385"></a>00385         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#5ea76f4ec44c3106771148adf7eb6459">addFile</a>(string desc, string fileRoute);
+<a name="l00386"></a>00386         
+<a name="l00394"></a>00394         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdminPortaudio.html#580cff808436bab69263e2d6132a72d9">deleteFile</a>(string desc);
+<a name="l00395"></a>00395         
+<a name="l00396"></a>00396 
+<a name="l00397"></a>00397         <span class="comment">//informaciÃ³n de debug y manejo de descripciones</span>
+<a name="l00398"></a>00398 
+<a name="l00404"></a>00404         vector&lt;string&gt;* <a class="code" href="classSoundAdminPortaudio.html#e649aa7031601061daeb06ed2ee684ae">getSourceIds</a>();
+<a name="l00405"></a>00405 
+<a name="l00410"></a>00410         vector&lt;string&gt;* <a class="code" href="classSoundAdminPortaudio.html#5bb58652b8c0496d0cc4e1f92d751bc9">getFileDescriptions</a>();
+<a name="l00411"></a>00411 
+<a name="l00412"></a>00412         <span class="comment">//manejo de Portaudio</span>
+<a name="l00413"></a>00413 
+<a name="l00420"></a>00420         <span class="keywordtype">int</span> <a class="code" href="classSoundAdminPortaudio.html#1dca4caf8c044a40d1958a6620ce60e5">soundAdminCallback</a>(<span class="keywordtype">void</span> *outputBuffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer);
+<a name="l00421"></a>00421         
+<a name="l00425"></a><a class="code" href="classSoundAdminPortaudio.html#2c2f3356ecb5c145d51cb414008b280b">00425</a>         <span class="keywordtype">double</span> <a class="code" href="classSoundAdminPortaudio.html#2c2f3356ecb5c145d51cb414008b280b">getCpuLoad</a>(){
+<a name="l00426"></a>00426                 <span class="keywordflow">if</span>(stream)
+<a name="l00427"></a>00427                         <span class="keywordflow">return</span> Pa_GetStreamCpuLoad(stream);
+<a name="l00428"></a>00428                 <span class="keywordflow">return</span> 0.0;
+<a name="l00429"></a>00429         }
+<a name="l00430"></a>00430 
+<a name="l00431"></a>00431 };
+<a name="l00432"></a>00432 
+<a name="l00433"></a>00433 <span class="preprocessor">#endif </span><span class="comment">/*SOUNDADMINPORTAUDIO_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Tue Jan 15 15:01:24 2008 para SoundAdminPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

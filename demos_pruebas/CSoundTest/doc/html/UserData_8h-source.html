@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>CSoundTest: Fichero Fuente UserData.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>UserData.h</h1><a href="UserData_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00008"></a>00008 <span class="preprocessor">#ifndef USERDATA_H_</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define USERDATA_H_</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;csound/csound.hpp&gt;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 
+<a name="l00020"></a><a class="code" href="classUserData.html">00020</a> <span class="keyword">class </span><a class="code" href="classUserData.html">UserData</a>
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022         
+<a name="l00023"></a>00023 <span class="keyword">private</span>:
+<a name="l00027"></a>00027         Csound *csound;
+<a name="l00031"></a>00031         <span class="keywordtype">int</span> result;
+<a name="l00032"></a>00032         
+<a name="l00036"></a>00036         <span class="keywordtype">bool</span> performing;
+<a name="l00037"></a>00037         
+<a name="l00041"></a>00041         <span class="keywordtype">double</span> degrees;
+<a name="l00045"></a>00045         <span class="keywordtype">double</span> distance;
+<a name="l00049"></a>00049         <span class="keywordtype">double</span> reverb;
+<a name="l00053"></a>00053         MYFLT* pvalues;
+<a name="l00054"></a>00054         
+<a name="l00055"></a>00055         
+<a name="l00056"></a>00056         
+<a name="l00057"></a>00057 <span class="keyword">public</span>:
+<a name="l00058"></a>00058         
+<a name="l00064"></a>00064         <a class="code" href="classUserData.html#4b42fb63cb7e4681cfbb89ef1c55ab60">UserData</a>(Csound *cs, <span class="keywordtype">int</span> res);
+<a name="l00065"></a>00065         
+<a name="l00069"></a>00069         <span class="keyword">virtual</span> <a class="code" href="classUserData.html#ea453765fe5004779dff6aa8e6094293">~UserData</a>();
+<a name="l00070"></a>00070         
+<a name="l00074"></a>00074         <span class="keywordtype">void</span> <a class="code" href="classUserData.html#e53938f8af5731ef5db24fed050c892e">togglePerform</a>(<span class="keywordtype">void</span>);
+<a name="l00075"></a>00075         
+<a name="l00080"></a>00080         <span class="keywordtype">bool</span> <a class="code" href="classUserData.html#1085a288b852df94607ce9f48b5c89e5">isPerforming</a>();
+<a name="l00081"></a>00081         
+<a name="l00085"></a>00085         <span class="keywordtype">int</span> <a class="code" href="classUserData.html#5fee65895717f86ea9741c0b2f87eb4d">getResult</a>();
+<a name="l00086"></a>00086         
+<a name="l00090"></a>00090         Csound* <a class="code" href="classUserData.html#36f4c0fd8c7d17cc50e4c52a4323834d">getCsound</a>();
+<a name="l00091"></a>00091         
+<a name="l00095"></a>00095         <span class="keywordtype">void</span> <a class="code" href="classUserData.html#8a958ccf5471cb04f860d0bf9fb5620a">destroyCsound</a>();
+<a name="l00096"></a>00096         
+<a name="l00103"></a>00103         <span class="keywordtype">void</span> <a class="code" href="classUserData.html#a51061d2c6afba28c74fe26a875dc9a5">setInteractionData</a>(<span class="keywordtype">double</span> degrees, <span class="keywordtype">double</span> reverb, <span class="keywordtype">double</span> distance);
+<a name="l00107"></a>00107         <span class="keywordtype">double</span> <a class="code" href="classUserData.html#23d8c7e152a7d584e28b52820bd9581e">getDegrees</a>();
+<a name="l00111"></a>00111         <span class="keywordtype">double</span> <a class="code" href="classUserData.html#9cb32c29b388c59ebfe0d10158866fc5">getReverb</a>();
+<a name="l00115"></a>00115         <span class="keywordtype">double</span> <a class="code" href="classUserData.html#32454e34c821ab179eee9322ea7b5508">getDistance</a>();
+<a name="l00119"></a>00119         MYFLT* <a class="code" href="classUserData.html#009afa5636657a4556dad124ae41a9b1">getPval</a>();
+<a name="l00124"></a>00124         <span class="keywordtype">void</span> <a class="code" href="classUserData.html#37b6eaa697198582e39e3fa777b89c8c">setPval</a>(MYFLT* val);
+<a name="l00125"></a>00125         
+<a name="l00126"></a>00126         
+<a name="l00127"></a>00127 };
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 <span class="preprocessor">#endif </span><span class="comment">/*USERDATA_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 17:06:39 2008 para CSoundTest por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

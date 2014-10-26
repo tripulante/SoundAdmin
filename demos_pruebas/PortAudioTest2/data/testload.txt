@@ -1,0 +1,9 @@
+;../data/03.wav
+;../data/alive.wav
+;../data/sine.wav
+;../data/free_drumloop.wav
+;../data/alive_44.wav
+;../data/free_drumloop_44.wav
+../data/free_drumloop_48.wav
+../data/sine_48.wav
+;enviar los archivos a cvs!

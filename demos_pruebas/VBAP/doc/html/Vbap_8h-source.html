@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>VBAP: Fichero Fuente Vbap.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>Vbap.h</h1><a href="Vbap_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef VBAP_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define VBAP_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;utility&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;gmtl/gmtl.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;gmtl/Math.h&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;gmtl/Matrix.h&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;gmtl/MatrixOps.h&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;gmtl/Vec.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#include "<a class="code" href="Speaker_8h.html">Speaker.h</a>"</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include "<a class="code" href="Triangle_8h.html">Triangle.h</a>"</span>
+<a name="l00019"></a>00019 
+<a name="l00024"></a><a class="code" href="Vbap_8h.html#d6bd39c07a48342422620114d92f6b96">00024</a> <span class="preprocessor">#define MIN_VOL_PER_SIDE (0.01)</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span>
+<a name="l00026"></a>00026 <span class="keyword">using namespace </span>std;
+<a name="l00027"></a>00027 <span class="keyword">using namespace </span>gmtl;
+<a name="l00028"></a>00028 <span class="keyword">using namespace </span>gmtl::Math;
+<a name="l00029"></a>00029 
+<a name="l00034"></a><a class="code" href="structspeakDist.html">00034</a> <span class="keyword">struct </span><a class="code" href="structspeakDist.html">speakDist</a>{
+<a name="l00038"></a><a class="code" href="structspeakDist.html#46d5dc3a69fa25e3300d324c53b89a10">00038</a>         <span class="keywordtype">int</span> <a class="code" href="structspeakDist.html#46d5dc3a69fa25e3300d324c53b89a10">i</a>;
+<a name="l00042"></a><a class="code" href="structspeakDist.html#90eda160c1a0d6be4ddafd87b69236d6">00042</a>         <span class="keywordtype">int</span> <a class="code" href="structspeakDist.html#90eda160c1a0d6be4ddafd87b69236d6">j</a>;
+<a name="l00046"></a><a class="code" href="structspeakDist.html#dd6d2f5f77ad94a7d1f8dfd4e9f3e4fe">00046</a>         <span class="keywordtype">float</span> <a class="code" href="structspeakDist.html#dd6d2f5f77ad94a7d1f8dfd4e9f3e4fe">distance</a>;
+<a name="l00052"></a><a class="code" href="structspeakDist.html#d0fea22c9850887dbdbc7a889fd014b3">00052</a>         <span class="keywordtype">bool</span> <a class="code" href="structspeakDist.html#d0fea22c9850887dbdbc7a889fd014b3">operator == </a>(<a class="code" href="structspeakDist.html">speakDist</a> b){
+<a name="l00053"></a>00053                 <span class="keywordflow">return</span> (<a class="code" href="structspeakDist.html#dd6d2f5f77ad94a7d1f8dfd4e9f3e4fe">distance</a> == b.<a class="code" href="structspeakDist.html#dd6d2f5f77ad94a7d1f8dfd4e9f3e4fe">distance</a> &amp;&amp; ((<a class="code" href="structspeakDist.html#46d5dc3a69fa25e3300d324c53b89a10">i</a> == b.<a class="code" href="structspeakDist.html#46d5dc3a69fa25e3300d324c53b89a10">i</a> &amp;&amp; <a class="code" href="structspeakDist.html#90eda160c1a0d6be4ddafd87b69236d6">j</a> == b.<a class="code" href="structspeakDist.html#90eda160c1a0d6be4ddafd87b69236d6">j</a>) || (<a class="code" href="structspeakDist.html#46d5dc3a69fa25e3300d324c53b89a10">i</a> == b.<a class="code" href="structspeakDist.html#90eda160c1a0d6be4ddafd87b69236d6">j</a> &amp;&amp; <a class="code" href="structspeakDist.html#90eda160c1a0d6be4ddafd87b69236d6">j</a> == b.<a class="code" href="structspeakDist.html#46d5dc3a69fa25e3300d324c53b89a10">i</a>)));
+<a name="l00054"></a>00054         }
+<a name="l00055"></a>00055         
+<a name="l00061"></a><a class="code" href="structspeakDist.html#4912c32744ef19c4c03d7e6613021b44">00061</a>         <span class="keywordtype">bool</span> <a class="code" href="structspeakDist.html#4912c32744ef19c4c03d7e6613021b44">operator &lt; </a>(<a class="code" href="structspeakDist.html">speakDist</a> a){
+<a name="l00062"></a>00062                 <span class="keywordflow">return</span> (<a class="code" href="structspeakDist.html#dd6d2f5f77ad94a7d1f8dfd4e9f3e4fe">distance</a> &lt; a.<a class="code" href="structspeakDist.html#dd6d2f5f77ad94a7d1f8dfd4e9f3e4fe">distance</a>);
+<a name="l00063"></a>00063         }
+<a name="l00064"></a>00064 };
+<a name="l00065"></a>00065 
+<a name="l00072"></a>00072 <span class="keywordtype">bool</span> sortFunction(<a class="code" href="structspeakDist.html">speakDist</a> a, <a class="code" href="structspeakDist.html">speakDist</a> b);
+<a name="l00073"></a>00073 
+<a name="l00082"></a><a class="code" href="classVbap.html">00082</a> <span class="keyword">class </span><a class="code" href="classVbap.html">Vbap</a>
+<a name="l00083"></a>00083 {
+<a name="l00087"></a>00087         <span class="keywordtype">int</span> numIntersec;
+<a name="l00091"></a>00091         <span class="keywordtype">int</span> numInside;
+<a name="l00095"></a>00095         ofstream out, outcrossed, selected;
+<a name="l00099"></a>00099         <a class="code" href="classSpeaker.html">Speaker</a>** totalSpeakers;
+<a name="l00100"></a>00100         
+<a name="l00104"></a>00104         <span class="keywordtype">int</span> numspeakers;
+<a name="l00105"></a>00105         
+<a name="l00109"></a>00109         vector&lt;speakDist&gt; distBetweenSpeakers;
+<a name="l00110"></a>00110         
+<a name="l00114"></a>00114         vector&lt;SpeakerTriangle*&gt; activeTriangles;
+<a name="l00115"></a>00115         
+<a name="l00119"></a>00119         <span class="keywordtype">float</span>** distances;
+<a name="l00120"></a>00120         
+<a name="l00128"></a>00128         <span class="keywordtype">void</span> intersection(<a class="code" href="structspeakDist.html">speakDist</a> a, <a class="code" href="structspeakDist.html">speakDist</a> b);
+<a name="l00129"></a>00129         
+<a name="l00135"></a>00135         <span class="keywordtype">bool</span> insideTriplet(<a class="code" href="classSpeakerTriangle.html">SpeakerTriangle</a> *a);
+<a name="l00136"></a>00136         
+<a name="l00142"></a>00142         <span class="keywordtype">bool</span> hasCrossedSide(<a class="code" href="classSpeakerTriangle.html">SpeakerTriangle</a> *b);
+<a name="l00143"></a>00143         
+<a name="l00147"></a>00147         <span class="keywordtype">void</span> printDistanceMatrix();
+<a name="l00148"></a>00148         
+<a name="l00149"></a>00149         
+<a name="l00150"></a>00150 <span class="keyword">public</span>:
+<a name="l00154"></a>00154         <a class="code" href="classVbap.html#6b7e7c41a599b59cb50ce00daa1b65d1">Vbap</a>(<span class="keywordtype">int</span> numspeak);
+<a name="l00158"></a>00158         <span class="keyword">virtual</span> <a class="code" href="classVbap.html#1a478b11c78131a8e509f2f555db5291">~Vbap</a>();
+<a name="l00159"></a>00159         
+<a name="l00163"></a>00163         <span class="keywordtype">bool</span> <a class="code" href="classVbap.html#7a564627022c2c94b16275697b2458ea">createSpeakers</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* configFilePath);
+<a name="l00164"></a>00164         
+<a name="l00168"></a>00168         <span class="keywordtype">void</span> <a class="code" href="classVbap.html#e53b9fd5e72d710955d2042e65c018da">createAllTriangles</a>();
+<a name="l00169"></a>00169         
+<a name="l00173"></a>00173         <span class="keywordtype">void</span> <a class="code" href="classVbap.html#6af0713ce7d6932ab110ce5389034d82">removeTriangles</a>();
+<a name="l00174"></a>00174         
+<a name="l00182"></a>00182         pair&lt;Vec3f, int*&gt;* <a class="code" href="classVbap.html#bf935446aae4108969cc93968826c898">selectTriangle</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
+<a name="l00183"></a>00183 };
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185 <span class="preprocessor">#endif </span><span class="comment">/*VBAP_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 18:07:36 2008 para VBAP por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

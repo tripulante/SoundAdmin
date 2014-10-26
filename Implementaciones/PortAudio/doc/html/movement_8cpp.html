@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Audio3DUniandes(SoundAdminPortaudio): Referencia del Archivo movement.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>Referencia del Archivo movement.cpp</h1>Mueve una fuente como una esfera, para escuchar el movimiento suave. <a href="#_details">Más...</a>
+<p>
+<code>#include &lt;iostream&gt;</code><br>
+<code>#include &lt;fstream&gt;</code><br>
+<code>#include &lt;string&gt;</code><br>
+<code>#include &lt;vector&gt;</code><br>
+<code>#include &lt;pthread.h&gt;</code><br>
+<code>#include &quot;<a class="el" href="SoundAdminPortaudio_8h-source.html">../soundadmin/SoundAdminPortaudio.h</a>&quot;</code><br>
+
+<p>
+Dependencia gráfica adjunta para movement.cpp:<p><center><img src="movement_8cpp__incl.png" border="0" usemap="#movement.cpp_map" alt=""></center>
+<map name="movement.cpp_map">
+<area href="SoundAdminPortaudio_8h.html" shape="rect" coords="176,328,453,352" alt="">
+<area href="Vbap_8h.html" shape="rect" coords="512,205,629,229" alt="">
+<area href="Listener_8h.html" shape="rect" coords="528,157,613,181" alt="">
+<area href="Source_8h.html" shape="rect" coords="531,451,611,475" alt="">
+<area href="AudioFileLoader_8h.html" shape="rect" coords="501,352,640,376" alt="">
+</map>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#e0d10bd35f12c9248b3d7e9761f6bdd0">loadfile</a> (const char *file)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#bbad9685a244938b0eaa27ed884b7752">loadAudioFiles</a> (const char *srcs)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#2e183738074ecba89502f528d2e619c2">moveSource</a> (void *)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#c0f2228420376f4db7e1274f2b41667c">main</a> (int argc, const char *argv[])</td></tr>
+
+<tr><td colspan="2"><br><h2>Variables</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#4525e628a149024078372c173766700f">test2</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#d103f7e35c49037bd98800015fa0c99e">srcPos</a> [3] = {0}</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#0e51383ba2b26548a0200e855f459416">speedx</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="13c57b666f056b5cae3bf6663337792c"></a><!-- doxytag: member="movement.cpp::speedy" ref="13c57b666f056b5cae3bf6663337792c" args="" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><b>speedy</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="233ce33724e787c41cb73eec6c452861"></a><!-- doxytag: member="movement.cpp::speedz" ref="233ce33724e787c41cb73eec6c452861" args="" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><b>speedz</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#c8bcf5e8b2ca8cb6cb4de5621a696187">lim</a> = 0.0f</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8cpp.html#3723d2ff8486e014a37dbb9ec274a9e6">alias</a></td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Mueve una fuente como una esfera, para escuchar el movimiento suave. 
+<p>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="bbad9685a244938b0eaa27ed884b7752"></a><!-- doxytag: member="movement.cpp::loadAudioFiles" ref="bbad9685a244938b0eaa27ed884b7752" args="(const char *srcs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadAudioFiles           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>srcs</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Carga archivos de audio al sistema Los archivos consisten de &lt;descripcion&gt;:&lt;ruta&gt; 
+</div>
+</div><p>
+<a class="anchor" name="e0d10bd35f12c9248b3d7e9761f6bdd0"></a><!-- doxytag: member="movement.cpp::loadfile" ref="e0d10bd35f12c9248b3d7e9761f6bdd0" args="(const char *file)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool loadfile           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>file</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Se encarga de la construcciÃ³n del sistema a partir de un archivo de configuraciÃ³n <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>Archivo que se va a leer </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si al administrador se pudo crear exitosamente </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c0f2228420376f4db7e1274f2b41667c"></a><!-- doxytag: member="movement.cpp::main" ref="c0f2228420376f4db7e1274f2b41667c" args="(int argc, const char *argv[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>argv</em>[]</td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+FunciÃ³n principal 
+</div>
+</div><p>
+<a class="anchor" name="2e183738074ecba89502f528d2e619c2"></a><!-- doxytag: member="movement.cpp::moveSource" ref="2e183738074ecba89502f528d2e619c2" args="(void *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * moveSource           </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Mueve una fuente de manera aleatoria 
+</div>
+</div><p>
+<hr><h2>Documentación de las variables</h2>
+<a class="anchor" name="3723d2ff8486e014a37dbb9ec274a9e6"></a><!-- doxytag: member="movement.cpp::alias" ref="3723d2ff8486e014a37dbb9ec274a9e6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="movement_8cpp.html#3723d2ff8486e014a37dbb9ec274a9e6">alias</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fuente que se va a mover 
+</div>
+</div><p>
+<a class="anchor" name="c8bcf5e8b2ca8cb6cb4de5621a696187"></a><!-- doxytag: member="movement.cpp::lim" ref="c8bcf5e8b2ca8cb6cb4de5621a696187" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="movement_8cpp.html#c8bcf5e8b2ca8cb6cb4de5621a696187">lim</a> = 0.0f          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Nos movemos en un Ã¡rea determinada por el usuario 
+</div>
+</div><p>
+<a class="anchor" name="0e51383ba2b26548a0200e855f459416"></a><!-- doxytag: member="movement.cpp::speedx" ref="0e51383ba2b26548a0200e855f459416" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="movement_8cpp.html#0e51383ba2b26548a0200e855f459416">speedx</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Velocidades 
+</div>
+</div><p>
+<a class="anchor" name="d103f7e35c49037bd98800015fa0c99e"></a><!-- doxytag: member="movement.cpp::srcPos" ref="d103f7e35c49037bd98800015fa0c99e" args="[3]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="movement_8cpp.html#d103f7e35c49037bd98800015fa0c99e">srcPos</a>[3] = {0}          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Permite el movimiento de fuentes en el espacio 
+</div>
+</div><p>
+<a class="anchor" name="4525e628a149024078372c173766700f"></a><!-- doxytag: member="movement.cpp::test2" ref="4525e628a149024078372c173766700f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a>* <a class="el" href="movement_8cpp.html#4525e628a149024078372c173766700f">test2</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Administrador que se va a probar 
+</div>
+</div><p>
+<hr size="1"><address style="align: right;"><small>Generado el Thu Jan 10 19:33:34 2008 para Audio3DUniandes(SoundAdminPortaudio) por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

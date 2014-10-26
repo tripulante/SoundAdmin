@@ -1,0 +1,111 @@
+#-------------------------------------------------------------#
+				Instrucciones de Ejecución
+#-------------------------------------------------------------#
+Proyecto de Grado
+Presentado por John Jairo Palma Robayo (200312089)
+Ingeniería de Sistemas y Computación
+Universidad de los Andes
+Enero de 2008
+
+#-------------------------------------------------------------#
+				Descripción
+#-------------------------------------------------------------#
+
+Este documento detalla la ejecución de pruebas del sistema 
+usando trackers mediante VRPN, a fin de demostrar el uso de 
+espacialización del proyecto desarrollado.
+
+#-------------------------------------------------------------#
+				Prerrequisitos
+#-------------------------------------------------------------#
+El sistema tiene que tener instaladas las siguientes 
+librerías, las cuales están disponibles en el sistema de
+prueba (genova.uniandes.edu.co):
+	PortAudio
+	GMTL
+	VRPN
+
+#-------------------------------------------------------------#
+				Ejecución
+#-------------------------------------------------------------#
+A continuación se presentan los pasos de ejecución de la
+prueba:
+
+1. Construir el proyecto usando Eclipse CDT:
+
+	1.1. Asegurarse de tener las librerías correctamente
+		enlazadas al proyecto.
+		
+			Click derecho en el proyecto->Properties->
+			C/C++ Build->Settings.
+			
+	1.2. Crear el ejecutable del proyecto.
+			
+			Project->Build Project
+			
+	1.3. Nota: En el caso de Uniandes3DAudio se incluyen
+		pruebas adicionales dentro del proyecto, las cuales
+		deben ser compiladas de manera distinta:
+		
+		1.3.1. Cambiar el valor de la variable PRUEBA, en 
+			src/tests/pruebas.h entre 0 y 4 para 
+			seleccionar la prueba a compilar.
+			
+		1.3.2. Construir el proyecto como en el paso 1.2.
+
+2. Conectarse al servidor VRPN (en este caso un computador
+	del laboratorio IMAGINE) usando otra consola:
+	
+					ssh imagine2[@uniandes.edu.co]
+
+3. Activar el servidor VRPN. En el caso de la máquina de 
+	prueba éste sería el procedimiento (pre: los trackers
+	a usar deben estar encendidos):
+	
+	3.1. Viajar hasta la carpeta que tiene instalado el 
+		servidor:
+			
+			cd /usr/local/VR/vrpn-xxx
+	
+	3.2. Ejecutar el script del servidor:
+	
+			./connectWithTrackers
+			
+4. Ejecutar la prueba:
+
+	4.1. Navegar hasta la carpeta Debug del proyecto.
+	
+	4.2. Ejecutar:
+	
+	Nota: Cada una de las pruebas incluye en 
+		la carpeta Debug scripts para ejecutarse.
+	
+	Nota: Cada proyecto despliega la lista de parámetros que 
+		recibe al ser introducidos de manera incorrecta.
+
+	4.2.1. En el caso del proyecto con OpenAL 
+		(OpenALTest):
+		
+		./OpenALTest <dirección tracker> 
+			<archivo audio 1> <archivo audio 2>
+			
+		Ejemplo (incluído en demo.sh)
+		
+		./OpenALTest Tracker0@tcp://imagine2 
+			/root/joh-palm/audioTestFiles/out.ogg 
+			/root/joh-palm/audioTestFiles/sine_44.wav
+			
+	4.2.2. En el proyecto usando PortAudio
+		(Uniandes3DAudio)
+	
+		./Uniandes3DAudio <dirección tracker> 
+			<archivo audio 1> <archivo audio 2>
+			<número speakers> <archivo configuración>
+		
+		Ejemplo (incluído en pruebaDarth.sh)
+		
+		./Uniandes3DAudio Tracker0@tcp://imagine2
+		/root/joh-palm/audioTestFiles/sabhit1_44.wav
+		/root/joh-palm/audioTestFiles/sabramb1_44.wav
+		5 
+		/root/joh-palm/workspace/Uniandes3DAudio/data/test_data2.txt

@@ -1,0 +1,5 @@
+base referer
+rect $classAudioFileLoader.html 5,98 133,122
+rect $classVbap.html 157,98 213,122
+rect $classSpeaker.html 148,7 223,31
+rect $classListener.html 283,98 357,122

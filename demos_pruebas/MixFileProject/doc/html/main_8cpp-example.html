@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>FileMixerPortaudio: main.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>main.cpp</h1>Archivo de prueba que permite mezclar dos seÃ±ales de audio distintas. <dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo (<a href="mailto:joh-palm@uniandes.edu.co">joh-palm@uniandes.edu.co</a> - <a href="mailto:tripulante@gmail.com">tripulante@gmail.com</a>)</dd></dl>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="FileMixer_8h.html">FileMixer.h</a>"</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00010"></a>00010 <span class="keyword">using namespace </span>std;
+<a name="l00011"></a>00011 
+<a name="l00015"></a>00015 <a name="_a0"></a><a class="code" href="classFileMixer.html">FileMixer</a> *mixer;
+<a name="l00016"></a>00016 
+<a name="l00020"></a>00020 <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *argv[]){
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022         <span class="keywordflow">if</span>(argc != 4){
+<a name="l00023"></a>00023                 cout &lt;&lt; <span class="stringliteral">"Nada"</span> &lt;&lt; endl;
+<a name="l00024"></a>00024                 <span class="keywordflow">return</span> -1;
+<a name="l00025"></a>00025         }
+<a name="l00026"></a>00026         <span class="keywordflow">else</span>{
+<a name="l00027"></a>00027                 stringstream sstream(stringstream::in | stringstream::out);
+<a name="l00028"></a>00028                 sstream &lt;&lt; argv[1];
+<a name="l00029"></a>00029 <span class="comment">//              cout &lt;&lt; sstream.str() &lt;&lt; endl;</span>
+<a name="l00030"></a>00030                 <span class="keywordtype">int</span> sampleRate;
+<a name="l00031"></a>00031                 sstream &gt;&gt; sampleRate;
+<a name="l00032"></a>00032 <span class="comment">//              cout &lt;&lt; sampleRate &lt;&lt; endl;</span>
+<a name="l00033"></a>00033                 <span class="keywordflow">try</span>{
+<a name="l00034"></a>00034                         mixer = <span class="keyword">new</span> <a class="code" href="classFileMixer.html">FileMixer</a>(sampleRate);
+<a name="l00035"></a>00035                         mixer-&gt;<a name="a1"></a><a class="code" href="classFileMixer.html#f8f981be6728370b9c8228f99ba65d0c">createSource</a>(<span class="stringliteral">"test1"</span>, argv[2]);
+<a name="l00036"></a>00036                         mixer-&gt;<a class="code" href="classFileMixer.html#f8f981be6728370b9c8228f99ba65d0c">createSource</a>(<span class="stringliteral">"test2"</span>, argv[3]);
+<a name="l00037"></a>00037                         mixer-&gt;<a name="a2"></a><a class="code" href="classFileMixer.html#91de49bd83bafdd17e4938d43d32918b">startPlaying</a>();
+<a name="l00038"></a>00038                         <span class="keywordtype">char</span> c;
+<a name="l00039"></a>00039                         <span class="keywordflow">while</span>(c != <span class="charliteral">'o'</span>){
+<a name="l00040"></a>00040                                 cin &gt;&gt; c;
+<a name="l00041"></a>00041                                 <span class="keywordflow">if</span>(c == <span class="charliteral">'c'</span>)
+<a name="l00042"></a>00042                                         mixer-&gt;<a name="a3"></a><a class="code" href="classFileMixer.html#a96392a90449e69147c1e2f7164c9ddc">changeRandomGain</a>();
+<a name="l00043"></a>00043                         }
+<a name="l00044"></a>00044                         <span class="keyword">delete</span> mixer;
+<a name="l00045"></a>00045                         <span class="keywordflow">return</span> 0;
+<a name="l00046"></a>00046                 }
+<a name="l00047"></a>00047                 <span class="keywordflow">catch</span>(string&amp; s){
+<a name="l00048"></a>00048                         cout &lt;&lt; s &lt;&lt; endl;
+<a name="l00049"></a>00049                         <span class="keywordflow">return</span> -1;
+<a name="l00050"></a>00050                 }
+<a name="l00051"></a>00051         }
+<a name="l00052"></a>00052 }
+</pre></div> <hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:57:08 2008 para FileMixerPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

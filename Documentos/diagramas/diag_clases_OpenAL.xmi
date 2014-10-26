@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI xmlns:UML="http://schema.omg.org/spec/UML/1.3" verified="false" timestamp="2008-01-14T12:14:02" xmi.version="1.2" >
+ <XMI.header>
+  <XMI.documentation>
+   <XMI.exporter>umbrello uml modeller http://uml.sf.net</XMI.exporter>
+   <XMI.exporterVersion>1.5.8</XMI.exporterVersion>
+   <XMI.exporterEncoding>UnicodeUTF8</XMI.exporterEncoding>
+  </XMI.documentation>
+  <XMI.metamodel xmi.name="UML" href="UML.xml" xmi.version="1.3" />
+ </XMI.header>
+ <XMI.content>
+  <UML:Model isSpecification="false" isLeaf="false" isRoot="false" xmi.id="m1" isAbstract="false" name="Modelo UML" >
+   <UML:Namespace.ownedElement>
+    <UML:Stereotype isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="folder" isRoot="false" isAbstract="false" name="folder" />
+    <UML:Stereotype isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="datatype" isRoot="false" isAbstract="false" name="datatype" />
+    <UML:Stereotype isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="constructor" isRoot="false" isAbstract="false" name="constructor" />
+    <UML:Model stereotype="folder" isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="Logical View" isRoot="false" isAbstract="false" name="Logical View" >
+     <UML:Namespace.ownedElement>
+      <UML:Package stereotype="folder" isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="Datatypes" isRoot="false" isAbstract="false" name="Datatypes" >
+       <UML:Namespace.ownedElement>
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="uV7w0RsnxL2N" isRoot="false" isAbstract="false" name="int" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="IOZ3oM0hkNj1" isRoot="false" isAbstract="false" name="char" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="dSHKfnrZGyWG" isRoot="false" isAbstract="false" name="bool" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="PM3Mh4iySH1G" isRoot="false" isAbstract="false" name="float" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="bzwLNdKy5bIi" isRoot="false" isAbstract="false" name="double" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="M7Id5mrS8tnp" isRoot="false" isAbstract="false" name="short" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="xTlNkmcKmYd7" isRoot="false" isAbstract="false" name="long" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="By5EXLxuTDVW" isRoot="false" isAbstract="false" name="unsigned int" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="zMz7DkuADgYv" isRoot="false" isAbstract="false" name="unsigned short" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="QADCgrHrpK3M" isRoot="false" isAbstract="false" name="unsigned long" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="gyE7Bhd84aFF" isRoot="false" isAbstract="false" name="string" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="JThPNti1nRpQ" isRoot="false" isAbstract="false" name="vorbis_info*" elementReference="iWtDGbE9cKgq" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="ALu3OKYXZWgo" isRoot="false" isAbstract="false" name="list&lt; SourceFileAL * >" elementReference="qp08mgEEPReq" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="YIpYrEuQeG7w" isRoot="false" isAbstract="false" name="SourceFileAL*" elementReference="7S6FNqUBP71Y" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="ibaNpfH5dMi1" isRoot="false" isAbstract="false" name="list&lt; string >*" elementReference="qp08mgEEPReq" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="EiwF6KMfuCCH" isRoot="false" isAbstract="false" name="float*" elementReference="PM3Mh4iySH1G" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="Yy1GEOAdYfqr" isRoot="false" isAbstract="false" name="Source*" elementReference="s0GAVxJBWrWM" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="W4IjFae5boNt" isRoot="false" isAbstract="false" name="list&lt; SourceStructAL * >" elementReference="qp08mgEEPReq" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="l9VdE2iqEt3E" isRoot="false" isAbstract="false" name="SoundLoaderAL*" elementReference="BEyBHhYGZ4hT" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="9cqorgQaLhdv" isRoot="false" isAbstract="false" name="SourceStructAL*" elementReference="aTYa7VfvkINu" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="vyVKTQJCO3jH" isRoot="false" isAbstract="false" name="ALCcontext*" elementReference="au1cIPSLCtih" />
+        <UML:DataType stereotype="datatype" isSpecification="false" isLeaf="false" visibility="public" namespace="Datatypes" xmi.id="fkx1neIuFAzz" isRoot="false" isAbstract="false" name="ALCdevice*" elementReference="uNh7ENm9JHTn" />
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Class comment="Clase que define un archivo en OpenAL
+@author John Jairo Palma Robayo" isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="7S6FNqUBP71Y" isRoot="false" isAbstract="false" name="SourceFileAL" >
+       <UML:Classifier.feature>
+        <UML:Attribute comment="Descripci�n del archivo" isSpecification="false" visibility="private" xmi.id="hEIQqqwI6VR7" type="gyE7Bhd84aFF" name="description" />
+        <UML:Attribute comment="Buffer generado a partir de la carga del archivo" isSpecification="false" visibility="private" xmi.id="L7xkEyGuCZI2" type="0RHuL0QQTVfo" name="buffer" />
+        <UML:Operation stereotype="constructor" comment="Constructor de la clase. Construye una nueva clase a partir
+de un buffer para OpenAL y su descripci�n
+&lt;pre>: buf != NULL, desc != &quot;&quot;
+@param desc descripci�n asociada al archivo
+@param buf Buffer OpenAL asociado al archivo" isSpecification="false" isLeaf="false" visibility="public" xmi.id="NFITihZg9qZU" isRoot="false" isAbstract="false" isQuery="false" name="SourceFileAL" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="ozvFUY2pgzYu" value="" type="gyE7Bhd84aFF" name="desc" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="woo8L59jKPC0" value="" type="0RHuL0QQTVfo" name="buf" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="destructor de la clase. Elimina la descripci�n de la clase y elimina el 
+buffer asociado a la clase.
+&lt;pre>: El buffer no est� asociado a ninguna fuente." isSpecification="false" isLeaf="false" visibility="public" xmi.id="7lgGZFiMFbbh" isRoot="false" isAbstract="false" isQuery="false" name="~ SourceFileAL" />
+        <UML:Operation comment="@return buffer AL generado para este archivo" isSpecification="false" isLeaf="false" visibility="public" xmi.id="AdXqb3iXrVdD" isRoot="false" isAbstract="false" isQuery="false" name="getBuffer" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="akuuA6sHqYVN" type="0RHuL0QQTVfo" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Cambia el buffer asignado para este archivo
+@param buf Nuevo buffer AL designado para este archivo" isSpecification="false" isLeaf="false" visibility="public" xmi.id="mDj1nJgvuBlV" isRoot="false" isAbstract="false" isQuery="false" name="setBuffer" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="ET06weHWMBOW" value="" type="0RHuL0QQTVfo" name="buf" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="@return descripci�n asociada a este archivo" isSpecification="false" isLeaf="false" visibility="public" xmi.id="FGl3pGRbS8aD" isRoot="false" isAbstract="false" isQuery="false" name="getDescription" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="PE8KQrneImiF" type="gyE7Bhd84aFF" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="@param nuDesc Nueva descripci�n asociada a este archivo" isSpecification="false" isLeaf="false" visibility="public" xmi.id="Ozlk8AFOQ0RD" isRoot="false" isAbstract="false" isQuery="false" name="setDescription" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="FqofxMsMb0e1" value="" type="gyE7Bhd84aFF" name="nuDesc" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="0RHuL0QQTVfo" isRoot="false" isAbstract="false" name="ALuint" />
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="iWtDGbE9cKgq" isRoot="false" isAbstract="false" name="vorbis_info" />
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="cXqCpW28xkVK" isRoot="false" isAbstract="false" name="ALenum" />
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="1uVRum9WJxi8" isRoot="false" isAbstract="false" name="OggVorbis_File" />
+      <UML:Class comment="Definiciones*//**
+Clase que se encarga de la carga de archivos para OpenAL
+Convierte los archivos conseguidos en buffers para el uso
+@author John Jairo Palma Robayo" isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="BEyBHhYGZ4hT" isRoot="false" isAbstract="false" name="SoundLoaderAL" >
+       <UML:Classifier.feature>
+        <UML:Attribute comment="Lista de archivos AL creados por el sistema" isSpecification="false" visibility="private" xmi.id="S8X2IgO93wNs" type="ALu3OKYXZWgo" name="files" />
+        <UML:Operation comment="Mtodo auxiliar que se encarga de crear un archivo a partir de un wav.
+@param wavfile Nombre del archivo del que se quiere crear el buffer 
+@return AL_NONE si el archivo no se pudo abrir." isSpecification="false" isLeaf="false" visibility="private" xmi.id="6RpcQnUgLrUL" isRoot="false" isAbstract="false" isQuery="false" name="createBufferFromWav" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="lg0oaNegoRJD" type="0RHuL0QQTVfo" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="u7X8pSaIa5Kt" value="" type="gyE7Bhd84aFF" name="wavfile" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Mtodo auxiliar que permite crear un buffer AL a partir de un archivo OggVorbis
+@param oggfile Nombre del archivo del que se quiere crear el buffer
+@return AL_NONE si el buffer no se pudo crear o el archivo no se pudo abrir" isSpecification="false" isLeaf="false" visibility="private" xmi.id="EltXdLrVTMdI" isRoot="false" isAbstract="false" isQuery="false" name="createBufferFromOgg" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="ZQlLs2W4lPcO" type="0RHuL0QQTVfo" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="oBYNGqE1UEo4" value="" type="gyE7Bhd84aFF" name="oggfile" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Método auxiliar que usa libsndfile para cargar archivos con otras extensiones
+@param file Nombre del archivo que desea usar para el buffer
+@return AL_NONE si el buffer no se puedo crear o el archivo no se pudo abrir" isSpecification="false" isLeaf="false" visibility="private" xmi.id="jRsCnTScf1xt" isRoot="false" isAbstract="false" isQuery="false" name="createBufferFromOtherExtension" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="7o0tBaFu176o" type="0RHuL0QQTVfo" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="pBtKNhOw57Hv" value="" type="gyE7Bhd84aFF" name="file" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation stereotype="constructor" comment="Constructor de la clase" isSpecification="false" isLeaf="false" visibility="public" xmi.id="bXOEYL7LW0ft" isRoot="false" isAbstract="false" isQuery="false" name="SoundLoaderAL" />
+        <UML:Operation comment="Destructor de la clase" isSpecification="false" isLeaf="false" visibility="public" xmi.id="f4nj95eHrc82" isRoot="false" isAbstract="false" isQuery="false" name="~ SoundLoaderAL" />
+        <UML:Operation comment="Mtodo encargado de cargar los distintos archivos y convertirlos en buffers OpenAL
+@param file Ruta/Nombre del archivo del cul se cargarn todos
+@throw exception Si el archivo no se puede abrir  
+*///void loadFiles(string file) throw (string);/**
+Método encargado de cargar un archivo.
+@param description Descripción del archivo
+@param file Ruta al archivo.
+@throw string Si el archivo no se puede abrir.
+@throw string Si el archivo no se pudo cargar." isSpecification="false" isLeaf="false" visibility="public" xmi.id="CNvBTzy2WMG2" isRoot="false" isAbstract="false" isQuery="false" name="loadFile" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="gLOAM34z5piF" value="" type="gyE7Bhd84aFF" name="description" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="uNWlxem8zhJQ" value="" type="gyE7Bhd84aFF" name="file" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Mtodo encargardo de iterar por todos los archivos y destruirlos
+&lt;pre> los archivos no tienen ningn source asociado
+@throw exception Alguno de los buffers no pudo ser destruido" isSpecification="false" isLeaf="false" visibility="public" xmi.id="eFSBagBG2ZQM" isRoot="false" isAbstract="false" isQuery="false" name="destroyAllFiles" />
+        <UML:Operation comment="Mtodo encargado de localizar un archivo dada su descripcin
+@param desc descripcin del archivo
+@return NULL si el archivo no existe. Apuntador al objeti si est." isSpecification="false" isLeaf="false" visibility="public" xmi.id="bSLgI2vAPPuK" isRoot="false" isAbstract="false" isQuery="false" name="findFile" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="G07dOzxNfQMy" type="YIpYrEuQeG7w" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="1gSzLkPzzs8Z" value="" type="gyE7Bhd84aFF" name="desc" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Método que retorna las descripciones de los archivos cargados
+@return Lista con los archivos. Puede ser una lista vacía en caso de no habrse cargado nada" isSpecification="false" isLeaf="false" visibility="public" xmi.id="Amv9c2hAKUh9" isRoot="false" isAbstract="false" isQuery="false" name="getFileDescriptions" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="LgPy4lwEVqL7" type="ibaNpfH5dMi1" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="qp08mgEEPReq" isRoot="false" isAbstract="false" name="list" />
+      <UML:Dependency isSpecification="false" visibility="public" namespace="Logical View" xmi.id="BC5kGmE5ZCBM" client="BEyBHhYGZ4hT" name="" supplier="7S6FNqUBP71Y" />
+      <UML:Class comment="Clase que define una estructura que combina los archivos y las fuentes
+@author John Jairo Palma Robayo" isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="aTYa7VfvkINu" isRoot="false" isAbstract="false" name="SourceStructAL" >
+       <UML:Classifier.feature>
+        <UML:Attribute comment="Apuntador que define esta fuente para OpenAL" isSpecification="false" visibility="private" xmi.id="OCXFJyPrS7sw" type="0RHuL0QQTVfo" name="source" />
+        <UML:Attribute comment="Archivo de audio asociado a esta fuente" isSpecification="false" visibility="private" xmi.id="n5mwBXWm03K7" type="YIpYrEuQeG7w" name="file" />
+        <UML:Attribute comment="Fuente en movimiento asociada a esta estructura" isSpecification="false" visibility="private" xmi.id="bFg4MY08dl4n" type="Yy1GEOAdYfqr" name="src" />
+        <UML:Operation stereotype="constructor" comment="Constructor de la clase. Crea una nueva estructura AL para la reproduccin de la
+fuente
+@param f Archivo asociado a la fuente
+@param s fuente
+@throw exception Si no se puede crear la fuente OpenAL " isSpecification="false" isLeaf="false" visibility="public" xmi.id="IYXIbrO9nPO2" isRoot="false" isAbstract="false" isQuery="false" name="SourceStructAL" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="nYfJEV8pipr4" value="" type="YIpYrEuQeG7w" name="f" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="NsAzdCkvlHBK" value="" type="Yy1GEOAdYfqr" name="s" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="destructor de la clase" isSpecification="false" isLeaf="false" visibility="public" xmi.id="6ZSuwqujOZ0a" isRoot="false" isAbstract="false" isQuery="false" name="~ SourceStructAL" />
+        <UML:Operation comment="Actualiza la posicin de la fuente
+@param x Nueva posicin en x de la fuente
+@param y Nueva posicin en y de la fuente
+@param z Nueva posicin en z de la fuente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="29QiwFkH7vGi" isRoot="false" isAbstract="false" isQuery="false" name="updateSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="50bqFlBMKbEH" value="" type="PM3Mh4iySH1G" name="x" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="R8yphxOh4mP0" value="" type="PM3Mh4iySH1G" name="y" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="17H72Wp8UPwk" value="" type="PM3Mh4iySH1G" name="z" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="cambia el archivo asociado a la estructura
+@param f Nuevo archivo asociado a la estructura" isSpecification="false" isLeaf="false" visibility="public" xmi.id="A54SgIh7Qev5" isRoot="false" isAbstract="false" isQuery="false" name="setFile" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="bJmf59d4EuBH" value="" type="YIpYrEuQeG7w" name="f" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Cambia la fuente asociada a la estructura
+@param s Nueva fuente." isSpecification="false" isLeaf="false" visibility="public" xmi.id="Q1NtOHdYNh01" isRoot="false" isAbstract="false" isQuery="false" name="setSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="zg7PK2SvJCYM" value="" type="Yy1GEOAdYfqr" name="s" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="@return la fuente actual de la estructura" isSpecification="false" isLeaf="false" visibility="public" xmi.id="JBQX3cmSb9Lz" isRoot="false" isAbstract="false" isQuery="false" name="getSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="PyVmdTlc9szT" type="Yy1GEOAdYfqr" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="@return Archivo actual asociado a la fuente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="uRMBbsXu3yR5" isRoot="false" isAbstract="false" isQuery="false" name="getFile" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="YEX9Ns6kobUR" type="YIpYrEuQeG7w" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Pone a sonar la fuente. 
+&lt;pre> La fuente es ubicada previamente de acuerdo a la posicin del oyente si es ambiente
+@param loop indica si la fuente se reproduce constantemente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="4G1E8yf1N2Cy" isRoot="false" isAbstract="false" isQuery="false" name="playSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="uiswgJ1EXWLt" value="" type="dSHKfnrZGyWG" name="loop" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Detiene la fuente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="OPdC08b2OcEU" isRoot="false" isAbstract="false" isQuery="false" name="stopSource" />
+        <UML:Operation comment="Pausa la fuente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="YuTvugtmOji2" isRoot="false" isAbstract="false" isQuery="false" name="pauseSource" />
+        <UML:Operation comment="Indica que la fuente debe ser ambiente o no
+@param ambient Booleano que indica si la fuente es (true) o no (false) ambiente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="2hEYDXRZw4jw" isRoot="false" isAbstract="false" isQuery="false" name="setAsAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="AKwWuB1S3ULv" value="" type="dSHKfnrZGyWG" name="ambient" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Indica si la fuente actualmente es ambiente
+@return true si la fuente es ambiente, false si no" isSpecification="false" isLeaf="false" visibility="public" xmi.id="8EhUvOUy5iWH" isRoot="false" isAbstract="false" isQuery="false" name="isAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="FxqBza58s0en" type="dSHKfnrZGyWG" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class comment="Clase que se encarga de administrar las fuentes generadas mediante
+OpenAL
+@author John Jairo Palma Robayo (joh-palm@uniandes.edu.co/tripulante@gmail.com)" isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="Yr1pJLmplw1E" isRoot="false" isAbstract="false" name="SoundAdministratorOpenAL" >
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="hIBm37IGDBIx" />
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Attribute comment="Lista de fuentes activas en el sistema" isSpecification="false" visibility="private" xmi.id="83ppyUtfMvNg" type="W4IjFae5boNt" name="active" />
+        <UML:Attribute comment="Cargador de archivos" isSpecification="false" visibility="private" xmi.id="O7pGueS0fHpe" type="l9VdE2iqEt3E" name="loader" />
+        <UML:Attribute comment="Contexto ALC para iniclaizar OpenAL" isSpecification="false" visibility="private" xmi.id="7du7mDYK6XuM" type="vyVKTQJCO3jH" name="context" />
+        <UML:Attribute comment="Device ALC para que OpenAL pueda trabajar" isSpecification="false" visibility="private" xmi.id="LVKR0CnvZT2l" type="fkx1neIuFAzz" name="device" />
+        <UML:Operation comment="Obtiene una estructura entre las fuentes activas.
+@param id Identificador de la fuente a buscar
+@return Pointer a la fuente obtenida.NULL si no existe." isSpecification="false" isLeaf="false" visibility="private" xmi.id="jhH5cejMnFx0" isRoot="false" isAbstract="false" isQuery="false" name="getSourceActive" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="LNF7aD5prvHM" type="9cqorgQaLhdv" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="FgqTXrhvyUAs" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Obtiene una estructura entre las fuentes ambientes.
+@param id Identificador de la fuente a buscar
+@return Pointer a la fuente obtenida.NULL si no existe." isSpecification="false" isLeaf="false" visibility="private" xmi.id="kyHiTRZa1POs" isRoot="false" isAbstract="false" isQuery="false" name="getAmbientSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="i0mXt3td0BLR" type="9cqorgQaLhdv" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="3pQMU4IqPXvz" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation stereotype="constructor" comment="Constructor de la clase" isSpecification="false" isLeaf="false" visibility="public" xmi.id="omu61Nte5oft" isRoot="false" isAbstract="false" isQuery="false" name="SoundAdministratorOpenAL" />
+        <UML:Operation comment="Destructor de la clase" isSpecification="false" isLeaf="false" visibility="public" xmi.id="Qvlg5jdOCvoD" isRoot="false" isAbstract="false" isQuery="false" name="~ SoundAdministratorOpenAL" />
+        <UML:Operation comment="//Mtodos implementados de la clase heredada/**
+Se encarga de inicializar el administrador de acuerdo al API
+@throws SoundException en caso que no se pueda inicalizar el API " isSpecification="false" isLeaf="false" visibility="public" xmi.id="8Z8f08RpuLvv" isRoot="false" isAbstract="false" isQuery="false" name="initializeAdministrator" />
+        <UML:Operation comment="Cierra el administrador de acuerdo al API que subyace en la 
+implementación.
+@throws SoundException en caso que no se pueda inicalizar el API" isSpecification="false" isLeaf="false" visibility="public" xmi.id="hmZmYCdy7PcA" isRoot="false" isAbstract="false" isQuery="false" name="closeAdministrator" />
+        <UML:Operation comment="Se encarga de configurar el sistema de acuerdo a lo que se va a usar
+@param sr Sample Rate del programa
+@param br Bitrate (Tamaño de palabra) a usar
+@param numSpeakers Número de parlantes a usar
+*///  void setConfiguration(SampleRate sr, BitRate br, int numParlantes)  ;//Creación, asignación y destrucción de fuentes/**
+Crea una fuente puntual en el origen asociada al archivo indicado por
+fileDesc. La fuente se asocia a una descripción del archivo asociada
+desde la carga
+@param id Identificador de la nueva fuente
+@param fileDesc Descripción del identificador
+@param amb bool que indica si la fuente es ambiente o no
+@return true Si la fuente pudo ser creada exitosamente
+@return false Si la fuente no pudo ser creada
+@throw SoundException si el archivo descrito por fileDesc no existe
+@throw SoundException si ya existe una fuente con el id solicitado" isSpecification="false" isLeaf="false" visibility="public" xmi.id="8EYK9MXHwdxw" isRoot="false" isAbstract="false" isQuery="false" name="createSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="YeLuiQnzBcKI" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="lMjffcYMM57u" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="HkrM7RWFf5Yn" value="" type="gyE7Bhd84aFF" name="fileDesc" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="P34JhzESLx61" value="" type="dSHKfnrZGyWG" name="amb" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//reproducción de fuentes/**
+Destruye la fuente. En este caso la separa del objeto audio
+con el que esté asociada y la elimina
+@param id Identificador de la fuente a eliminar " isSpecification="false" isLeaf="false" visibility="public" xmi.id="1qWht4UH5Wam" isRoot="false" isAbstract="false" isQuery="false" name="destroySource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="WoDpkJoIvAAd" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Indica que la fuente con id &lt;b>id&lt;/b> debe empezar a sonar
+Si la fuente está sonando o no existe, el comando no hace nada
+@param id Identificador de la fuente que se quiere hacer sonar
+@param loop Indica si el sonido debe ser reproducido constantemente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="avbjXv0ZlUEd" isRoot="false" isAbstract="false" isQuery="false" name="playSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="WgubASOgFbUz" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="sIFnQNRzJ2iq" value="" type="dSHKfnrZGyWG" name="loop" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Detiene la reproducción de una fuente en el momento actual
+@param id Identificador de la fuente a pausar." isSpecification="false" isLeaf="false" visibility="public" xmi.id="vgNeAZHgF9IQ" isRoot="false" isAbstract="false" isQuery="false" name="pauseSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="ce4rDYo5p1sF" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Detiene la reproducción de una fuente. En el momento que se decida
+resumir la reproducción la fuente empieza desde el principio 
+@param id Identificador de la fuente a detener" isSpecification="false" isLeaf="false" visibility="public" xmi.id="OJCfJtWEZrtk" isRoot="false" isAbstract="false" isQuery="false" name="stopSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="R8OeIe4sI7hV" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Libera la fuente del archivo fuente que está usando en el momento
+como fuente sonora
+@param id identificador de la fuente " isSpecification="false" isLeaf="false" visibility="public" xmi.id="dVaSURgsisY2" isRoot="false" isAbstract="false" isQuery="false" name="detachSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="l2EJr51IEPxU" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="reasigna a la fuente el archivo señalado por desc
+@param id Identificador de la fuente
+@param desc Descripción de la fuente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="2zMK63okWMA0" isRoot="false" isAbstract="false" isQuery="false" name="attachSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="rGDLdOLOC9ut" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="nqqWhMWQMkjE" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="qkU28PUAPqST" value="" type="gyE7Bhd84aFF" name="desc" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="reproduce todas las fuentes en el sistema" isSpecification="false" isLeaf="false" visibility="public" xmi.id="WQKq914zkXzs" isRoot="false" isAbstract="false" isQuery="false" name="playAllSources" />
+        <UML:Operation comment="Pausa todas las fuentes activas en el sistema" isSpecification="false" isLeaf="false" visibility="public" xmi.id="wT0LHSn6jyRK" isRoot="false" isAbstract="false" isQuery="false" name="pauseAllSources" />
+        <UML:Operation comment="Detiene todas las fuentes en el sistema" isSpecification="false" isLeaf="false" visibility="public" xmi.id="KmiXtdON1gEA" isRoot="false" isAbstract="false" isQuery="false" name="stopAllSources" />
+        <UML:Operation comment="Retorna una lista con los nombres de las fuentes en el sistema
+@return Lista con nombres de fuentes" isSpecification="false" isLeaf="false" visibility="public" xmi.id="iG7Sn6IkXI3o" isRoot="false" isAbstract="false" isQuery="false" name="getSourceIds" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="iqsRpJj93Sex" type="ibaNpfH5dMi1" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="retorna una lista con los nombres de las fuentes en reproducción
+@return Lista de nombres de fuentes activas" isSpecification="false" isLeaf="false" visibility="public" xmi.id="33K2hYDNnIna" isRoot="false" isAbstract="false" isQuery="false" name="getActiveSources" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="N5IuLMh4AZTx" type="ibaNpfH5dMi1" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Destruye todas las fuentes" isSpecification="false" isLeaf="false" visibility="public" xmi.id="tD5wdjrekCeS" isRoot="false" isAbstract="false" isQuery="false" name="destroyAllSources" />
+        <UML:Operation comment="indica si existe un archivo con una descripción dada
+@param id identificador de la fuente
+@return true si existe una fuente con nombre &lt;b>id&lt;/b>. false si no  " isSpecification="false" isLeaf="false" visibility="public" xmi.id="irnV8b4VeMP0" isRoot="false" isAbstract="false" isQuery="false" name="existsSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="ZHtJRYj7NXbV" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="g42reVmVgrPH" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//Carga de archivos/**
+retorna una lista con las descripciones de todos los archivos
+@return lista de descripciones" isSpecification="false" isLeaf="false" visibility="public" xmi.id="8f0mzOkgSmV4" isRoot="false" isAbstract="false" isQuery="false" name="getFileDescriptions" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="GHZw7xEgE7zd" type="ibaNpfH5dMi1" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Carga los archivos indicados en un archivo junto con su
+descripción.
+Formato del archivo:
+&lt;descripción del archivo>:&lt;ruta_archivo>
+;&lt;comentario>
+@param dataFile Archivo con las rutas a los archivos de audio y su descripción
+@throw string el archivo no se pudo abrir o no existe
+@throw string el archivo tiene un formato incorrecto
+*///void loadFiles(string dataFile) throw (string);/**
+Carga un archivo individual.
+@param description descripción del archivo
+@param path Ruta al archivo
+@throw string Mensaje de error si el archivo no pudo ser cargado." isSpecification="false" isLeaf="false" visibility="public" xmi.id="dhk1ELWK0X60" isRoot="false" isAbstract="false" isQuery="false" name="loadFile" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="vpeLb7QrOxoT" value="" type="gyE7Bhd84aFF" name="description" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="u09857ljoWk2" value="" type="gyE7Bhd84aFF" name="path" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Borra todos los archivos cargados" isSpecification="false" isLeaf="false" visibility="public" xmi.id="pEMolQmeFQ0p" isRoot="false" isAbstract="false" isQuery="false" name="cleanFiles" />
+        <UML:Operation comment="indica si existe un archivo con una descripción dada
+@param desc Descripción del archivo
+@return true si existe un archivo con descripción &lt;b>desc&lt;/b>. false si no  " isSpecification="false" isLeaf="false" visibility="public" xmi.id="XOgtLSNGQUOU" isRoot="false" isAbstract="false" isQuery="false" name="fileExists" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="8zVLPVAurpmD" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="b8DPcvPP9jDt" value="" type="gyE7Bhd84aFF" name="desc" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//movimiento de fuentes /**
+Actualiza la ubicación de una fuente en el espacio
+@param id identificador de la fuente
+@param x Posición nueva de la fuente en x
+@param y Posición nueva de la fuente en y
+@param z Posición nueva de la fuente en z" isSpecification="false" isLeaf="false" visibility="public" xmi.id="H9TgdpADvLcX" isRoot="false" isAbstract="false" isQuery="false" name="updateSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="G0xNj8Er8kDV" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="DLO5AAISJj6u" value="" type="PM3Mh4iySH1G" name="x" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="YG7UbizpiuAP" value="" type="PM3Mh4iySH1G" name="y" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="3PF99QeKl2Pw" value="" type="PM3Mh4iySH1G" name="z" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//sonido ambiente, relacionado con el listener (escucha)/**
+Asocia una fuente a la escucha de manera que se mueve con ella
+y tiene la misma amplitud en todos los puntos.
+@param id Identificador de la fuente a asociar
+@param ambient Indica si la fuente es ambiente o no
+@throws string si la fuente no existe o ya fue asociada al listener" isSpecification="false" isLeaf="false" visibility="public" xmi.id="CfMTOQMxgRPF" isRoot="false" isAbstract="false" isQuery="false" name="useSourceAsAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="7O4nHCDIbQRi" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="q33Z6QTG6niU" value="" type="dSHKfnrZGyWG" name="ambient" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Permite consultar si una fuente es ambiente o no
+@param id Identificador de la fuente a consultar
+@return true si la fuente es ambiente o false si no o no existe " isSpecification="false" isLeaf="false" visibility="public" xmi.id="D2PrRo6ZB8MQ" isRoot="false" isAbstract="false" isQuery="false" name="isAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="2kV8YBbjDybc" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="LXiuv7bjAeJE" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Actualiza la ubicación del listener en el espacio
+@param x Posición nueva del listener en x
+@param y Posición nueva del listener en y
+@param z Posición nueva del listener en z" isSpecification="false" isLeaf="false" visibility="public" xmi.id="lhBuoWK9101v" isRoot="false" isAbstract="false" isQuery="false" name="updateListener" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="7ceHEvWHgzNC" value="" type="PM3Mh4iySH1G" name="x" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="AwvLvUvgA7Yy" value="" type="PM3Mh4iySH1G" name="y" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="bs5as6VxjAEx" value="" type="PM3Mh4iySH1G" name="z" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Separa al listener de todas las fuentes asociadas a él." isSpecification="false" isLeaf="false" visibility="public" xmi.id="3iCjhatpUn8N" isRoot="false" isAbstract="false" isQuery="false" name="cleanAmbientSources" />
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization isSpecification="false" child="Yr1pJLmplw1E" visibility="public" namespace="Logical View" xmi.id="hIBm37IGDBIx" parent="BdDC6Z7Elohh" discriminator="" name="" />
+      <UML:Dependency isSpecification="false" visibility="public" namespace="Logical View" xmi.id="dMiGLLBdjxf4" client="Yr1pJLmplw1E" name="" supplier="aTYa7VfvkINu" />
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="au1cIPSLCtih" isRoot="false" isAbstract="false" name="ALCcontext" />
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="uNh7ENm9JHTn" isRoot="false" isAbstract="false" name="ALCdevice" />
+      <UML:Class comment="Clase que permite cargar un archivo .ogg y convertirlo a un buffer OpenAL.
+TODO Optimizar la carga para que no sea tan lenta
+@author John Jairo Palma Robayo" isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="pQd7AMMYJ8IS" isRoot="false" isAbstract="false" name="OggLoader" >
+       <UML:Classifier.feature>
+        <UML:Attribute comment="Información del archivo" isSpecification="false" visibility="private" xmi.id="ttGHPyB6S2Ji" type="JThPNti1nRpQ" name="info" />
+        <UML:Attribute comment="Formato de la información AL" isSpecification="false" visibility="private" xmi.id="dDLOc8oT23kP" type="cXqCpW28xkVK" name="format" />
+        <UML:Attribute comment="Archivo Vorbis" isSpecification="false" visibility="private" xmi.id="TlEQTjj4u2SV" type="1uVRum9WJxi8" name="file" />
+        <UML:Operation stereotype="constructor" comment="Constructor de la clase." isSpecification="false" isLeaf="false" visibility="public" xmi.id="IXogWDul2gQz" isRoot="false" isAbstract="false" isQuery="false" name="OggLoader" />
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="3GJcEwb3KEAU" isRoot="false" isAbstract="false" isQuery="false" name="~ OggLoader" />
+        <UML:Operation comment="Método que carga un archivo .ogg y lo convierte a un buffer OpenAL
+@param path Cadena con el archivo
+@return buffer del archivo en OpenAL
+@throws Cadenas con excepción derivada de la carga del archivo o errores en OpenAL  " isSpecification="false" isLeaf="false" visibility="public" xmi.id="YX2qdIGtq4ZK" isRoot="false" isAbstract="false" isQuery="false" name="loadFile" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="HT5H8TGBjYlv" value="" type="gyE7Bhd84aFF" name="path" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Método privado que se encarga de la carga del archivo
+&lt;pre> El archivo ya fue cargado
+@return Buffer generado
+@throws Cadena con el error en caso de haber sido cargado " isSpecification="false" isLeaf="false" visibility="public" xmi.id="UMyoY8G5fItG" isRoot="false" isAbstract="false" isQuery="false" name="loadFileOntoBuffer" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="CyRtWCoyWmk3" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="a99ODjiSAlkI" value="" type="0RHuL0QQTVfo" name="buffer" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Imprime la infomación del archivo vorbis
+&lt;pre> El archivo ya fue cargado" isSpecification="false" isLeaf="false" visibility="private" xmi.id="t06WGznr8wDJ" isRoot="false" isAbstract="false" isQuery="false" name="printFileInfo" />
+        <UML:Operation comment="Busca si hay problemas con OpenAL" isSpecification="false" isLeaf="false" visibility="private" xmi.id="dujofT6qQYhu" isRoot="false" isAbstract="false" isQuery="false" name="error" />
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class comment="Interfaz que define los métodos que han de ser implementados
+por cada API posterior
+TODO Tener un método que permita averiguar los archivos que no están 
+atados a ninguna fuente/las fuentes que no tienen archivos asociados.
+TODO Empezar a definir los métodos que permiten la implementación del protocolo de red
+del sistema
+TODO Definir los métodos que permiten la implementación de múltiples cajas acústicas. 
+@author John Jairo Palma Robayo (joh-palm@uniandes.edu.co/tripulante@gmail.com)" isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="BdDC6Z7Elohh" isRoot="false" isAbstract="false" name="ISoundAdministrator" >
+       <UML:Classifier.feature>
+        <UML:Operation comment="Enum para determinar el sample rate del aparato a usar
+*///enum SampleRate{44100_KHz, 48000_KHz};/**
+Enum para determinar el tamaño de palabra del sistema
+*///enum BitRate{24_BIT, 16_BIT};//funciones encargadas de inicialización del API./**
+Se encarga de inicializar el administrador de acuerdo al API 
+@throws SoundException en caso que no se pueda inicializar el API" isSpecification="false" isLeaf="false" visibility="public" xmi.id="ABdEs9V74JH1" isRoot="false" isAbstract="true" isQuery="false" name="initializeAdministrator" />
+        <UML:Operation comment="Cierra el administrador de acuerdo al API que subyace en la 
+implementación.
+@throws SoundException en caso que no se pueda cerrar el API" isSpecification="false" isLeaf="false" visibility="public" xmi.id="rM9iMmVVPgfV" isRoot="false" isAbstract="true" isQuery="false" name="closeAdministrator" />
+        <UML:Operation comment="Se encarga de configurar el sistema de acuerdo a lo que se va a usar
+@param sr Sample Rate del programa
+@param br Bitrate (Tamaño de palabra) a usar
+@param numSpeakers Número de parlantes a usar
+*///virtual void setConfiguration(SampleRate sr, BitRate br, int numParlantes) = 0;//Creación, asignación y destrucción de fuentes/**
+Crea una fuente puntual en el origen asociada al archivo indicado por
+fileDesc. La fuente se asocia a una descripción del archivo asociada
+desde la carga
+@param id Identificador de la nueva fuente
+@param fileDesc Descripción del identificador
+@param amb bool que indica si la fuente es ambiente o no
+@return true Si la fuente pudo ser creada exitosamente
+@return false Si la fuente no pudo ser creada
+@throw SoundException si el archivo descrito por fileDesc no existe
+@throw SoundException si ya existe una fuente con el id solicitado" isSpecification="false" isLeaf="false" visibility="public" xmi.id="FmizZNehWHvO" isRoot="false" isAbstract="true" isQuery="false" name="createSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="Nk5SHJuczoKM" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="QOWSglRX7ZFS" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="LiviNbCaLsZs" value="" type="gyE7Bhd84aFF" name="fileDesc" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="FDalSVAqueIa" value="" type="dSHKfnrZGyWG" name="amb" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//reproducción de fuentes/**
+Destruye la fuente. En este caso la separa del objeto audio
+con el que esté asociada y la elimina
+@param id Identificador de la fuente a eliminar " isSpecification="false" isLeaf="false" visibility="public" xmi.id="NWviMUbbgBL8" isRoot="false" isAbstract="true" isQuery="false" name="destroySource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="eTzW5F4Sx8uE" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Indica que la fuente con id &lt;b>id&lt;/b> debe empezar a sonar
+Si la fuente está sonando o no existe, el comando no hace nada
+@param id Identificador de la fuente que se quiere hacer sonar
+@param loop Indica si el sonido debe ser reproducido constantemente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="RnqOb9jydee0" isRoot="false" isAbstract="true" isQuery="false" name="playSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="6DZmOut1NqXS" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="5as1inF7a4T9" value="" type="dSHKfnrZGyWG" name="loop" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Detiene la reproducción de una fuente en el momento actual
+@param id Identificador de la fuente a pausar." isSpecification="false" isLeaf="false" visibility="public" xmi.id="BC5oojmvxMfJ" isRoot="false" isAbstract="true" isQuery="false" name="pauseSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="GYIcOq2SOvT4" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Detiene la reproducción de una fuente. En el momento que se decida
+resumir la reproducción la fuente empieza desde el principio 
+@param id Identificador de la fuente a detener" isSpecification="false" isLeaf="false" visibility="public" xmi.id="giBGkcNvpSkd" isRoot="false" isAbstract="true" isQuery="false" name="stopSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="BUW6qCQ5kih7" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Libera la fuente del archivo fuente que está usando en el momento
+como fuente sonora
+@param id identificador de la fuente " isSpecification="false" isLeaf="false" visibility="public" xmi.id="WhXsc0wGg5WP" isRoot="false" isAbstract="true" isQuery="false" name="detachSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="irKXJ28TXfZN" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="reasigna a la fuente el archivo señalado por desc
+@param id Identificador de la fuente
+@param desc Descripción de la fuente" isSpecification="false" isLeaf="false" visibility="public" xmi.id="pxQXe5e8n9zN" isRoot="false" isAbstract="true" isQuery="false" name="attachSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="uwyh4v3Dofzn" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="9veoz8Dh0XCJ" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="YIk5xIQkDrIp" value="" type="gyE7Bhd84aFF" name="desc" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="reproduce todas las fuentes en el sistema" isSpecification="false" isLeaf="false" visibility="public" xmi.id="nAUlgg3EznHu" isRoot="false" isAbstract="true" isQuery="false" name="playAllSources" />
+        <UML:Operation comment="Pausa todas las fuentes activas en el sistema" isSpecification="false" isLeaf="false" visibility="public" xmi.id="5hfHWv6Rp26t" isRoot="false" isAbstract="true" isQuery="false" name="pauseAllSources" />
+        <UML:Operation comment="Detiene todas las fuentes en el sistema" isSpecification="false" isLeaf="false" visibility="public" xmi.id="x95mo4ZaF2Lt" isRoot="false" isAbstract="true" isQuery="false" name="stopAllSources" />
+        <UML:Operation comment="Retorna una lista con los nombres de las fuentes en el sistema
+@return Lista con nombres de fuentes" isSpecification="false" isLeaf="false" visibility="public" xmi.id="gO7fAOYD3BUa" isRoot="false" isAbstract="true" isQuery="false" name="getSourceIds" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="6b1tb5nZFsJ1" type="ibaNpfH5dMi1" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="retorna una lista con los nombres de las fuentes en reproducción
+@return Lista de nombres de fuentes activas" isSpecification="false" isLeaf="false" visibility="public" xmi.id="uqb7sv0ZH7CR" isRoot="false" isAbstract="true" isQuery="false" name="getActiveSources" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="TidVt75xg4rI" type="ibaNpfH5dMi1" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Destruye todas las fuentes" isSpecification="false" isLeaf="false" visibility="public" xmi.id="9cpMU8OOyxWr" isRoot="false" isAbstract="true" isQuery="false" name="destroyAllSources" />
+        <UML:Operation comment="indica si existe un archivo con una descripción dada
+@param id identificador de la fuente
+@return true si existe una fuente con nombre &lt;b>id&lt;/b>. false si no  " isSpecification="false" isLeaf="false" visibility="public" xmi.id="qWO8caZ3JCYA" isRoot="false" isAbstract="true" isQuery="false" name="existsSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="9VN6TtvJOJPy" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="Ib6yfvEnX391" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//Carga de archivos/**
+retorna una lista con las descripciones de todos los archivos
+@return lista de descripciones" isSpecification="false" isLeaf="false" visibility="public" xmi.id="txzA9YLP9RMn" isRoot="false" isAbstract="true" isQuery="false" name="getFileDescriptions" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="KYarahqjDDne" type="ibaNpfH5dMi1" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Carga los archivos indicados en un archivo junto con su
+descripción.
+Formato del archivo:
+&lt;descripción del archivo>:&lt;ruta_archivo>
+;&lt;comentario>
+@param dataFile Archivo con las rutas a los archivos de audio y su descripción
+@throw SoundException el archivo no se pudo abrir o no existe
+@throw SoundException el archivo tiene un formato incorrecto
+*///virtual void loadFiles(string dataFile) throw (string)= 0;/**
+Carga un archivo individual.
+@param description descripción del archivo
+@param path Ruta al archivo
+@throw string Mensaje de error si el archivo no pudo ser cargado." isSpecification="false" isLeaf="false" visibility="public" xmi.id="5ixR1NPtKO3R" isRoot="false" isAbstract="true" isQuery="false" name="loadFile" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="uMp2lBp5jNwJ" value="" type="gyE7Bhd84aFF" name="description" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="4m1Fyot1VrSW" value="" type="gyE7Bhd84aFF" name="path" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Borra todos los archivos cargados" isSpecification="false" isLeaf="false" visibility="public" xmi.id="CpNUBRt4li6X" isRoot="false" isAbstract="true" isQuery="false" name="cleanFiles" />
+        <UML:Operation comment="indica si existe un archivo con una descripción dada
+@param desc Descripción del archivo
+@return true si existe un archivo con descripción &lt;b>desc&lt;/b>. false si no  " isSpecification="false" isLeaf="false" visibility="public" xmi.id="rtcZEXqIHrWF" isRoot="false" isAbstract="true" isQuery="false" name="fileExists" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="Qmh9UngKeJts" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="ePE9EgdQT1sd" value="" type="gyE7Bhd84aFF" name="desc" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//movimiento de fuentes /**
+Actualiza la ubicación de una fuente en el espacio
+@param id identificador de la fuente
+@param x Posición nueva de la fuente en x
+@param y Posición nueva de la fuente en y
+@param z Posición nueva de la fuente en z" isSpecification="false" isLeaf="false" visibility="public" xmi.id="qj87ZeLD4ZKG" isRoot="false" isAbstract="true" isQuery="false" name="updateSource" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="EvhfwXIKJzUm" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="k86ORzEFgNLF" value="" type="PM3Mh4iySH1G" name="x" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="zeQ1BkIPgx3a" value="" type="PM3Mh4iySH1G" name="y" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="ULtoLLY5TeSt" value="" type="PM3Mh4iySH1G" name="z" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="//sonido ambiente, relacionado con el listener (escucha)/**
+Asocia una fuente a la escucha de manera que se mueve con ella
+y tiene la misma amplitud en todos los puntos.
+@param id Identificador de la fuente a asociar
+@param ambient Indica si la fuente es ambiente o no
+@throws string si la fuente no existe o ya fue asociada al listener" isSpecification="false" isLeaf="false" visibility="public" xmi.id="bg6F3RV13v2F" isRoot="false" isAbstract="true" isQuery="false" name="useSourceAsAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="eKcIHfsm1jYK" value="" type="gyE7Bhd84aFF" name="id" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="46NYipRHWXWX" value="" type="dSHKfnrZGyWG" name="ambient" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Permite consultar si una fuente es ambiente o no
+@param id Identificador de la fuente a consultar
+@return true si la fuente es ambiente o false si no o no existe " isSpecification="false" isLeaf="false" visibility="public" xmi.id="xzYytbBXvonB" isRoot="false" isAbstract="true" isQuery="false" name="isAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="xOSRuwzpuVnn" type="dSHKfnrZGyWG" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="RfvQNTkRX8zD" value="" type="gyE7Bhd84aFF" name="id" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Actualiza la ubicación del listener en el espacio
+@param x Posición nueva del listener en x
+@param y Posición nueva del listener en y
+@param z Posición nueva del listener en z" isSpecification="false" isLeaf="false" visibility="public" xmi.id="6zI0l59Ci4b5" isRoot="false" isAbstract="true" isQuery="false" name="updateListener" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="VLV0RSBNrdoj" value="" type="PM3Mh4iySH1G" name="x" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="XlWRHJCLGSJz" value="" type="PM3Mh4iySH1G" name="y" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="XSAEUlHx6mxY" value="" type="PM3Mh4iySH1G" name="z" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation comment="Separa al listener de todas las fuentes asociadas a él." isSpecification="false" isLeaf="false" visibility="public" xmi.id="F8v4jhlFTHei" isRoot="false" isAbstract="true" isQuery="false" name="cleanAmbientSources" />
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class isSpecification="false" isLeaf="false" visibility="public" namespace="Logical View" xmi.id="s0GAVxJBWrWM" isRoot="false" isAbstract="false" name="Source" >
+       <UML:Classifier.feature>
+        <UML:Attribute comment="Posición en el espacio de la fuente
+pos[0] = x, pos[1] = y; pos[2] = z;" isSpecification="false" visibility="protected" xmi.id="WmPA869UmWQo" type="PM3Mh4iySH1G" name="pos" />
+        <UML:Attribute comment="Indica si la fuente está actualmente en reproducción" isSpecification="false" visibility="protected" xmi.id="GN0lBJr3K5Dn" type="dSHKfnrZGyWG" name="playing" />
+        <UML:Attribute comment="Identificador de la fuente" isSpecification="false" visibility="protected" xmi.id="0UwWMTqqDE0L" type="gyE7Bhd84aFF" name="id" />
+        <UML:Attribute comment="Infica si la fuente es ambiente o no" isSpecification="false" visibility="protected" xmi.id="K8n4cEssZsck" type="dSHKfnrZGyWG" name="ambient" />
+        <UML:Operation stereotype="constructor" isSpecification="false" isLeaf="false" visibility="public" xmi.id="BRlTWwEWQB0k" isRoot="false" isAbstract="false" isQuery="false" name="Source" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="cpbp3Z8NhwPK" value="" type="gyE7Bhd84aFF" name="nuID" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="8HAh7mPGDAih" isRoot="false" isAbstract="false" isQuery="false" name="~ Source" />
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="4wDU7CFjzoW2" isRoot="false" isAbstract="false" isQuery="false" name="update" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="NfN5ZmNf1XK8" value="" type="PM3Mh4iySH1G" name="x" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="KjOVr4Dv1ON8" value="" type="PM3Mh4iySH1G" name="y" />
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="YaqXOKZmzupW" value="" type="PM3Mh4iySH1G" name="z" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="gCBhjVn1CAX3" isRoot="false" isAbstract="false" isQuery="false" name="getPosition" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="Wk3UesyJ4A0l" type="EiwF6KMfuCCH" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="dmlqwGtAyoO2" isRoot="false" isAbstract="false" isQuery="false" name="togglePlaying" />
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="8kf0uqHOaIqC" isRoot="false" isAbstract="false" isQuery="false" name="isPlaying" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="ApVCzUycGhSC" type="dSHKfnrZGyWG" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="xKKv8gvEQbEI" isRoot="false" isAbstract="false" isQuery="false" name="setId" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="RUh1mXBvMh7J" value="" type="gyE7Bhd84aFF" name="nuID" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="B3uRkMbhetak" isRoot="false" isAbstract="false" isQuery="false" name="getId" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="aWy07BHYdyXP" type="gyE7Bhd84aFF" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="TiKoNQ7YTzxE" isRoot="false" isAbstract="false" isQuery="false" name="isAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter kind="return" xmi.id="KWtyQUh00fy7" type="dSHKfnrZGyWG" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="oFdRB8rdq9RC" isRoot="false" isAbstract="false" isQuery="false" name="setAmbient" >
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter isSpecification="false" visibility="private" xmi.id="ZWi1WgFqA6ma" value="" type="dSHKfnrZGyWG" name="amb" />
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello" >
+      <diagrams>
+       <diagram snapgrid="0" showattsig="1" fillcolor="#ffffc0" linewidth="0" zoom="100" showgrid="0" showopsig="1" usefillcolor="1" snapx="10" canvaswidth="1046" snapy="10" showatts="1" xmi.id="tQP1JFlGjCWW" documentation="" type="1" showops="1" showpackage="0" name="diagrama de clase" localid="" showstereotype="0" showscope="1" snapcsgrid="0" font="Sans,10,-1,5,50,0,0,0,0,0" linecolor="#ff0000" canvasheight="716" >
+        <widgets>
+         <classwidget usesdiagramfillcolor="0" width="161" showattsigs="601" x="487" fillcolor="#ffffc0" y="467" showopsigs="601" linewidth="none" height="36" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="BdDC6Z7Elohh" showoperations="0" showpackage="0" showscope="1" showstereotype="1" usesdiagramusefillcolor="0" font="Sans,10,-1,5,50,1,0,0,0,0" linecolor="#ff0000" />
+         <classwidget usesdiagramfillcolor="1" width="212" showattsigs="601" x="461" fillcolor="none" y="558" showopsigs="601" linewidth="none" height="46" usefillcolor="1" showpubliconly="0" showattributes="0" isinstance="0" xmi.id="Yr1pJLmplw1E" showoperations="0" showpackage="0" showscope="1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,75,0,0,0,0,0" linecolor="none" />
+         <classwidget usesdiagramfillcolor="1" width="125" showattsigs="601" x="505" fillcolor="none" y="664" showopsigs="601" linewidth="none" height="46" usefillcolor="1" showpubliconly="0" showattributes="0" isinstance="0" xmi.id="BEyBHhYGZ4hT" showoperations="0" showpackage="0" showscope="1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,75,0,0,0,0,0" linecolor="none" />
+         <classwidget usesdiagramfillcolor="1" width="62" showattsigs="601" x="980" fillcolor="none" y="558" showopsigs="601" linewidth="none" height="46" usefillcolor="1" showpubliconly="0" showattributes="0" isinstance="0" xmi.id="s0GAVxJBWrWM" showoperations="0" showpackage="0" showscope="1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,75,0,0,0,0,0" linecolor="none" />
+         <classwidget usesdiagramfillcolor="1" width="106" showattsigs="601" x="799" fillcolor="none" y="664" showopsigs="601" linewidth="none" height="46" usefillcolor="1" showpubliconly="0" showattributes="0" isinstance="0" xmi.id="7S6FNqUBP71Y" showoperations="0" showpackage="0" showscope="1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,75,0,0,0,0,0" linecolor="none" />
+         <classwidget usesdiagramfillcolor="1" width="124" showattsigs="601" x="790" fillcolor="none" y="559" showopsigs="601" linewidth="none" height="46" usefillcolor="1" showpubliconly="0" showattributes="0" isinstance="0" xmi.id="aTYa7VfvkINu" showoperations="0" showpackage="0" showscope="1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,75,0,0,0,0,0" linecolor="none" />
+        </widgets>
+        <messages/>
+        <associations>
+         <assocwidget totalcounta="2" indexa="1" totalcountb="2" indexb="1" linewidth="none" widgetbid="BdDC6Z7Elohh" widgetaid="Yr1pJLmplw1E" xmi.id="hIBm37IGDBIx" type="500" linecolor="none" >
+          <linepath>
+           <startpoint startx="567" starty="558" />
+           <endpoint endx="567" endy="503" />
+          </linepath>
+         </assocwidget>
+         <assocwidget totalcounta="2" indexa="1" visibilityB="200" totalcountb="2" indexb="1" linewidth="none" widgetbid="BEyBHhYGZ4hT" widgetaid="Yr1pJLmplw1E" xmi.id="O7pGueS0fHpe" type="501" changeabilityA="900" changeabilityB="900" linecolor="none" visibilityA="200" >
+          <linepath>
+           <startpoint startx="567" starty="604" />
+           <endpoint endx="567" endy="664" />
+          </linepath>
+          <floatingtext usesdiagramfillcolor="1" width="32" x="606" fillcolor="none" y="642" linewidth="none" posttext="" role="702" height="22" usefillcolor="1" pretext="" isinstance="0" xmi.id="VU5me4yrQKYs" text="0..1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,50,0,0,0,0,0" linecolor="none" />
+          <floatingtext usesdiagramfillcolor="1" width="54" x="453" fillcolor="none" y="640" linewidth="none" posttext="" role="710" height="22" usefillcolor="1" pretext="-" isinstance="0" xmi.id="W1CbU33mAHMR" text="loader" usesdiagramusefillcolor="1" font="Sans,10,-1,5,50,0,0,0,0,0" linecolor="none" />
+         </assocwidget>
+         <assocwidget totalcounta="2" indexa="1" totalcountb="2" indexb="1" linewidth="none" widgetbid="7S6FNqUBP71Y" widgetaid="BEyBHhYGZ4hT" xmi.id="BC5kGmE5ZCBM" type="502" linecolor="none" >
+          <linepath>
+           <startpoint startx="630" starty="687" />
+           <endpoint endx="799" endy="687" />
+          </linepath>
+         </assocwidget>
+         <assocwidget totalcounta="2" indexa="1" totalcountb="2" indexb="1" linewidth="none" widgetbid="aTYa7VfvkINu" widgetaid="Yr1pJLmplw1E" xmi.id="dMiGLLBdjxf4" type="502" linecolor="none" >
+          <linepath>
+           <startpoint startx="673" starty="581" />
+           <endpoint endx="790" endy="582" />
+          </linepath>
+         </assocwidget>
+         <assocwidget totalcounta="2" indexa="1" visibilityB="200" totalcountb="2" indexb="1" linewidth="none" widgetbid="7S6FNqUBP71Y" widgetaid="aTYa7VfvkINu" xmi.id="n5mwBXWm03K7" type="501" changeabilityA="900" changeabilityB="900" linecolor="none" visibilityA="200" >
+          <linepath>
+           <startpoint startx="852" starty="605" />
+           <endpoint endx="852" endy="664" />
+          </linepath>
+          <floatingtext usesdiagramfillcolor="1" width="32" x="831" fillcolor="none" y="616" linewidth="none" posttext="" role="702" height="22" usefillcolor="1" pretext="" isinstance="0" xmi.id="HClRR5swXwgB" text="0..1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,50,0,0,0,0,0" linecolor="none" />
+          <floatingtext usesdiagramfillcolor="1" width="33" x="805" fillcolor="none" y="613" linewidth="none" posttext="" role="710" height="22" usefillcolor="1" pretext="-" isinstance="0" xmi.id="4gR83W4YXG91" text="file" usesdiagramusefillcolor="1" font="Sans,10,-1,5,50,0,0,0,0,0" linecolor="none" />
+         </assocwidget>
+         <assocwidget totalcounta="2" indexa="1" visibilityB="200" totalcountb="2" indexb="1" linewidth="none" widgetbid="s0GAVxJBWrWM" widgetaid="aTYa7VfvkINu" xmi.id="bFg4MY08dl4n" type="501" changeabilityA="900" changeabilityB="900" linecolor="none" visibilityA="200" >
+          <linepath>
+           <startpoint startx="914" starty="582" />
+           <endpoint endx="980" endy="581" />
+          </linepath>
+          <floatingtext usesdiagramfillcolor="1" width="32" x="975" fillcolor="none" y="581" linewidth="none" posttext="" role="702" height="22" usefillcolor="1" pretext="" isinstance="0" xmi.id="ABpgPyfg9P7a" text="0..1" usesdiagramusefillcolor="1" font="Sans,10,-1,5,50,0,0,0,0,0" linecolor="none" />
+          <floatingtext usesdiagramfillcolor="1" width="32" x="951" fillcolor="none" y="583" linewidth="none" posttext="" role="710" height="22" usefillcolor="1" pretext="-" isinstance="0" xmi.id="yc0MwZF1Fe9H" text="src" usesdiagramusefillcolor="1" font="Sans,10,-1,5,50,0,0,0,0,0" linecolor="none" />
+         </assocwidget>
+        </associations>
+       </diagram>
+      </diagrams>
+     </XMI.extension>
+    </UML:Model>
+    <UML:Model stereotype="folder" isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="Use Case View" isRoot="false" isAbstract="false" name="Use Case View" >
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="Component View" isRoot="false" isAbstract="false" name="Component View" >
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="Deployment View" isRoot="false" isAbstract="false" name="Deployment View" >
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" isSpecification="false" isLeaf="false" visibility="public" namespace="m1" xmi.id="Entity Relationship Model" isRoot="false" isAbstract="false" name="Entity Relationship Model" >
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+   </UML:Namespace.ownedElement>
+  </UML:Model>
+ </XMI.content>
+ <XMI.extensions xmi.extender="umbrello" >
+  <docsettings viewid="tQP1JFlGjCWW" documentation="" uniqueid="9RpRqZ6K9MMf" />
+  <listview>
+   <listitem open="1" type="800" label="Vistas" >
+    <listitem open="1" type="801" id="Logical View" >
+     <listitem open="0" type="807" id="tQP1JFlGjCWW" label="diagrama de clase" />
+     <listitem open="0" type="813" id="au1cIPSLCtih" />
+     <listitem open="0" type="813" id="uNh7ENm9JHTn" />
+     <listitem open="0" type="813" id="cXqCpW28xkVK" />
+     <listitem open="0" type="813" id="0RHuL0QQTVfo" />
+     <listitem open="0" type="813" id="BdDC6Z7Elohh" >
+      <listitem open="0" type="815" id="ABdEs9V74JH1" />
+      <listitem open="0" type="815" id="rM9iMmVVPgfV" />
+      <listitem open="0" type="815" id="FmizZNehWHvO" />
+      <listitem open="0" type="815" id="NWviMUbbgBL8" />
+      <listitem open="0" type="815" id="RnqOb9jydee0" />
+      <listitem open="0" type="815" id="BC5oojmvxMfJ" />
+      <listitem open="0" type="815" id="giBGkcNvpSkd" />
+      <listitem open="0" type="815" id="WhXsc0wGg5WP" />
+      <listitem open="0" type="815" id="pxQXe5e8n9zN" />
+      <listitem open="0" type="815" id="nAUlgg3EznHu" />
+      <listitem open="0" type="815" id="5hfHWv6Rp26t" />
+      <listitem open="0" type="815" id="x95mo4ZaF2Lt" />
+      <listitem open="0" type="815" id="gO7fAOYD3BUa" />
+      <listitem open="0" type="815" id="uqb7sv0ZH7CR" />
+      <listitem open="0" type="815" id="9cpMU8OOyxWr" />
+      <listitem open="0" type="815" id="qWO8caZ3JCYA" />
+      <listitem open="0" type="815" id="txzA9YLP9RMn" />
+      <listitem open="0" type="815" id="5ixR1NPtKO3R" />
+      <listitem open="0" type="815" id="CpNUBRt4li6X" />
+      <listitem open="0" type="815" id="rtcZEXqIHrWF" />
+      <listitem open="0" type="815" id="qj87ZeLD4ZKG" />
+      <listitem open="0" type="815" id="bg6F3RV13v2F" />
+      <listitem open="0" type="815" id="xzYytbBXvonB" />
+      <listitem open="0" type="815" id="6zI0l59Ci4b5" />
+      <listitem open="0" type="815" id="F8v4jhlFTHei" />
+     </listitem>
+     <listitem open="0" type="813" id="pQd7AMMYJ8IS" >
+      <listitem open="0" type="814" id="ttGHPyB6S2Ji" />
+      <listitem open="0" type="814" id="dDLOc8oT23kP" />
+      <listitem open="0" type="814" id="TlEQTjj4u2SV" />
+      <listitem open="0" type="815" id="IXogWDul2gQz" />
+      <listitem open="0" type="815" id="3GJcEwb3KEAU" />
+      <listitem open="0" type="815" id="YX2qdIGtq4ZK" />
+      <listitem open="0" type="815" id="UMyoY8G5fItG" />
+      <listitem open="0" type="815" id="t06WGznr8wDJ" />
+      <listitem open="0" type="815" id="dujofT6qQYhu" />
+     </listitem>
+     <listitem open="0" type="813" id="1uVRum9WJxi8" />
+     <listitem open="0" type="813" id="Yr1pJLmplw1E" >
+      <listitem open="0" type="814" id="83ppyUtfMvNg" />
+      <listitem open="0" type="814" id="O7pGueS0fHpe" />
+      <listitem open="0" type="814" id="7du7mDYK6XuM" />
+      <listitem open="0" type="814" id="LVKR0CnvZT2l" />
+      <listitem open="0" type="815" id="jhH5cejMnFx0" />
+      <listitem open="0" type="815" id="kyHiTRZa1POs" />
+      <listitem open="0" type="815" id="omu61Nte5oft" />
+      <listitem open="0" type="815" id="Qvlg5jdOCvoD" />
+      <listitem open="0" type="815" id="8Z8f08RpuLvv" />
+      <listitem open="0" type="815" id="hmZmYCdy7PcA" />
+      <listitem open="0" type="815" id="8EYK9MXHwdxw" />
+      <listitem open="0" type="815" id="1qWht4UH5Wam" />
+      <listitem open="0" type="815" id="avbjXv0ZlUEd" />
+      <listitem open="0" type="815" id="vgNeAZHgF9IQ" />
+      <listitem open="0" type="815" id="OJCfJtWEZrtk" />
+      <listitem open="0" type="815" id="dVaSURgsisY2" />
+      <listitem open="0" type="815" id="2zMK63okWMA0" />
+      <listitem open="0" type="815" id="WQKq914zkXzs" />
+      <listitem open="0" type="815" id="wT0LHSn6jyRK" />
+      <listitem open="0" type="815" id="KmiXtdON1gEA" />
+      <listitem open="0" type="815" id="iG7Sn6IkXI3o" />
+      <listitem open="0" type="815" id="33K2hYDNnIna" />
+      <listitem open="0" type="815" id="tD5wdjrekCeS" />
+      <listitem open="0" type="815" id="irnV8b4VeMP0" />
+      <listitem open="0" type="815" id="8f0mzOkgSmV4" />
+      <listitem open="0" type="815" id="dhk1ELWK0X60" />
+      <listitem open="0" type="815" id="pEMolQmeFQ0p" />
+      <listitem open="0" type="815" id="XOgtLSNGQUOU" />
+      <listitem open="0" type="815" id="H9TgdpADvLcX" />
+      <listitem open="0" type="815" id="CfMTOQMxgRPF" />
+      <listitem open="0" type="815" id="D2PrRo6ZB8MQ" />
+      <listitem open="0" type="815" id="lhBuoWK9101v" />
+      <listitem open="0" type="815" id="3iCjhatpUn8N" />
+     </listitem>
+     <listitem open="0" type="813" id="BEyBHhYGZ4hT" >
+      <listitem open="0" type="814" id="S8X2IgO93wNs" />
+      <listitem open="0" type="815" id="6RpcQnUgLrUL" />
+      <listitem open="0" type="815" id="EltXdLrVTMdI" />
+      <listitem open="0" type="815" id="jRsCnTScf1xt" />
+      <listitem open="0" type="815" id="bXOEYL7LW0ft" />
+      <listitem open="0" type="815" id="f4nj95eHrc82" />
+      <listitem open="0" type="815" id="CNvBTzy2WMG2" />
+      <listitem open="0" type="815" id="eFSBagBG2ZQM" />
+      <listitem open="0" type="815" id="bSLgI2vAPPuK" />
+      <listitem open="0" type="815" id="Amv9c2hAKUh9" />
+     </listitem>
+     <listitem open="0" type="813" id="s0GAVxJBWrWM" >
+      <listitem open="0" type="814" id="WmPA869UmWQo" />
+      <listitem open="0" type="814" id="GN0lBJr3K5Dn" />
+      <listitem open="0" type="814" id="0UwWMTqqDE0L" />
+      <listitem open="0" type="814" id="K8n4cEssZsck" />
+      <listitem open="0" type="815" id="BRlTWwEWQB0k" />
+      <listitem open="0" type="815" id="8HAh7mPGDAih" />
+      <listitem open="0" type="815" id="4wDU7CFjzoW2" />
+      <listitem open="0" type="815" id="gCBhjVn1CAX3" />
+      <listitem open="0" type="815" id="dmlqwGtAyoO2" />
+      <listitem open="0" type="815" id="8kf0uqHOaIqC" />
+      <listitem open="0" type="815" id="xKKv8gvEQbEI" />
+      <listitem open="0" type="815" id="B3uRkMbhetak" />
+      <listitem open="0" type="815" id="TiKoNQ7YTzxE" />
+      <listitem open="0" type="815" id="oFdRB8rdq9RC" />
+     </listitem>
+     <listitem open="0" type="813" id="7S6FNqUBP71Y" >
+      <listitem open="0" type="814" id="hEIQqqwI6VR7" />
+      <listitem open="0" type="814" id="L7xkEyGuCZI2" />
+      <listitem open="0" type="815" id="NFITihZg9qZU" />
+      <listitem open="0" type="815" id="7lgGZFiMFbbh" />
+      <listitem open="0" type="815" id="AdXqb3iXrVdD" />
+      <listitem open="0" type="815" id="mDj1nJgvuBlV" />
+      <listitem open="0" type="815" id="FGl3pGRbS8aD" />
+      <listitem open="0" type="815" id="Ozlk8AFOQ0RD" />
+     </listitem>
+     <listitem open="0" type="813" id="aTYa7VfvkINu" >
+      <listitem open="0" type="814" id="OCXFJyPrS7sw" />
+      <listitem open="0" type="814" id="n5mwBXWm03K7" />
+      <listitem open="0" type="814" id="bFg4MY08dl4n" />
+      <listitem open="0" type="815" id="IYXIbrO9nPO2" />
+      <listitem open="0" type="815" id="6ZSuwqujOZ0a" />
+      <listitem open="0" type="815" id="29QiwFkH7vGi" />
+      <listitem open="0" type="815" id="A54SgIh7Qev5" />
+      <listitem open="0" type="815" id="Q1NtOHdYNh01" />
+      <listitem open="0" type="815" id="JBQX3cmSb9Lz" />
+      <listitem open="0" type="815" id="uRMBbsXu3yR5" />
+      <listitem open="0" type="815" id="4G1E8yf1N2Cy" />
+      <listitem open="0" type="815" id="OPdC08b2OcEU" />
+      <listitem open="0" type="815" id="YuTvugtmOji2" />
+      <listitem open="0" type="815" id="2hEYDXRZw4jw" />
+      <listitem open="0" type="815" id="8EhUvOUy5iWH" />
+     </listitem>
+     <listitem open="0" type="813" id="qp08mgEEPReq" />
+     <listitem open="0" type="813" id="iWtDGbE9cKgq" />
+     <listitem open="0" type="830" id="Datatypes" >
+      <listitem open="0" type="829" id="vyVKTQJCO3jH" />
+      <listitem open="0" type="829" id="fkx1neIuFAzz" />
+      <listitem open="0" type="829" id="l9VdE2iqEt3E" />
+      <listitem open="0" type="829" id="Yy1GEOAdYfqr" />
+      <listitem open="0" type="829" id="YIpYrEuQeG7w" />
+      <listitem open="0" type="829" id="9cqorgQaLhdv" />
+      <listitem open="1" type="829" id="dSHKfnrZGyWG" />
+      <listitem open="1" type="829" id="IOZ3oM0hkNj1" />
+      <listitem open="1" type="829" id="bzwLNdKy5bIi" />
+      <listitem open="1" type="829" id="PM3Mh4iySH1G" />
+      <listitem open="0" type="829" id="EiwF6KMfuCCH" />
+      <listitem open="1" type="829" id="uV7w0RsnxL2N" />
+      <listitem open="0" type="829" id="ALu3OKYXZWgo" />
+      <listitem open="0" type="829" id="W4IjFae5boNt" />
+      <listitem open="0" type="829" id="ibaNpfH5dMi1" />
+      <listitem open="1" type="829" id="xTlNkmcKmYd7" />
+      <listitem open="1" type="829" id="M7Id5mrS8tnp" />
+      <listitem open="1" type="829" id="gyE7Bhd84aFF" />
+      <listitem open="1" type="829" id="By5EXLxuTDVW" />
+      <listitem open="1" type="829" id="QADCgrHrpK3M" />
+      <listitem open="1" type="829" id="zMz7DkuADgYv" />
+      <listitem open="0" type="829" id="JThPNti1nRpQ" />
+     </listitem>
+    </listitem>
+    <listitem open="1" type="802" id="Use Case View" />
+    <listitem open="1" type="821" id="Component View" />
+    <listitem open="1" type="827" id="Deployment View" />
+    <listitem open="1" type="836" id="Entity Relationship Model" />
+   </listitem>
+  </listview>
+  <codegeneration>
+   <codegenerator language="C++" />
+  </codegeneration>
+ </XMI.extensions>
+</XMI>

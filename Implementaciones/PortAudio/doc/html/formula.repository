@@ -1,0 +1,12 @@
+\form#0:$(a.distance < b.distance)$
+\form#1:$distance < a.distance$
+\form#2:$a.distance \leq b.distance$
+\form#3:\[ atten = \frac{1}{d^2}\]
+\form#4:\[ d = ||listener - pos||\]
+\form#5:$ d^2 < 1.0 $
+\form#6:$ 0.01 \leq atten \leq 1.0 $
+\form#7:$(0.0 < bend < 2.0)$
+\form#8:$(0.0 \leq gain \leq 1.0)$
+\form#9:$(numSpeak \geq 2)$
+\form#10:$\to$
+\form#11:$numSpeak = 2$

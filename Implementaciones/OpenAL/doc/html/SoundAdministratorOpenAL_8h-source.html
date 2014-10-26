@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminOpenAL: Fichero Fuente SoundAdministratorOpenAL.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>SoundAdministratorOpenAL.h</h1><a href="SoundAdministratorOpenAL_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SOUNDADMINISTRATOROPENAL_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SOUNDADMINISTRATOROPENAL_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="comment">/*inclusiones del sistema*/</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;AL/alut.h&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;AL/al.h&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;AL/alc.h&gt;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="comment">/*inclusiones del proyecto*/</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "../../interface/ISoundAdministrator.h"</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include "../../interface/Source.h"</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include "<a class="code" href="SourceFileAL_8h.html">SourceFileAL.h</a>"</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="SoundLoaderAL_8h.html">SoundLoaderAL.h</a>"</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "SourceStructAL.h"</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="comment">/*namespaces*/</span>
+<a name="l00020"></a>00020 <span class="keyword">using namespace </span>std;
+<a name="l00021"></a>00021 
+<a name="l00029"></a><a class="code" href="classSoundAdministratorOpenAL.html">00029</a> <span class="keyword">class </span><a class="code" href="classSoundAdministratorOpenAL.html">SoundAdministratorOpenAL</a> : <span class="keyword">public</span> <a class="code" href="classISoundAdministrator.html">ISoundAdministrator</a>
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">private</span>:
+<a name="l00033"></a>00033 
+<a name="l00037"></a>00037         list&lt;SourceStructAL*&gt; active;
+<a name="l00038"></a>00038 
+<a name="l00042"></a>00042         <a class="code" href="classSoundLoaderAL.html">SoundLoaderAL</a>* loader;
+<a name="l00043"></a>00043                 
+<a name="l00049"></a>00049         <a class="code" href="classSourceStructAL.html">SourceStructAL</a>* getSourceActive(string <span class="keywordtype">id</span>);
+<a name="l00050"></a>00050         
+<a name="l00056"></a>00056         <a class="code" href="classSourceStructAL.html">SourceStructAL</a>* getAmbientSource(string <span class="keywordtype">id</span>);
+<a name="l00057"></a>00057         
+<a name="l00061"></a>00061         ALCcontext *context;
+<a name="l00062"></a>00062         
+<a name="l00066"></a>00066         ALCdevice *device;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">public</span>:
+<a name="l00069"></a>00069 
+<a name="l00073"></a>00073         <a class="code" href="classSoundAdministratorOpenAL.html#eb25c10543765dfe1b9d32e5d7dbdec7">SoundAdministratorOpenAL</a>();
+<a name="l00074"></a>00074 
+<a name="l00078"></a>00078         <span class="keyword">virtual</span> <a class="code" href="classSoundAdministratorOpenAL.html#ca245e41efc568b474992fde572c60b2">~SoundAdministratorOpenAL</a>();
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080         <span class="comment">//Mtodos implementados de la clase heredada</span>
+<a name="l00081"></a>00081 
+<a name="l00086"></a>00086         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#39c76f3d4cda395a1ecef06938bd72e2">initializeAdministrator</a>() <span class="keywordflow">throw</span> (string);
+<a name="l00087"></a>00087 
+<a name="l00093"></a>00093         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#ec63bc4550b941b1e481da0012cfe5f9">closeAdministrator</a>() <span class="keywordflow">throw</span> (string);
+<a name="l00094"></a>00094 
+<a name="l00101"></a>00101         <span class="comment">//  void setConfiguration(SampleRate sr, BitRate br, int numParlantes)  ;</span>
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103         <span class="comment">//CreaciÃ³n, asignaciÃ³n y destrucciÃ³n de fuentes</span>
+<a name="l00104"></a>00104 
+<a name="l00117"></a>00117         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdministratorOpenAL.html#721f89fb83e3a1b33cfe8f54da2b8d3c">createSource</a>(string <span class="keywordtype">id</span>, string fileDesc, <span class="keywordtype">bool</span> amb) <span class="keywordflow">throw</span> (string);
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119         <span class="comment">//reproducciÃ³n de fuentes</span>
+<a name="l00120"></a>00120 
+<a name="l00127"></a>00127         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#c00ada6966ede51dbf3992c4736eb8eb">destroySource</a>(string <span class="keywordtype">id</span>) <span class="keywordflow">throw</span> (string);
+<a name="l00128"></a>00128 
+<a name="l00135"></a>00135         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#28b0957bd51ac6fd1521e3c73f9af4b0">playSource</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> loop);
+<a name="l00136"></a>00136 
+<a name="l00141"></a>00141         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#a98f7876e388266a01dacac6a61c9f3d">pauseSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00142"></a>00142 
+<a name="l00148"></a>00148         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#c05efd6946f7b6995097ad4bd508215d">stopSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00149"></a>00149 
+<a name="l00155"></a>00155         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#a2c7a8879f9c6129ac5b44b1a30b4097">detachSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00156"></a>00156 
+<a name="l00162"></a>00162         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdministratorOpenAL.html#5c847ff6163eebe7789b3faff3e97d7d">attachSource</a>(string <span class="keywordtype">id</span>, string desc);
+<a name="l00163"></a>00163 
+<a name="l00167"></a>00167         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#558924ab9a3cae701a708edbc0ed9fc1">playAllSources</a>();
+<a name="l00168"></a>00168 
+<a name="l00172"></a>00172         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#95d26f726df84f1c774c8d8374dd56b7">pauseAllSources</a>();
+<a name="l00173"></a>00173 
+<a name="l00177"></a>00177         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#e21fda6e978d77b284ac26db1b9fe8d4">stopAllSources</a>();
+<a name="l00178"></a>00178 
+<a name="l00183"></a>00183         list&lt;string&gt;* <a class="code" href="classSoundAdministratorOpenAL.html#d90f8245ee7dc666f2e7b6b2a0f95a59">getSourceIds</a>();
+<a name="l00184"></a>00184 
+<a name="l00189"></a>00189         list&lt;string&gt;* <a class="code" href="classSoundAdministratorOpenAL.html#c8531054873b9b8bf99d97d7ec490cd6">getActiveSources</a>();
+<a name="l00190"></a>00190 
+<a name="l00194"></a>00194         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#ce000a25fb740ae9402998d6f1a2695c">destroyAllSources</a>( );
+<a name="l00195"></a>00195 
+<a name="l00201"></a>00201         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdministratorOpenAL.html#fe92ba8ad029c1ca7f1b54e8e10f00f9">existsSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203         <span class="comment">//Carga de archivos</span>
+<a name="l00204"></a>00204 
+<a name="l00208"></a>00208         list&lt;string&gt;* <a class="code" href="classSoundAdministratorOpenAL.html#6d69a8c9d3b0c931ac0e7e6495917edb">getFileDescriptions</a>(); 
+<a name="l00209"></a>00209 
+<a name="l00220"></a>00220         <span class="comment">//void loadFiles(string dataFile) throw (string);</span>
+<a name="l00221"></a>00221         
+<a name="l00228"></a>00228         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#b6296162015a1279344d9a7698c08e31">loadFile</a>(string description, string path) <span class="keywordflow">throw</span> (string);
+<a name="l00229"></a>00229 
+<a name="l00233"></a>00233         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#571f4940efa1dc8f51c1a652f6012439">cleanFiles</a>();
+<a name="l00234"></a>00234 
+<a name="l00240"></a>00240         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdministratorOpenAL.html#cc1bfd637d27e7e9630873ee54013fcb">fileExists</a>(string desc);
+<a name="l00241"></a>00241 
+<a name="l00242"></a>00242         <span class="comment">//movimiento de fuentes </span>
+<a name="l00250"></a>00250 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#ba79db9aba78c33817d6b937a59e2be8">updateSource</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
+<a name="l00251"></a>00251 
+<a name="l00252"></a>00252         <span class="comment">//sonido ambiente, relacionado con el listener (escucha)</span>
+<a name="l00253"></a>00253 
+<a name="l00261"></a>00261         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#70f438b56853eaf3f8b3af395aaa503e">useSourceAsAmbient</a>(string <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> ambient) <span class="keywordflow">throw</span> (string);
+<a name="l00262"></a>00262 
+<a name="l00268"></a>00268         <span class="keywordtype">bool</span> <a class="code" href="classSoundAdministratorOpenAL.html#e0a07712165195b1b097e89530925b60">isAmbient</a>(string <span class="keywordtype">id</span>);
+<a name="l00269"></a>00269         
+<a name="l00276"></a>00276         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#c1aa28c272c64ec9af17248604464c59">updateListener</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
+<a name="l00277"></a>00277 
+<a name="l00281"></a>00281         <span class="keywordtype">void</span> <a class="code" href="classSoundAdministratorOpenAL.html#c4b416538b87c236091f4db1dfebd3cd">cleanAmbientSources</a>();
+<a name="l00282"></a>00282 };
+<a name="l00283"></a>00283 
+<a name="l00284"></a>00284 <span class="preprocessor">#endif </span><span class="comment">/*SOUNDADMINISTRATOROPENAL_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:26:53 2008 para SoundAdminOpenAL por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

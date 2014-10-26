@@ -1,0 +1,376 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>CSoundTest: Referencia de la Clase UserData</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase UserData</h1><!-- doxytag: class="UserData" -->Clase encargada de almacenar los datos a pasarse al thread.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="UserData_8h-source.html">UserData.h</a>&gt;</code>
+<p>
+<a href="classUserData-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#4b42fb63cb7e4681cfbb89ef1c55ab60">UserData</a> (Csound *cs, int res)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#ea453765fe5004779dff6aa8e6094293">~UserData</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#e53938f8af5731ef5db24fed050c892e">togglePerform</a> (void)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#1085a288b852df94607ce9f48b5c89e5">isPerforming</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#5fee65895717f86ea9741c0b2f87eb4d">getResult</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">Csound *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#36f4c0fd8c7d17cc50e4c52a4323834d">getCsound</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#8a958ccf5471cb04f860d0bf9fb5620a">destroyCsound</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#a51061d2c6afba28c74fe26a875dc9a5">setInteractionData</a> (double degrees, double reverb, double distance)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#23d8c7e152a7d584e28b52820bd9581e">getDegrees</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#9cb32c29b388c59ebfe0d10158866fc5">getReverb</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#32454e34c821ab179eee9322ea7b5508">getDistance</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">MYFLT *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#009afa5636657a4556dad124ae41a9b1">getPval</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserData.html#37b6eaa697198582e39e3fa777b89c8c">setPval</a> (MYFLT *val)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase encargada de almacenar los datos a pasarse al thread. 
+<p>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+
+<p>
+<a class="el" href="main_8cpp-example.html#_a0">main.cpp</a>.</dl>
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="4b42fb63cb7e4681cfbb89ef1c55ab60"></a><!-- doxytag: member="UserData::UserData" ref="4b42fb63cb7e4681cfbb89ef1c55ab60" args="(Csound *cs, int res)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UserData::UserData           </td>
+          <td>(</td>
+          <td class="paramtype">Csound *&nbsp;</td>
+          <td class="paramname"> <em>cs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>res</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>cs</em>&nbsp;</td><td>Objeto Csound para trabajar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>res</em>&nbsp;</td><td>Resultado de la compilaciÃ³n </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ea453765fe5004779dff6aa8e6094293"></a><!-- doxytag: member="UserData::~UserData" ref="ea453765fe5004779dff6aa8e6094293" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UserData::~UserData           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="e53938f8af5731ef5db24fed050c892e"></a><!-- doxytag: member="UserData::togglePerform" ref="e53938f8af5731ef5db24fed050c892e" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserData::togglePerform           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Activa/Desactiva el hecho de estar tocando <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a1">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="1085a288b852df94607ce9f48b5c89e5"></a><!-- doxytag: member="UserData::isPerforming" ref="1085a288b852df94607ce9f48b5c89e5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UserData::isPerforming           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Pregunta si estamos tocando <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Valor del atributo performing </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a4">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="5fee65895717f86ea9741c0b2f87eb4d"></a><!-- doxytag: member="UserData::getResult" ref="5fee65895717f86ea9741c0b2f87eb4d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UserData::getResult           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Resultado de compilaciÃ³n Csound </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a2">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="36f4c0fd8c7d17cc50e4c52a4323834d"></a><!-- doxytag: member="UserData::getCsound" ref="36f4c0fd8c7d17cc50e4c52a4323834d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Csound * UserData::getCsound           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Objeto Csound compilando actualmente </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a3">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="8a958ccf5471cb04f860d0bf9fb5620a"></a><!-- doxytag: member="UserData::destroyCsound" ref="8a958ccf5471cb04f860d0bf9fb5620a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserData::destroyCsound           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruye el objeto csound al final de un performance 
+</div>
+</div><p>
+<a class="anchor" name="a51061d2c6afba28c74fe26a875dc9a5"></a><!-- doxytag: member="UserData::setInteractionData" ref="a51061d2c6afba28c74fe26a875dc9a5" args="(double degrees, double reverb, double distance)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserData::setInteractionData           </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>degrees</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>reverb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>distance</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Cambia los datos de la interacciÃ³n <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>degrees</em>&nbsp;</td><td>Grados interacciÃ³n </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>reverb</em>&nbsp;</td><td>ReverberaciÃ³n </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>distance</em>&nbsp;</td><td>Distancia </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a8">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="23d8c7e152a7d584e28b52820bd9581e"></a><!-- doxytag: member="UserData::getDegrees" ref="23d8c7e152a7d584e28b52820bd9581e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UserData::getDegrees           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtiene los grados de la funciÃ³n <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a5">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="9cb32c29b388c59ebfe0d10158866fc5"></a><!-- doxytag: member="UserData::getReverb" ref="9cb32c29b388c59ebfe0d10158866fc5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UserData::getReverb           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtienen la reverberaciÃ³n de la funciÃ³n <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a7">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="32454e34c821ab179eee9322ea7b5508"></a><!-- doxytag: member="UserData::getDistance" ref="32454e34c821ab179eee9322ea7b5508" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UserData::getDistance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtiene la distancia de la funciÃ³n <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a6">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="009afa5636657a4556dad124ae41a9b1"></a><!-- doxytag: member="UserData::getPval" ref="009afa5636657a4556dad124ae41a9b1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MYFLT * UserData::getPval           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtiene el arreglo de valores P 
+</div>
+</div><p>
+<a class="anchor" name="37b6eaa697198582e39e3fa777b89c8c"></a><!-- doxytag: member="UserData::setPval" ref="37b6eaa697198582e39e3fa777b89c8c" args="(MYFLT *val)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UserData::setPval           </td>
+          <td>(</td>
+          <td class="paramtype">MYFLT *&nbsp;</td>
+          <td class="paramname"> <em>val</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Cambia los valores P <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>val</em>&nbsp;</td><td>Apuntador a arreglo de valores p para un evento </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="UserData_8h-source.html">UserData.h</a><li>UserData.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 17:06:39 2008 para CSoundTest por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

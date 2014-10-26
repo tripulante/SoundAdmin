@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>VBAP: Referencia de la Clase SpeakerTriangle</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase SpeakerTriangle</h1><!-- doxytag: class="SpeakerTriangle" -->Define un triÃ¡ngulo entre speakers y algunas funciones Ãºtiles.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="Triangle_8h-source.html">Triangle.h</a>&gt;</code>
+<p>
+Diagrama de colaboración para SpeakerTriangle:<p><center><img src="classSpeakerTriangle__coll__graph.png" border="0" usemap="#SpeakerTriangle__coll__map" alt="Collaboration graph"></center>
+<map name="SpeakerTriangle__coll__map">
+<area href="classSpeaker.html" shape="rect" coords="32,7,107,31" alt="">
+</map>
+<center><font size="2">[<a href="graph_legend.html">leyenda</a>]</font></center><a href="classSpeakerTriangle-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#e5a933f810f081bb49648e28920aa9b2">SpeakerTriangle</a> (<a class="el" href="classSpeaker.html">Speaker</a> *a, <a class="el" href="classSpeaker.html">Speaker</a> *b, <a class="el" href="classSpeaker.html">Speaker</a> *c)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#12e2a947b0b3abbfc0b16f06e21d3f3f">~SpeakerTriangle</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classSpeaker.html">Speaker</a> **&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#3bf7a9a0de108780acb721343660d43a">getSpeakers</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">Matrix33f&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#2ee237fa4ba401beaa13507587dbf45f">getMatrix</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#015f228d6e09d16bcd29eb0a5f4b3bea">toString</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#4460a6676d1562bffdaf2ed8f9474e9a">isTriangleVertex</a> (int numspeaker)</td></tr>
+
+<tr><td colspan="2"><br><h2>Métodos públicos estáticos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#94e126a15494ced65d85eb42cc4e4e61">triangleVolume</a> (<a class="el" href="classSpeakerTriangle.html">SpeakerTriangle</a> s)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpeakerTriangle.html#389c7d9f1d5feb11f4da63b8eb7a6fff">angleBetween</a> (Vec3f a, Vec3f b)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Define un triÃ¡ngulo entre speakers y algunas funciones Ãºtiles. 
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="e5a933f810f081bb49648e28920aa9b2"></a><!-- doxytag: member="SpeakerTriangle::SpeakerTriangle" ref="e5a933f810f081bb49648e28920aa9b2" args="(Speaker *a, Speaker *b, Speaker *c)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpeakerTriangle::SpeakerTriangle           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSpeaker.html">Speaker</a> *&nbsp;</td>
+          <td class="paramname"> <em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSpeaker.html">Speaker</a> *&nbsp;</td>
+          <td class="paramname"> <em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSpeaker.html">Speaker</a> *&nbsp;</td>
+          <td class="paramname"> <em>c</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase <dl class="pre" compact><dt><b>Precondición:</b></dt><dd>Los parlantes no son nulos </dd></dl>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>a</em>&nbsp;</td><td><a class="el" href="classSpeaker.html">Speaker</a> que define la primer arista del triÃ¡ngulo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>b</em>&nbsp;</td><td><a class="el" href="classSpeaker.html">Speaker</a> que define la segunda arista del triÃ¡ngulo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td><a class="el" href="classSpeaker.html">Speaker</a> que define la tercer arista del triÃ¡ngulo </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="12e2a947b0b3abbfc0b16f06e21d3f3f"></a><!-- doxytag: member="SpeakerTriangle::~SpeakerTriangle" ref="12e2a947b0b3abbfc0b16f06e21d3f3f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SpeakerTriangle::~SpeakerTriangle           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="3bf7a9a0de108780acb721343660d43a"></a><!-- doxytag: member="SpeakerTriangle::getSpeakers" ref="3bf7a9a0de108780acb721343660d43a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSpeaker.html">Speaker</a>** SpeakerTriangle::getSpeakers           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Retorna el arreglo con los parlantes contenidos en el triÃ¡ngulo </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2ee237fa4ba401beaa13507587dbf45f"></a><!-- doxytag: member="SpeakerTriangle::getMatrix" ref="2ee237fa4ba401beaa13507587dbf45f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix33f SpeakerTriangle::getMatrix           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Retorna la matriz para realizar los cÃ¡lculos de ganancias </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="94e126a15494ced65d85eb42cc4e4e61"></a><!-- doxytag: member="SpeakerTriangle::triangleVolume" ref="94e126a15494ced65d85eb42cc4e4e61" args="(SpeakerTriangle s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float SpeakerTriangle::triangleVolume           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSpeakerTriangle.html">SpeakerTriangle</a>&nbsp;</td>
+          <td class="paramname"> <em>s</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Devuelve el volumen del sÃ³lido contenido por los vectores en el triÃ¡ngulo dividido por el total de la longitud de los lados <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>TriÃ¡ngulo a calcular </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Volumen del triÃ¡ngulo. 0.0f si es muy pequeÃ±o </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="389c7d9f1d5feb11f4da63b8eb7a6fff"></a><!-- doxytag: member="SpeakerTriangle::angleBetween" ref="389c7d9f1d5feb11f4da63b8eb7a6fff" args="(Vec3f a, Vec3f b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float SpeakerTriangle::angleBetween           </td>
+          <td>(</td>
+          <td class="paramtype">Vec3f&nbsp;</td>
+          <td class="paramname"> <em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vec3f&nbsp;</td>
+          <td class="paramname"> <em>b</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Retorna el Ã¡ngulo entre los dos vectores <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>a</em>&nbsp;</td><td>Vector a calcular </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>b</em>&nbsp;</td><td>Vector a calcular </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Ãngulo entre los dos vectores </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="015f228d6e09d16bcd29eb0a5f4b3bea"></a><!-- doxytag: member="SpeakerTriangle::toString" ref="015f228d6e09d16bcd29eb0a5f4b3bea" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SpeakerTriangle::toString           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Convierte el triÃ¡ngulo a una cadena legible para debug <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>TriÃ¡ngulo como cadena legible </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4460a6676d1562bffdaf2ed8f9474e9a"></a><!-- doxytag: member="SpeakerTriangle::isTriangleVertex" ref="4460a6676d1562bffdaf2ed8f9474e9a" args="(int numspeaker)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SpeakerTriangle::isTriangleVertex           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>numspeaker</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Verifica si existe un vÃ©rtice del triÃ¡ngulo con ese nÃºmero de speaker <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>numspeaker</em>&nbsp;</td><td>NÃºmero del speaker a verificar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si uno de los vÃ©rtices del triÃ¡ngulo tiene ese nÃºmero de speaker </dd></dl>
+
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="Triangle_8h-source.html">Triangle.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 18:07:36 2008 para VBAP por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

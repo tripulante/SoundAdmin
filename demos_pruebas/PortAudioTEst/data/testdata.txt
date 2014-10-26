@@ -1,0 +1,11 @@
+../data/808loop.wav
+4
+source
+data
+font
+por
+k
+a
+c
+d
+s

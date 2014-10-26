@@ -1,0 +1,897 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminOpenAL: Referencia de la Clase SoundAdministratorOpenAL</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase SoundAdministratorOpenAL</h1><!-- doxytag: class="SoundAdministratorOpenAL" --><!-- doxytag: inherits="ISoundAdministrator" -->Clase que se encarga de administrar las fuentes generadas mediante OpenAL.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="SoundAdministratorOpenAL_8h-source.html">SoundAdministratorOpenAL.h</a>&gt;</code>
+<p>
+Diagrama de herencias de SoundAdministratorOpenAL<p><center><img src="classSoundAdministratorOpenAL__inherit__graph.png" border="0" usemap="#SoundAdministratorOpenAL__inherit__map" alt="Inheritance graph"></center>
+<map name="SoundAdministratorOpenAL__inherit__map">
+<area href="classISoundAdministrator.html" shape="rect" coords="28,7,185,31" alt="">
+</map>
+<center><font size="2">[<a href="graph_legend.html">leyenda</a>]</font></center>Diagrama de colaboración para SoundAdministratorOpenAL:<p><center><img src="classSoundAdministratorOpenAL__coll__graph.png" border="0" usemap="#SoundAdministratorOpenAL__coll__map" alt="Collaboration graph"></center>
+<map name="SoundAdministratorOpenAL__coll__map">
+<area href="classISoundAdministrator.html" shape="rect" coords="6,7,163,31" alt="">
+<area href="classSoundLoaderAL.html" shape="rect" coords="187,7,310,31" alt="">
+</map>
+<center><font size="2">[<a href="graph_legend.html">leyenda</a>]</font></center><a href="classSoundAdministratorOpenAL-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#eb25c10543765dfe1b9d32e5d7dbdec7">SoundAdministratorOpenAL</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#ca245e41efc568b474992fde572c60b2">~SoundAdministratorOpenAL</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#39c76f3d4cda395a1ecef06938bd72e2">initializeAdministrator</a> ()  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#ec63bc4550b941b1e481da0012cfe5f9">closeAdministrator</a> ()  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#721f89fb83e3a1b33cfe8f54da2b8d3c">createSource</a> (string id, string fileDesc, bool amb)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#c00ada6966ede51dbf3992c4736eb8eb">destroySource</a> (string id)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#28b0957bd51ac6fd1521e3c73f9af4b0">playSource</a> (string id, bool loop)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#a98f7876e388266a01dacac6a61c9f3d">pauseSource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#c05efd6946f7b6995097ad4bd508215d">stopSource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#a2c7a8879f9c6129ac5b44b1a30b4097">detachSource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#5c847ff6163eebe7789b3faff3e97d7d">attachSource</a> (string id, string desc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#558924ab9a3cae701a708edbc0ed9fc1">playAllSources</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#95d26f726df84f1c774c8d8374dd56b7">pauseAllSources</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#e21fda6e978d77b284ac26db1b9fe8d4">stopAllSources</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">list&lt; string &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#d90f8245ee7dc666f2e7b6b2a0f95a59">getSourceIds</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">list&lt; string &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#c8531054873b9b8bf99d97d7ec490cd6">getActiveSources</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#ce000a25fb740ae9402998d6f1a2695c">destroyAllSources</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#fe92ba8ad029c1ca7f1b54e8e10f00f9">existsSource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">list&lt; string &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#6d69a8c9d3b0c931ac0e7e6495917edb">getFileDescriptions</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#b6296162015a1279344d9a7698c08e31">loadFile</a> (string description, string path)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#571f4940efa1dc8f51c1a652f6012439">cleanFiles</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#cc1bfd637d27e7e9630873ee54013fcb">fileExists</a> (string desc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#ba79db9aba78c33817d6b937a59e2be8">updateSource</a> (string id, float x, float y, float z)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#70f438b56853eaf3f8b3af395aaa503e">useSourceAsAmbient</a> (string id, bool ambient)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#e0a07712165195b1b097e89530925b60">isAmbient</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#c1aa28c272c64ec9af17248604464c59">updateListener</a> (float x, float y, float z)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdministratorOpenAL.html#c4b416538b87c236091f4db1dfebd3cd">cleanAmbientSources</a> ()</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase que se encarga de administrar las fuentes generadas mediante OpenAL. 
+<p>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo (<a href="mailto:joh-palm@uniandes.edu.co">joh-palm@uniandes.edu.co</a> - <a href="mailto:tripulante@gmail.com">tripulante@gmail.com</a>) </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+
+<p>
+<a class="el" href="main_8cpp-example.html#_a5">main.cpp</a>.</dl>
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="eb25c10543765dfe1b9d32e5d7dbdec7"></a><!-- doxytag: member="SoundAdministratorOpenAL::SoundAdministratorOpenAL" ref="eb25c10543765dfe1b9d32e5d7dbdec7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SoundAdministratorOpenAL::SoundAdministratorOpenAL           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase 
+</div>
+</div><p>
+<a class="anchor" name="ca245e41efc568b474992fde572c60b2"></a><!-- doxytag: member="SoundAdministratorOpenAL::~SoundAdministratorOpenAL" ref="ca245e41efc568b474992fde572c60b2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SoundAdministratorOpenAL::~SoundAdministratorOpenAL           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="39c76f3d4cda395a1ecef06938bd72e2"></a><!-- doxytag: member="SoundAdministratorOpenAL::initializeAdministrator" ref="39c76f3d4cda395a1ecef06938bd72e2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::initializeAdministrator           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Se encarga de inicializar el administrador de acuerdo al API <dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>en caso que no se pueda inicalizar el API </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#77187c9a880d57b22e2281f7d6e5467a">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="ec63bc4550b941b1e481da0012cfe5f9"></a><!-- doxytag: member="SoundAdministratorOpenAL::closeAdministrator" ref="ec63bc4550b941b1e481da0012cfe5f9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::closeAdministrator           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Cierra el administrador de acuerdo al API que subyace en la implementaciÃ³n. <dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>en caso que no se pueda inicalizar el API </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#5abd5bf85001e76559ed25a80b5b5271">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="721f89fb83e3a1b33cfe8f54da2b8d3c"></a><!-- doxytag: member="SoundAdministratorOpenAL::createSource" ref="721f89fb83e3a1b33cfe8f54da2b8d3c" args="(string id, string fileDesc, bool amb)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdministratorOpenAL::createSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>fileDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>amb</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%">  throw (string)<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea una fuente puntual en el origen asociada al archivo indicado por fileDesc. La fuente se asocia a una descripciÃ³n del archivo asociada desde la carga <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la nueva fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fileDesc</em>&nbsp;</td><td>DescripciÃ³n del identificador </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>amb</em>&nbsp;</td><td>bool que indica si la fuente es ambiente o no </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true Si la fuente pudo ser creada exitosamente <p>
+false Si la fuente no pudo ser creada </dd></dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si el archivo descrito por fileDesc no existe </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si ya existe una fuente con el id solicitado </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#b59786e744477caddead3a3f3c4be15b">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="c00ada6966ede51dbf3992c4736eb8eb"></a><!-- doxytag: member="SoundAdministratorOpenAL::destroySource" ref="c00ada6966ede51dbf3992c4736eb8eb" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::destroySource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruye la fuente. En este caso la separa del objeto audio con el que estÃ© asociada y la elimina <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a eliminar </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si la fuente no existe o no se pudo eliminar </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#70f08079f4044c985d6e2a578792ae2c">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="28b0957bd51ac6fd1521e3c73f9af4b0"></a><!-- doxytag: member="SoundAdministratorOpenAL::playSource" ref="28b0957bd51ac6fd1521e3c73f9af4b0" args="(string id, bool loop)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::playSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>loop</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Indica que la fuente con id <b>id</b> debe empezar a sonar Si la fuente estÃ¡ sonando o no existe, el comando no hace nada <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente que se quiere hacer sonar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>loop</em>&nbsp;</td><td>Indica si el sonido debe ser reproducido constantemente </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#b2973fb5fa37f6e959425636f4daed89">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="a98f7876e388266a01dacac6a61c9f3d"></a><!-- doxytag: member="SoundAdministratorOpenAL::pauseSource" ref="a98f7876e388266a01dacac6a61c9f3d" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::pauseSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Detiene la reproducciÃ³n de una fuente en el momento actual <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a pausar. </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#cef536929db79191d35db27fb17a1769">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="c05efd6946f7b6995097ad4bd508215d"></a><!-- doxytag: member="SoundAdministratorOpenAL::stopSource" ref="c05efd6946f7b6995097ad4bd508215d" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::stopSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Detiene la reproducciÃ³n de una fuente. En el momento que se decida resumir la reproducciÃ³n la fuente empieza desde el principio <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a detener </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#49ed08353bdf59ad21900f6f0cc4504c">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="a2c7a8879f9c6129ac5b44b1a30b4097"></a><!-- doxytag: member="SoundAdministratorOpenAL::detachSource" ref="a2c7a8879f9c6129ac5b44b1a30b4097" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::detachSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Libera la fuente del archivo fuente que estÃ¡ usando en el momento como fuente sonora <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#310e137c2fb4f2a0cdb783790ce6ffd4">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="5c847ff6163eebe7789b3faff3e97d7d"></a><!-- doxytag: member="SoundAdministratorOpenAL::attachSource" ref="5c847ff6163eebe7789b3faff3e97d7d" args="(string id, string desc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdministratorOpenAL::attachSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+reasigna a la fuente el archivo seÃ±alado por desc <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescripciÃ³n del archivo a asociar </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#fc2458e5dc3b56af75377307bbc981fc">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="558924ab9a3cae701a708edbc0ed9fc1"></a><!-- doxytag: member="SoundAdministratorOpenAL::playAllSources" ref="558924ab9a3cae701a708edbc0ed9fc1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::playAllSources           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+reproduce todas las fuentes en el sistema 
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#827c7153d99cfde03d2e1d383402b479">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="95d26f726df84f1c774c8d8374dd56b7"></a><!-- doxytag: member="SoundAdministratorOpenAL::pauseAllSources" ref="95d26f726df84f1c774c8d8374dd56b7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::pauseAllSources           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Pausa todas las fuentes activas en el sistema 
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#98520ced60a5487f01b8e740abfb87df">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="e21fda6e978d77b284ac26db1b9fe8d4"></a><!-- doxytag: member="SoundAdministratorOpenAL::stopAllSources" ref="e21fda6e978d77b284ac26db1b9fe8d4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::stopAllSources           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Detiene todas las fuentes en el sistema 
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#b7d270cca9fc1de24c8ccddfdbc9a9eb">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="d90f8245ee7dc666f2e7b6b2a0f95a59"></a><!-- doxytag: member="SoundAdministratorOpenAL::getSourceIds" ref="d90f8245ee7dc666f2e7b6b2a0f95a59" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt; string &gt; * SoundAdministratorOpenAL::getSourceIds           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Retorna una lista con los nombres de las fuentes en el sistema <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Lista con nombres de fuentes </dd></dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#684ae55e7af2c7b6292bf938755aa8bb">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="c8531054873b9b8bf99d97d7ec490cd6"></a><!-- doxytag: member="SoundAdministratorOpenAL::getActiveSources" ref="c8531054873b9b8bf99d97d7ec490cd6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt; string &gt; * SoundAdministratorOpenAL::getActiveSources           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+retorna una lista con los nombres de las fuentes en reproducciÃ³n <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Lista de nombres de fuentes activas </dd></dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#2862d5bb66ad934e51837531837ff363">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="ce000a25fb740ae9402998d6f1a2695c"></a><!-- doxytag: member="SoundAdministratorOpenAL::destroyAllSources" ref="ce000a25fb740ae9402998d6f1a2695c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::destroyAllSources           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruye todas las fuentes 
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#f7213e02a87d3b008270bb1757becb86">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="fe92ba8ad029c1ca7f1b54e8e10f00f9"></a><!-- doxytag: member="SoundAdministratorOpenAL::existsSource" ref="fe92ba8ad029c1ca7f1b54e8e10f00f9" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdministratorOpenAL::existsSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+indica si existe un archivo con una descripciÃ³n dada <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si existe una fuente con nombre <b>id</b>. false si no </dd></dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#5efdef17f7fd07d3219c43cbb7d42195">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="6d69a8c9d3b0c931ac0e7e6495917edb"></a><!-- doxytag: member="SoundAdministratorOpenAL::getFileDescriptions" ref="6d69a8c9d3b0c931ac0e7e6495917edb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt; string &gt; * SoundAdministratorOpenAL::getFileDescriptions           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>lista con las descrpiciones de los archivos del sistema </dd></dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#e978d0cb4f603d1efcd7080de541956c">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="b6296162015a1279344d9a7698c08e31"></a><!-- doxytag: member="SoundAdministratorOpenAL::loadFile" ref="b6296162015a1279344d9a7698c08e31" args="(string description, string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::loadFile           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%">  throw (string)<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Carga un archivo individual. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>description</em>&nbsp;</td><td>descripciÃ³n del archivo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta al archivo </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>Mensaje de error si el archivo no pudo ser cargado. </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#b8dea606bd474059d6a78d4799f450f2">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="571f4940efa1dc8f51c1a652f6012439"></a><!-- doxytag: member="SoundAdministratorOpenAL::cleanFiles" ref="571f4940efa1dc8f51c1a652f6012439" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::cleanFiles           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Borra todos los archivos cargados 
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#7ae672c604fa533a8e12b3cf6922918f">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="cc1bfd637d27e7e9630873ee54013fcb"></a><!-- doxytag: member="SoundAdministratorOpenAL::fileExists" ref="cc1bfd637d27e7e9630873ee54013fcb" args="(string desc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdministratorOpenAL::fileExists           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+indica si existe un archivo con una descripciÃ³n dada <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescripciÃ³n del archivo </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si existe un archivo con descripciÃ³n <b>desc</b>. false si no </dd></dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#9c36f59ea5d158427e206f48d8b6dbb0">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="ba79db9aba78c33817d6b937a59e2be8"></a><!-- doxytag: member="SoundAdministratorOpenAL::updateSource" ref="ba79db9aba78c33817d6b937a59e2be8" args="(string id, float x, float y, float z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::updateSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>z</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Actualiza la ubicaciÃ³n de una fuente en el espacio <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>PosiciÃ³n nueva de la fuente en x </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>PosiciÃ³n nueva de la fuente en y </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>z</em>&nbsp;</td><td>PosiciÃ³n nueva de la fuente en z </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#cef3df2eab54060fda62cf2dc5c555e6">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="70f438b56853eaf3f8b3af395aaa503e"></a><!-- doxytag: member="SoundAdministratorOpenAL::useSourceAsAmbient" ref="70f438b56853eaf3f8b3af395aaa503e" args="(string id, bool ambient)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::useSourceAsAmbient           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>ambient</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%">  throw (string)<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Asocia una fuente a la escucha de manera que se mueve con ella y tiene la misma amplitud en todos los puntos. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a asociar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ambient</em>&nbsp;</td><td>Indica si la fuente es ambiente o no </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si la fuente no existe o ya fue asociada al listener </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#1df4c83d4f78aa87532302f7e5c315fb">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="e0a07712165195b1b097e89530925b60"></a><!-- doxytag: member="SoundAdministratorOpenAL::isAmbient" ref="e0a07712165195b1b097e89530925b60" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdministratorOpenAL::isAmbient           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Permite consultar si una fuente es ambiente o no <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a consultar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si la fuente es ambiente o false si no o no existe </dd></dl>
+
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#c6b9f660d4e3e12aeb56c0d024be966b">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="c1aa28c272c64ec9af17248604464c59"></a><!-- doxytag: member="SoundAdministratorOpenAL::updateListener" ref="c1aa28c272c64ec9af17248604464c59" args="(float x, float y, float z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::updateListener           </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>z</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Actualiza la ubicaciÃ³n del listener en el espacio <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>PosiciÃ³n nueva del listener en x </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>PosiciÃ³n nueva del listener en y </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>z</em>&nbsp;</td><td>PosiciÃ³n nueva del listener en z </td></tr>
+  </table>
+</dl>
+
+<p>
+TODO Esto es en cuanto a OpenAL... y PortAudio? TODO CÃ³mo cambiamos la orientaciÃ³n del listener? 
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#ec79cd50d09cc1b7d40b127d33e87920">ISoundAdministrator</a>.
+</div>
+</div><p>
+<a class="anchor" name="c4b416538b87c236091f4db1dfebd3cd"></a><!-- doxytag: member="SoundAdministratorOpenAL::cleanAmbientSources" ref="c4b416538b87c236091f4db1dfebd3cd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdministratorOpenAL::cleanAmbientSources           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Separa al listener de todas las fuentes asociadas a Ã©l. 
+<p>
+Implementa <a class="el" href="classISoundAdministrator.html#b2ea367e90085e25ce373b173df3fc2e">ISoundAdministrator</a>.
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="SoundAdministratorOpenAL_8h-source.html">SoundAdministratorOpenAL.h</a><li>SoundAdministratorOpenAL.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:26:53 2008 para SoundAdminOpenAL por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

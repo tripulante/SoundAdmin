@@ -1,0 +1,23 @@
+Triángulos antes de borrar: 4
+Deberían haberse borrado: 2
+Restantes: 2
+Triángulo: 
+Speaker No. 1 Vector: (0.5, 0.707107, -0.5)
+Speaker No. 2 Vector: (0.5, 0.707107, 0.5)
+Speaker No. 3 Vector: (0.5, -0.707107, 0.5)
+Matriz Invertida: 
+| 1 0 -1 |
+| 1.26881e-08 0.707107 1 |
+| 1 -0.707107 1.26881e-08 |
+
+
+Triángulo: 
+Speaker No. 1 Vector: (0.5, 0.707107, -0.5)
+Speaker No. 3 Vector: (0.5, -0.707107, 0.5)
+Speaker No. 4 Vector: (0.5, -0.707107, -0.5)
+Matriz Invertida: 
+| 1 0.707107 -0 |
+| 1 2.46891e-08 1 |
+| -1.26881e-08 -0.707107 -1 |
+
+

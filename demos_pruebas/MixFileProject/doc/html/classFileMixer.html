@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>FileMixerPortaudio: Referencia de la Clase FileMixer</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase FileMixer</h1><!-- doxytag: class="FileMixer" -->Clase encargada de mezclar las seÃ±ales de archivos leÃ­dos usando libsndfile en una salida portaudio.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="FileMixer_8h-source.html">FileMixer.h</a>&gt;</code>
+<p>
+<a href="classFileMixer-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileMixer.html#2280b7a044d5cd283aeb469f0270da25">FileMixer</a> (int sampleRate)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileMixer.html#359542dd9fea03c46767fbe83a7d068d">~FileMixer</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileMixer.html#2ecc43c55fa702fcc979bc13dab74526">mixFunc</a> (void *outputBuffer, unsigned long framesPerBuffer)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileMixer.html#f8f981be6728370b9c8228f99ba65d0c">createSource</a> (string id, const char *fileRoute)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileMixer.html#91de49bd83bafdd17e4938d43d32918b">startPlaying</a> ()  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileMixer.html#a96392a90449e69147c1e2f7164c9ddc">changeRandomGain</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Amigas</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileMixer.html#ba6125777961a891d7b0b0f3f0ea5808">fileCallback</a> (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase encargada de mezclar las seÃ±ales de archivos leÃ­dos usando libsndfile en una salida portaudio. 
+<p>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+
+<p>
+<a class="el" href="main_8cpp-example.html#_a0">main.cpp</a>.</dl>
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="2280b7a044d5cd283aeb469f0270da25"></a><!-- doxytag: member="FileMixer::FileMixer" ref="2280b7a044d5cd283aeb469f0270da25" args="(int sampleRate)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FileMixer::FileMixer           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>sampleRate</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>sampleRate</em>&nbsp;</td><td>Sample rate a usar en el dispositivo de salida </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si el sistema no puede ser soportado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>en caso de errores con PortAudio </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="359542dd9fea03c46767fbe83a7d068d"></a><!-- doxytag: member="FileMixer::~FileMixer" ref="359542dd9fea03c46767fbe83a7d068d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FileMixer::~FileMixer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="2ecc43c55fa702fcc979bc13dab74526"></a><!-- doxytag: member="FileMixer::mixFunc" ref="2ecc43c55fa702fcc979bc13dab74526" args="(void *outputBuffer, unsigned long framesPerBuffer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FileMixer::mixFunc           </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>outputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&nbsp;</td>
+          <td class="paramname"> <em>framesPerBuffer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Reproduce las fuentes (funciÃ³n privada de callback) <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>outputBuffer</em>&nbsp;</td><td>salida del sistema </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>framesPerBuffer</em>&nbsp;</td><td>nÃºmero de datos a leer </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>paContinue </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f8f981be6728370b9c8228f99ba65d0c"></a><!-- doxytag: member="FileMixer::createSource" ref="f8f981be6728370b9c8228f99ba65d0c" args="(string id, const char *fileRoute)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileMixer::createSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>fileRoute</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea una fuente <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fileRoute</em>&nbsp;</td><td>ruta al archivo </td></tr>
+  </table>
+</dl>
+<dl class="note" compact><dt><b>Nota:</b></dt><dd>No hace nada si ya existe una fuente con ese id o el archivo no se pudo abrir </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a1">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="91de49bd83bafdd17e4938d43d32918b"></a><!-- doxytag: member="FileMixer::startPlaying" ref="91de49bd83bafdd17e4938d43d32918b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileMixer::startPlaying           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Empieza a reproducir el sistema. <dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si hay problemas con PortAudio </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a2">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="a96392a90449e69147c1e2f7164c9ddc"></a><!-- doxytag: member="FileMixer::changeRandomGain" ref="a96392a90449e69147c1e2f7164c9ddc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileMixer::changeRandomGain           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Cambia al azar la ganancia de una fuente en el sistema <dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a3">main.cpp</a>.</dl>
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones relacionadas y clases amigas</h2>
+<a class="anchor" name="ba6125777961a891d7b0b0f3f0ea5808"></a><!-- doxytag: member="FileMixer::fileCallback" ref="ba6125777961a891d7b0b0f3f0ea5808" args="(const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fileCallback           </td>
+          <td>(</td>
+          <td class="paramtype">const void *&nbsp;</td>
+          <td class="paramname"> <em>inputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>outputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&nbsp;</td>
+          <td class="paramname"> <em>framesPerBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PaStreamCallbackTimeInfo *&nbsp;</td>
+          <td class="paramname"> <em>timeInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PaStreamCallbackFlags&nbsp;</td>
+          <td class="paramname"> <em>statusFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>userData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+FunciÃ³n de callback usada para la salida PortAudio <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>inputBuffer</em>&nbsp;</td><td>Toma datos de la entrada del dispositivo (no usado) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>outputBuffer</em>&nbsp;</td><td>EnvÃ­a datos al dispositivo de salida </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>framesPerBuffer</em>&nbsp;</td><td>CuÃ¡ntos datos han de enviarse </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>timeInfo</em>&nbsp;</td><td>No usado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>statusFlags</em>&nbsp;</td><td>No usado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>userData</em>&nbsp;</td><td>Datos del usuario a usar en la funciÃ³n </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>paContinue para operaciÃ³n normal. </dd></dl>
+
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="FileMixer_8h-source.html">FileMixer.h</a><li>FileMixer.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:57:08 2008 para FileMixerPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

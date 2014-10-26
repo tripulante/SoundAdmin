@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminOpenAL: Fichero Fuente SourceStructAL.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>SourceStructAL.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SOURCESTRUCTAL_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SOURCESTRUCTAL_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="comment">/*inclusiones del sistema*/</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;AL/al.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;AL/alut.h&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;exception&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="comment">/*inclusiones del proyecto*/</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include "../../interface/Source.h"</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "<a class="code" href="SourceFileAL_8h.html">SourceFileAL.h</a>"</span>
+<a name="l00014"></a>00014 <span class="comment">/*namespace*/</span>
+<a name="l00015"></a>00015 <span class="keyword">using namespace </span>std;
+<a name="l00016"></a>00016 
+<a name="l00023"></a><a class="code" href="classSourceStructAL.html">00023</a> <span class="keyword">class </span><a class="code" href="classSourceStructAL.html">SourceStructAL</a>
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">private</span>:
+<a name="l00027"></a>00027         
+<a name="l00031"></a>00031         ALuint source;
+<a name="l00032"></a>00032         
+<a name="l00036"></a>00036         <a class="code" href="classSourceFileAL.html">SourceFileAL</a> *file;
+<a name="l00037"></a>00037         
+<a name="l00041"></a>00041         <a class="code" href="classSource.html">Source</a> *src;
+<a name="l00042"></a>00042 <span class="keyword">public</span>:
+<a name="l00043"></a>00043         
+<a name="l00051"></a>00051         <a class="code" href="classSourceStructAL.html#e527980260f5db0c5de30b01f057f7f8">SourceStructAL</a>(<a class="code" href="classSourceFileAL.html">SourceFileAL</a> *f, <a class="code" href="classSource.html">Source</a> *s) <span class="keywordflow">throw</span> (string);
+<a name="l00052"></a>00052         
+<a name="l00056"></a>00056         <span class="keyword">virtual</span> <a class="code" href="classSourceStructAL.html#3f6aa7f00ae637b92fe570e9035f72d2">~SourceStructAL</a>();
+<a name="l00057"></a>00057         
+<a name="l00064"></a>00064         <span class="keywordtype">void</span> <a class="code" href="classSourceStructAL.html#a5a8abf74881eac85555add6e1c0f4b1">updateSource</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);
+<a name="l00065"></a>00065         
+<a name="l00070"></a>00070         <span class="keywordtype">void</span> <a class="code" href="classSourceStructAL.html#dfdd84093bef3ce90821c982a813f8be">setFile</a>(<a class="code" href="classSourceFileAL.html">SourceFileAL</a>* f);
+<a name="l00071"></a>00071         
+<a name="l00076"></a>00076         <span class="keywordtype">void</span> <a class="code" href="classSourceStructAL.html#2242c21ef0a28e7f7dccee43d1936a2d">setSource</a>(<a class="code" href="classSource.html">Source</a>* s);
+<a name="l00077"></a>00077         
+<a name="l00081"></a>00081         <a class="code" href="classSource.html">Source</a>* <a class="code" href="classSourceStructAL.html#0ffbf5122bcaf1ba7156d5564439b2cd">getSource</a>();
+<a name="l00082"></a>00082         
+<a name="l00086"></a>00086         <a class="code" href="classSourceFileAL.html">SourceFileAL</a>* <a class="code" href="classSourceStructAL.html#828ff506918861d24849f107823d417e">getFile</a>();
+<a name="l00087"></a>00087         
+<a name="l00093"></a>00093         <span class="keywordtype">void</span> <a class="code" href="classSourceStructAL.html#f0608d083fcabb1be030339d75c39c4c">playSource</a>(<span class="keywordtype">bool</span> loop);
+<a name="l00094"></a>00094         
+<a name="l00098"></a>00098         <span class="keywordtype">void</span> <a class="code" href="classSourceStructAL.html#e472eb43f70a817f25d4bf44a965d6f2">stopSource</a>();
+<a name="l00099"></a>00099         
+<a name="l00103"></a>00103         <span class="keywordtype">void</span> <a class="code" href="classSourceStructAL.html#de78d2986829229d4d165d49fa920d2a">pauseSource</a>();
+<a name="l00104"></a>00104         
+<a name="l00109"></a>00109         <span class="keywordtype">void</span> <a class="code" href="classSourceStructAL.html#0ab9b8c8a00939cd896f53a8b4451b1c">setAsAmbient</a>(<span class="keywordtype">bool</span> ambient);
+<a name="l00110"></a>00110         
+<a name="l00115"></a>00115         <span class="keywordtype">bool</span> <a class="code" href="classSourceStructAL.html#f0419f4ea0096deb552fa57e46cdf558">isAmbient</a>();
+<a name="l00116"></a>00116 };
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 <span class="preprocessor">#endif </span><span class="comment">/*SOURCESTRUCTAL_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:26:53 2008 para SoundAdminOpenAL por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

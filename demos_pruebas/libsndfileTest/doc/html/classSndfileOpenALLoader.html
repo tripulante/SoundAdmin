@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SndfileOpenALLoader: Referencia de la Clase SndfileOpenALLoader</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase SndfileOpenALLoader</h1><!-- doxytag: class="SndfileOpenALLoader" -->Clase que se encarga de cargar un archivo usando libsndfile y convertirlo a un buffer OpenAL para uso.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="SndfileOpenALLoader_8h-source.html">SndfileOpenALLoader.h</a>&gt;</code>
+<p>
+<a href="classSndfileOpenALLoader-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSndfileOpenALLoader.html#40d1f0a9c728994033b976152c7f652f">SndfileOpenALLoader</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSndfileOpenALLoader.html#5126c30b048bee573524a54ced4504f0">~SndfileOpenALLoader</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSndfileOpenALLoader.html#38cdb7bcc915c2bd96947fc98b995cab">loadFile</a> (string file)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSndfileOpenALLoader.html#7a72d794a276aff538922647b506ad4d">printFileInfo</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSndfileOpenALLoader.html#2afb7502e9f57439faf39d663a427b46">loadBufferFromFile</a> (ALuint buffer)  throw (string)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase que se encarga de cargar un archivo usando libsndfile y convertirlo a un buffer OpenAL para uso. 
+<p>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000002">Tareas Pendientes:</a></b></dt><dd>Corregir errores presentes en la carga que evitan su uso adecuado. </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000002">Tareas Pendientes:</a></b></dt><dd>Corregir la carga del archivo. EstÃ¡ cambiando de acuerdo a el sample rate y bitrate del archivo </dd></dl>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+
+<p>
+<a class="el" href="main_8cpp-example.html#_a0">main.cpp</a>.</dl>
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="40d1f0a9c728994033b976152c7f652f"></a><!-- doxytag: member="SndfileOpenALLoader::SndfileOpenALLoader" ref="40d1f0a9c728994033b976152c7f652f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SndfileOpenALLoader::SndfileOpenALLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase 
+</div>
+</div><p>
+<a class="anchor" name="5126c30b048bee573524a54ced4504f0"></a><!-- doxytag: member="SndfileOpenALLoader::~SndfileOpenALLoader" ref="5126c30b048bee573524a54ced4504f0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SndfileOpenALLoader::~SndfileOpenALLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="38cdb7bcc915c2bd96947fc98b995cab"></a><!-- doxytag: member="SndfileOpenALLoader::loadFile" ref="38cdb7bcc915c2bd96947fc98b995cab" args="(string file)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SndfileOpenALLoader::loadFile           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>file</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo que se encarga de cargar el archivo <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>Ruta del archivo a abrir </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Nombre del buffer creado. AL_NONE si no se creÃ³ nada </dd></dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si el archivo no se pudo abrir </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>si no se pudo crear buffer </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a1">main.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="7a72d794a276aff538922647b506ad4d"></a><!-- doxytag: member="SndfileOpenALLoader::printFileInfo" ref="7a72d794a276aff538922647b506ad4d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SndfileOpenALLoader::printFileInfo           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Imprime la informaciÃ³n de un archivo! 
+</div>
+</div><p>
+<a class="anchor" name="2afb7502e9f57439faf39d663a427b46"></a><!-- doxytag: member="SndfileOpenALLoader::loadBufferFromFile" ref="2afb7502e9f57439faf39d663a427b46" args="(ALuint buffer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SndfileOpenALLoader::loadBufferFromFile           </td>
+          <td>(</td>
+          <td class="paramtype">ALuint&nbsp;</td>
+          <td class="paramname"> <em>buffer</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo privado que permite crear el archivo copiando los datos bÃ¡sicos del archivo <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Nombre del buffer creado. AL_NONE si no se creÃ³ nada </dd></dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>con la cadena de error </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="main_8cpp-example.html#a2">main.cpp</a>.</dl>
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="SndfileOpenALLoader_8h-source.html">SndfileOpenALLoader.h</a><li>SndfileOpenALLoader.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 16:31:01 2008 para SndfileOpenALLoader por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

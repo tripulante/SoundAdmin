@@ -1,0 +1,4 @@
+Hubo Intersección
+Speakers: (0,2), (1,3)
+Totalij = 0; Totalmn = 0 TotalNegij = 2.0944; Totalnegmn = 2.0944
+Número de Intersecciones: 1

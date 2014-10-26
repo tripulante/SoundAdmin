@@ -1,0 +1,19 @@
+#
+# <Proyecto>
+#
+INPUT 			= ../src/implementation/openal ../src/implementation/openal/lib \
+					 ../src/interface ../src 
+PROJECT_NAME 	= SoundAdminOpenAL
+OUTPUT_LANGUAGE = Spanish
+#
+# <Salida>
+#
+#GENERATE_HTML	= YES
+#OUTPUT_DIRECTORY= .
+#CREATE_SUBDIRS	= NO
+#RECURSIVE		= YES
+FILE_PATTERNS	= *.h *.cpp
+HAVE_DOT		= YES
+FULL_PATH_NAMES	= NO
+GENERATE_LATEX	= NO
+EXAMPLE_PATH	= ../src

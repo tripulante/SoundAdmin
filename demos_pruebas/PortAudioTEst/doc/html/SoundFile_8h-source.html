@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>PortAudioTest: Fichero Fuente SoundFile.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>SoundFile.h</h1><a href="SoundFile_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00009"></a>00009 <span class="preprocessor">#ifndef SOUNDFILE_H_</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define SOUNDFILE_H_</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00013"></a>00013 <span class="comment">/*Include portaudio*/</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;portaudio.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;string&gt;</span> 
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;sndfile.hh&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;time.h&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include "<a class="code" href="Source_8h.html">Source.h</a>"</span>
+<a name="l00023"></a>00023 
+<a name="l00028"></a><a class="code" href="SoundFile_8h.html#032503e76d6f69bc67e99e909c8125da">00028</a> <span class="preprocessor">#define TABLE_SIZE   (400)</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span>
+<a name="l00034"></a>00034 <span class="preprocessor">#ifndef M_PI</span>
+<a name="l00035"></a><a class="code" href="SoundFile_8h.html#e71449b1cc6e6250b91f539153a7a0d3">00035</a> <span class="preprocessor"></span><span class="preprocessor">#define M_PI  (3.14159265)</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span>
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">using namespace </span>std;
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 
+<a name="l00048"></a><a class="code" href="classSoundFile.html">00048</a> <span class="keyword">class </span><a class="code" href="classSoundFile.html">SoundFile</a>
+<a name="l00049"></a>00049 {
+<a name="l00050"></a>00050         
+<a name="l00051"></a>00051 <span class="keyword">private</span>:
+<a name="l00055"></a>00055         SndfileHandle* sndfile;
+<a name="l00056"></a>00056         
+<a name="l00060"></a>00060         PaStream *stream;
+<a name="l00061"></a>00061 
+<a name="l00067"></a>00067         vector&lt;int&gt;* getSampleRates(<span class="keywordtype">int</span> deviceNumber);
+<a name="l00068"></a>00068         
+<a name="l00072"></a>00072         <span class="keywordtype">int</span> position;
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077         ofstream testOutGain;
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082         <span class="keywordtype">float</span> sine[<a class="code" href="SoundFile_8h.html#032503e76d6f69bc67e99e909c8125da">TABLE_SIZE</a>];
+<a name="l00083"></a>00083 
+<a name="l00087"></a>00087         <span class="keywordtype">int</span> numchannels;
+<a name="l00088"></a>00088         
+<a name="l00092"></a>00092         <span class="keyword">friend</span> <span class="keywordtype">int</span> <a class="code" href="classSoundFile.html#ba6125777961a891d7b0b0f3f0ea5808">fileCallback</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *inputBuffer, <span class="keywordtype">void</span> *outputBuffer,
+<a name="l00093"></a>00093                  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer, <span class="keyword">const</span> PaStreamCallbackTimeInfo* timeInfo,
+<a name="l00094"></a>00094                  PaStreamCallbackFlags statusFlags, <span class="keywordtype">void</span> *userData );
+<a name="l00095"></a>00095         
+<a name="l00099"></a>00099         <span class="keywordtype">void</span> initializeSineTable();
+<a name="l00100"></a>00100 
+<a name="l00104"></a>00104         map&lt;string, Source*&gt; sources;
+<a name="l00105"></a>00105         
+<a name="l00106"></a>00106 <span class="keyword">public</span>:
+<a name="l00107"></a>00107         
+<a name="l00113"></a>00113         <a class="code" href="classSoundFile.html#47ba96c0ff43e52b2e458b6839c07ade">SoundFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keywordtype">int</span> numchan);
+<a name="l00114"></a>00114         
+<a name="l00118"></a>00118         <span class="keyword">virtual</span> <a class="code" href="classSoundFile.html#2a4cc3a7780cc699e1ef51fc98f5d846">~SoundFile</a>();
+<a name="l00119"></a>00119         
+<a name="l00124"></a>00124         <span class="keywordtype">bool</span> <a class="code" href="classSoundFile.html#d5b38a898cdc91a8c61184644c2be06e">startPortaudio</a>();
+<a name="l00125"></a>00125         
+<a name="l00129"></a>00129         <span class="keywordtype">void</span> <a class="code" href="classSoundFile.html#ae3a599615427d664dac0b960d62f9e4">printDeviceInfo</a>();
+<a name="l00130"></a>00130         
+<a name="l00134"></a>00134         <span class="keywordtype">void</span> <a class="code" href="classSoundFile.html#635875951de2bdb138097645f0c1dcbd">printApiInfo</a>();
+<a name="l00135"></a>00135         
+<a name="l00141"></a>00141         <span class="keywordtype">bool</span> <a class="code" href="classSoundFile.html#6c90bd872eb69f171d8f7cad4e0d5193">initialize</a>(<span class="keywordtype">int</span> device);
+<a name="l00142"></a>00142 
+<a name="l00147"></a>00147         <span class="keywordtype">bool</span> <a class="code" href="classSoundFile.html#3500ffc185cb9a03964e3d4d7f6c9953">startPlaying</a>();
+<a name="l00148"></a>00148 
+<a name="l00153"></a>00153         <span class="keywordtype">bool</span> <a class="code" href="classSoundFile.html#bedb3134c1612397ff1f40e97b28643c">stopPlaying</a>();
+<a name="l00154"></a>00154 
+<a name="l00158"></a>00158         <span class="keywordtype">void</span> <a class="code" href="classSoundFile.html#4df59c0786fbce22072629a70f5a7899">finishPortaudio</a>();
+<a name="l00159"></a>00159         
+<a name="l00165"></a>00165         <span class="keywordtype">bool</span> <a class="code" href="classSoundFile.html#3022e556818a8deccae306c3eca50140">addSource</a>(string <span class="keywordtype">id</span>);
+<a name="l00166"></a>00166         
+<a name="l00173"></a>00173         <span class="keywordtype">int</span> <a class="code" href="classSoundFile.html#e1c1c701e4bb69daed9e6af75b89b811">readFile</a>(<span class="keywordtype">void</span> *outputBuffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer);
+<a name="l00174"></a>00174         
+<a name="l00178"></a>00178         <span class="keywordtype">void</span> <a class="code" href="classSoundFile.html#0a27d3a548cec669a5bdf1aa39370579">changeRandomPhase</a>();
+<a name="l00179"></a>00179         
+<a name="l00183"></a>00183         <span class="keywordtype">void</span> <a class="code" href="classSoundFile.html#09d32997f8e96b732f09b2f46dd3be58">changeRandomGain</a>();
+<a name="l00184"></a>00184 };
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186 <span class="preprocessor">#endif </span><span class="comment">/*SOUNDFILE_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Mon Jan 14 17:24:28 2008 para PortAudioTest por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

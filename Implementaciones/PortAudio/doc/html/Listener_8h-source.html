@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminPortaudio: Fichero Fuente Listener.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>Listener.h</h1><a href="Listener_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef LISTENER_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define LISTENER_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;gmtl/gmtl.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="keyword">using namespace </span>gmtl;
+<a name="l00008"></a>00008 <span class="keyword">using namespace </span>std;
+<a name="l00009"></a>00009 
+<a name="l00016"></a><a class="code" href="classListener.html">00016</a> <span class="keyword">class </span><a class="code" href="classListener.html">Listener</a>{
+<a name="l00017"></a>00017         
+<a name="l00018"></a>00018 <span class="keyword">private</span>:
+<a name="l00019"></a>00019         
+<a name="l00023"></a>00023         Vec3f position;
+<a name="l00024"></a>00024         
+<a name="l00028"></a>00028         Vec3f orientation;
+<a name="l00029"></a>00029         
+<a name="l00030"></a>00030 <span class="keyword">public</span>:
+<a name="l00031"></a>00031         
+<a name="l00035"></a><a class="code" href="classListener.html#56b63285e0b3204991b956e505ebd23a">00035</a>         <a class="code" href="classListener.html#56b63285e0b3204991b956e505ebd23a">Listener</a>(){
+<a name="l00036"></a>00036         }
+<a name="l00037"></a>00037         
+<a name="l00041"></a><a class="code" href="classListener.html#3556fba341ebacbce35064875e6a394a">00041</a>         <span class="keyword">virtual</span> <a class="code" href="classListener.html#3556fba341ebacbce35064875e6a394a">~Listener</a>(){
+<a name="l00042"></a>00042                 
+<a name="l00043"></a>00043         }
+<a name="l00044"></a>00044         
+<a name="l00048"></a><a class="code" href="classListener.html#ef5cae4dad28ec654b64c02f2d403fd6">00048</a>         <span class="keywordtype">void</span> <a class="code" href="classListener.html#ef5cae4dad28ec654b64c02f2d403fd6">setPosition</a>(Vec3f pos){
+<a name="l00049"></a>00049                 position = pos;
+<a name="l00050"></a>00050         }
+<a name="l00051"></a>00051         
+<a name="l00055"></a><a class="code" href="classListener.html#e0ff0d072dd751a9b1349edc735ad176">00055</a>         <span class="keywordtype">void</span> <a class="code" href="classListener.html#e0ff0d072dd751a9b1349edc735ad176">setOrientation</a>(Vec3f orient){
+<a name="l00056"></a>00056                 orientation = orient;
+<a name="l00057"></a>00057         }
+<a name="l00058"></a>00058         
+<a name="l00062"></a><a class="code" href="classListener.html#cb6ea81c7515eed531a0e691165f7992">00062</a>         Vec3f <a class="code" href="classListener.html#cb6ea81c7515eed531a0e691165f7992">getPosition</a>(){
+<a name="l00063"></a>00063                 <span class="keywordflow">return</span> position;
+<a name="l00064"></a>00064         }
+<a name="l00065"></a>00065         
+<a name="l00069"></a><a class="code" href="classListener.html#c17ed1cd809862d15114d62295d61b05">00069</a>         Vec3f <a class="code" href="classListener.html#c17ed1cd809862d15114d62295d61b05">getOrientation</a>(){
+<a name="l00070"></a>00070                 <span class="keywordflow">return</span> orientation;
+<a name="l00071"></a>00071         }
+<a name="l00072"></a>00072 };
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 <span class="preprocessor">#endif </span><span class="comment">/*LISTENER_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Tue Jan 15 15:01:24 2008 para SoundAdminPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

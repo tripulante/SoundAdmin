@@ -1,0 +1,6 @@
+base referer
+rect $SoundAdminPortaudio_8h.html 179,443 456,467
+rect $Vbap_8h.html 515,344 632,368
+rect $Listener_8h.html 531,296 616,320
+rect $Source_8h.html 534,491 614,515
+rect $AudioFileLoader_8h.html 504,589 643,613

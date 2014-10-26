@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Audio3DUniandes(SoundAdminPortaudio): Referencia del Archivo TestTracker.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>Referencia del Archivo TestTracker.cpp</h1>Programa de prueba para Portaudio usando la base del sistema desarrollado. <a href="#_details">Más...</a>
+<p>
+<code>#include &lt;pthread.h&gt;</code><br>
+<code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;stdlib.h&gt;</code><br>
+<code>#include &lt;GL/glut.h&gt;</code><br>
+<code>#include &lt;signal.h&gt;</code><br>
+<code>#include &lt;strings.h&gt;</code><br>
+<code>#include &lt;iostream&gt;</code><br>
+<code>#include &quot;<a class="el" href="SoundAdminPortaudio_8h-source.html">../soundadmin/SoundAdminPortaudio.h</a>&quot;</code><br>
+<code>#include &lt;string&gt;</code><br>
+<code>#include &lt;vrpn_Shared.h&gt;</code><br>
+<code>#include &lt;vrpn_Tracker.h&gt;</code><br>
+
+<p>
+Dependencia gráfica adjunta para TestTracker.cpp:<p><center><img src="TestTracker_8cpp__incl.png" border="0" usemap="#TestTracker.cpp_map" alt=""></center>
+<map name="TestTracker.cpp_map">
+<area href="SoundAdminPortaudio_8h.html" shape="rect" coords="179,443,456,467" alt="">
+<area href="Vbap_8h.html" shape="rect" coords="515,344,632,368" alt="">
+<area href="Listener_8h.html" shape="rect" coords="531,296,616,320" alt="">
+<area href="Source_8h.html" shape="rect" coords="534,491,614,515" alt="">
+<area href="AudioFileLoader_8h.html" shape="rect" coords="504,589,643,613" alt="">
+</map>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Clases</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><b>device_info</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><b>t_sensor_counter</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><b>t_user_callback</b></td></tr>
+
+<tr><td colspan="2"><br><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="da0430ff0133c72d1ab38ca336610f5a"></a><!-- doxytag: member="TestTracker.cpp::clrscr" ref="da0430ff0133c72d1ab38ca336610f5a" args="()" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>clrscr</b>()&nbsp;&nbsp;&nbsp;printf(&quot;%c[2J%c[1;1H&quot;, 27, 27)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="5de5d183f9a6a8d53316f743e1ca6dc2"></a><!-- doxytag: member="TestTracker.cpp::NMAX" ref="5de5d183f9a6a8d53316f743e1ca6dc2" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>NMAX</b>&nbsp;&nbsp;&nbsp;500</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="154d1969cc0246ef131580f9e80a2450"></a><!-- doxytag: member="TestTracker.cpp::VENTANA_XTAM" ref="154d1969cc0246ef131580f9e80a2450" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>VENTANA_XTAM</b>&nbsp;&nbsp;&nbsp;640</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="71d059a4c25e4afeb3b0852b078ab743"></a><!-- doxytag: member="TestTracker.cpp::VENTANA_YTAM" ref="71d059a4c25e4afeb3b0852b078ab743" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>VENTANA_YTAM</b>&nbsp;&nbsp;&nbsp;480</td></tr>
+
+<tr><td colspan="2"><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e4cc1a9ba71df84ccd32c2f926786646"></a><!-- doxytag: member="TestTracker.cpp::inspunto" ref="e4cc1a9ba71df84ccd32c2f926786646" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>inspunto</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d0cc5a3cf88fe3f45abecc59f023645d"></a><!-- doxytag: member="TestTracker.cpp::inspunto2" ref="d0cc5a3cf88fe3f45abecc59f023645d" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>inspunto2</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3ad2f2faa6418f18a1c3f8b8933e743d"></a><!-- doxytag: member="TestTracker.cpp::initTracker" ref="3ad2f2faa6418f18a1c3f8b8933e743d" args="(int argc, char *argv[])" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>initTracker</b> (int argc, char *argv[])</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestTracker_8cpp.html#b16ed170ec84aa0957e97cd8c6131873">setSource</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3877a4f3cc0a9bd8951ddef075a285b9"></a><!-- doxytag: member="TestTracker.cpp::handle_tracker_pos_quat" ref="3877a4f3cc0a9bd8951ddef075a285b9" args="(void *userdata, const vrpn_TRACKERCB t)" -->
+void VRPN_CALLBACK&nbsp;</td><td class="memItemRight" valign="bottom"><b>handle_tracker_pos_quat</b> (void *userdata, const vrpn_TRACKERCB t)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="651dfd2d342fda7905f20b782eca27f3"></a><!-- doxytag: member="TestTracker.cpp::hilofuncion" ref="651dfd2d342fda7905f20b782eca27f3" args="(void *)" -->
+void *&nbsp;</td><td class="memItemRight" valign="bottom"><b>hilofuncion</b> (void *)</td></tr>
+
+<tr><td colspan="2"><br><h2>Variables</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7fcd06599fe7d1f0134f6da5e0a7a3c3"></a><!-- doxytag: member="TestTracker.cpp::posx" ref="7fcd06599fe7d1f0134f6da5e0a7a3c3" args="" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>posx</b> = 0.0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bd9a302389061fb89241589f6431634a"></a><!-- doxytag: member="TestTracker.cpp::posy" ref="bd9a302389061fb89241589f6431634a" args="" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>posy</b> = 0.0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b86cfe5d81857bcc65de234e591b6a0c"></a><!-- doxytag: member="TestTracker.cpp::posz" ref="b86cfe5d81857bcc65de234e591b6a0c" args="" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>posz</b> = 0.0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="75a2872df215d28fb9d8cfe03e735bbe"></a><!-- doxytag: member="TestTracker.cpp::posx2" ref="75a2872df215d28fb9d8cfe03e735bbe" args="" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>posx2</b> = 0.0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="48d894c15fc52cf8fcff808c72479bcf"></a><!-- doxytag: member="TestTracker.cpp::posy2" ref="48d894c15fc52cf8fcff808c72479bcf" args="" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>posy2</b> = 0.0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bad6111dfd5124a4ad32f40de3358f01"></a><!-- doxytag: member="TestTracker.cpp::posz2" ref="bad6111dfd5124a4ad32f40de3358f01" args="" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>posz2</b> = 0.0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestTracker_8cpp.html#7267b4c27efedb6085e04a253ccd75bf">admin2</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestTracker_8cpp.html#07142b95ee9e2beb6a160c4bfa3cea45">fileTracker1</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e7fedc4f990281c62c7110faa8916313"></a><!-- doxytag: member="TestTracker.cpp::fileTracker2" ref="e7fedc4f990281c62c7110faa8916313" args="" -->
+string&nbsp;</td><td class="memItemRight" valign="bottom"><b>fileTracker2</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestTracker_8cpp.html#322a7e761ba363fb5325383582a11826">ambientT1</a> = false</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="799a7351f612acbb8a3584b74fc4df02"></a><!-- doxytag: member="TestTracker.cpp::ambientT2" ref="799a7351f612acbb8a3584b74fc4df02" args="" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>ambientT2</b> = false</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e08cadf772cca05e151cbad077d7c34c"></a><!-- doxytag: member="TestTracker.cpp::arrx" ref="e08cadf772cca05e151cbad077d7c34c" args="[NMAX]" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>arrx</b> [NMAX]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="70e30ecaade8a53ebb3950abfb1cebdd"></a><!-- doxytag: member="TestTracker.cpp::arry" ref="70e30ecaade8a53ebb3950abfb1cebdd" args="[NMAX]" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>arry</b> [NMAX]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ba75c856c48998bc34790413a67897e2"></a><!-- doxytag: member="TestTracker.cpp::arrz" ref="ba75c856c48998bc34790413a67897e2" args="[NMAX]" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>arrz</b> [NMAX]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3da96876c5a9ae9a63d498fc4f9dad9c"></a><!-- doxytag: member="TestTracker.cpp::arrx2" ref="3da96876c5a9ae9a63d498fc4f9dad9c" args="[NMAX]" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>arrx2</b> [NMAX]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b1c73c47f03c59be5f0258887e7dae86"></a><!-- doxytag: member="TestTracker.cpp::arry2" ref="b1c73c47f03c59be5f0258887e7dae86" args="[NMAX]" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>arry2</b> [NMAX]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="62c93b5ab368e7d01727bfed72041ac5"></a><!-- doxytag: member="TestTracker.cpp::arrz2" ref="62c93b5ab368e7d01727bfed72041ac5" args="[NMAX]" -->
+double&nbsp;</td><td class="memItemRight" valign="bottom"><b>arrz2</b> [NMAX]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="5992b274cfdcacdbc1fa8347fd01ebde"></a><!-- doxytag: member="TestTracker.cpp::done" ref="5992b274cfdcacdbc1fa8347fd01ebde" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>done</b> = 0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4e2e473e901d6857d0e4a671270e82f2"></a><!-- doxytag: member="TestTracker.cpp::dev" ref="4e2e473e901d6857d0e4a671270e82f2" args="" -->
+device_info *&nbsp;</td><td class="memItemRight" valign="bottom"><b>dev</b> = 0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c09ddc6593c8c7c41e0e19d48d71453b"></a><!-- doxytag: member="TestTracker.cpp::data" ref="c09ddc6593c8c7c41e0e19d48d71453b" args="" -->
+device_info&nbsp;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="15039e3efd9ee9f32c4e49b824802c0a"></a><!-- doxytag: member="TestTracker.cpp::XTAM_actual" ref="15039e3efd9ee9f32c4e49b824802c0a" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>XTAM_actual</b> = VENTANA_XTAM</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4b4e8a4390056173640e103611d2aa2c"></a><!-- doxytag: member="TestTracker.cpp::YTAM_actual" ref="4b4e8a4390056173640e103611d2aa2c" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>YTAM_actual</b> = VENTANA_YTAM</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Programa de prueba para Portaudio usando la base del sistema desarrollado. 
+<p>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo - Oscar Chavarro (<a href="mailto:jedilink@users.sourceforge.net">jedilink@users.sourceforge.net</a>) </dd></dl>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="b16ed170ec84aa0957e97cd8c6131873"></a><!-- doxytag: member="TestTracker.cpp::setSource" ref="b16ed170ec84aa0957e97cd8c6131873" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSource           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ubica las fuentes de audio en el espacio 
+</div>
+</div><p>
+<hr><h2>Documentación de las variables</h2>
+<a class="anchor" name="7267b4c27efedb6085e04a253ccd75bf"></a><!-- doxytag: member="TestTracker.cpp::admin2" ref="7267b4c27efedb6085e04a253ccd75bf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a>* <a class="el" href="TestTracker_8cpp.html#7267b4c27efedb6085e04a253ccd75bf">admin2</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Administrador de sonido 
+</div>
+</div><p>
+<a class="anchor" name="322a7e761ba363fb5325383582a11826"></a><!-- doxytag: member="TestTracker.cpp::ambientT1" ref="322a7e761ba363fb5325383582a11826" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="TestTracker_8cpp.html#322a7e761ba363fb5325383582a11826">ambientT1</a> = false          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Manejo de fuentes ambiente 
+</div>
+</div><p>
+<a class="anchor" name="07142b95ee9e2beb6a160c4bfa3cea45"></a><!-- doxytag: member="TestTracker.cpp::fileTracker1" ref="07142b95ee9e2beb6a160c4bfa3cea45" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="TestTracker_8cpp.html#07142b95ee9e2beb6a160c4bfa3cea45">fileTracker1</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Nombres de los archivos 
+</div>
+</div><p>
+<hr size="1"><address style="align: right;"><small>Generado el Thu Jan 10 19:26:34 2008 para Audio3DUniandes(SoundAdminPortaudio) por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

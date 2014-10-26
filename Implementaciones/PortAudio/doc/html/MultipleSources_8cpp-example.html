@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminPortaudio: MultipleSources.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>P�gina&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<h1>MultipleSources.cpp</h1>Prueba para ver cuantas fuentes puede soportar el sistema sobre un solo archivo <dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo</dd></dl>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "../soundadmin/SoundAdminPortaudio.h"</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="pruebas_8h.html">pruebas.h</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;portaudio.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">using namespace </span>std;
+<a name="l00015"></a>00015 
+<a name="l00019"></a>00019 <a name="_a0"></a><a class="code" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a> *admin;
+<a name="l00020"></a>00020 
+<a name="l00024"></a>00024 <span class="keywordtype">void</span> createAndActiveSources();
+<a name="l00025"></a>00025 
+<a name="l00029"></a>00029 <span class="keywordtype">int</span> numsources = 0;
+<a name="l00030"></a>00030 
+<a name="l00034"></a>00034 <span class="preprocessor">#if PRUEBA == 1</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *argv[]){
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037         <span class="keywordflow">if</span>(argc != 6){
+<a name="l00038"></a>00038                 cout &lt;&lt; <span class="stringliteral">"Parámetros Ingresados Incorrectamente"</span> &lt;&lt; endl;
+<a name="l00039"></a>00039                 cout &lt;&lt; <span class="stringliteral">"Debe ingresar los siguientes parámetros: "</span> &lt;&lt; endl;
+<a name="l00040"></a>00040                 cout &lt;&lt; <span class="stringliteral">"./Uniandes3DAudio &lt;numspeakers&gt; &lt;configfile&gt; &lt;samplerate&gt; &lt;audiofile&gt; &lt;no.fuentes&gt;"</span> &lt;&lt; endl;
+<a name="l00041"></a>00041                 <span class="keywordflow">return</span> 0;
+<a name="l00042"></a>00042         }
+<a name="l00043"></a>00043         <span class="keywordflow">else</span>{
+<a name="l00044"></a>00044                 stringstream values(stringstream::in | stringstream::out);
+<a name="l00045"></a>00045                 <span class="keywordtype">int</span> chan = 0, samplerate = 0;
+<a name="l00046"></a>00046                 values &lt;&lt; argv[1] &lt;&lt; <span class="stringliteral">" "</span> &lt;&lt; argv[3] &lt;&lt; <span class="stringliteral">" "</span> &lt;&lt; argv[5];
+<a name="l00047"></a>00047                 cout &lt;&lt; values.str() &lt;&lt; endl;
+<a name="l00048"></a>00048                 values &gt;&gt; chan;
+<a name="l00049"></a>00049                 values &gt;&gt; samplerate;
+<a name="l00050"></a>00050                 values &gt;&gt; numsources;
+<a name="l00051"></a>00051                 <span class="keywordflow">try</span>{
+<a name="l00052"></a>00052                         admin = <a name="a1"></a><a class="code" href="classSoundAdminPortaudio.html#85b8c3b8ff8dc16ecce4367ef9ccf52b">SoundAdminPortaudio::getSoundAdminInstance</a>();
+<a name="l00053"></a>00053                         <span class="keywordflow">if</span>(samplerate == 22050)
+<a name="l00054"></a>00054                                 admin-&gt;<a name="a2"></a><a class="code" href="classSoundAdminPortaudio.html#008cfb924650055a9d96758a8ebc3407">setConfiguration</a>(SoundAdminPortaudio::SR_22050_HZ, chan, argv[2], SoundAdminPortaudio::MONO);
+<a name="l00055"></a>00055                         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(samplerate == 44100)
+<a name="l00056"></a>00056                                 admin-&gt;<a class="code" href="classSoundAdminPortaudio.html#008cfb924650055a9d96758a8ebc3407">setConfiguration</a>(SoundAdminPortaudio::SR_44100_HZ, chan, argv[2], SoundAdminPortaudio::MONO);
+<a name="l00057"></a>00057                         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(samplerate == 48000)
+<a name="l00058"></a>00058                                 admin-&gt;<a class="code" href="classSoundAdminPortaudio.html#008cfb924650055a9d96758a8ebc3407">setConfiguration</a>(SoundAdminPortaudio::SR_48000_HZ, chan, argv[2], SoundAdminPortaudio::MONO);
+<a name="l00059"></a>00059                         <span class="keywordflow">else</span>
+<a name="l00060"></a>00060                                 <span class="keywordflow">throw</span> string(<span class="stringliteral">"El sample rate solictado no es soportado\n"</span>);
+<a name="l00061"></a>00061                         string route(argv[4]);
+<a name="l00062"></a>00062                         <span class="keywordflow">if</span>(!admin-&gt;<a name="a3"></a><a class="code" href="classSoundAdminPortaudio.html#5ea76f4ec44c3106771148adf7eb6459">addFile</a>(<span class="stringliteral">"testfile"</span>, route))
+<a name="l00063"></a>00063                                 <span class="keywordflow">throw</span> string(<span class="stringliteral">"Archivo no es válido\n"</span>);
+<a name="l00064"></a>00064                         
+<a name="l00065"></a>00065                         createAndActiveSources();
+<a name="l00066"></a>00066                         <span class="keywordtype">char</span> c;
+<a name="l00067"></a>00067                         <span class="keywordflow">while</span>(c != <span class="charliteral">'o'</span>)
+<a name="l00068"></a>00068                                 cin &gt;&gt; c;
+<a name="l00069"></a>00069                         
+<a name="l00070"></a>00070                         <span class="keywordflow">return</span> 0;
+<a name="l00071"></a>00071                 }
+<a name="l00072"></a>00072                 <span class="keywordflow">catch</span>(string s){
+<a name="l00073"></a>00073                         cout &lt;&lt; s &lt;&lt; endl;
+<a name="l00074"></a>00074                         <span class="keywordflow">return</span> 0;
+<a name="l00075"></a>00075                 }
+<a name="l00076"></a>00076         }
+<a name="l00077"></a>00077 }
+<a name="l00078"></a>00078 <span class="preprocessor">#endif</span>
+<a name="l00079"></a>00079 <span class="preprocessor"></span>
+<a name="l00080"></a>00080 <span class="keywordtype">void</span> createAndActiveSources(){
+<a name="l00081"></a>00081         stringstream s(stringstream::out|stringstream::app);
+<a name="l00082"></a>00082         <span class="keywordtype">int</span> i = 0;
+<a name="l00083"></a>00083         <span class="keywordtype">bool</span> end = <span class="keyword">false</span>;
+<a name="l00084"></a>00084         
+<a name="l00085"></a>00085         <span class="keywordflow">while</span>(!end &amp;&amp; i &lt; numsources){
+<a name="l00086"></a>00086                 s.str(<span class="stringliteral">"testsource"</span>);
+<a name="l00087"></a>00087                 s &lt;&lt; i;
+<a name="l00088"></a>00088                 admin-&gt;<a name="a4"></a><a class="code" href="classSoundAdminPortaudio.html#2118e86787ad7e259435d91fdd8ce3f6">createSource</a>(s.str(), <span class="stringliteral">"testfile"</span>, <span class="keyword">true</span>);
+<a name="l00089"></a>00089                 admin-&gt;<a name="a5"></a><a class="code" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a>(s.str());
+<a name="l00090"></a>00090                 <span class="keywordflow">if</span>(admin-&gt;<a name="a6"></a><a class="code" href="classSoundAdminPortaudio.html#2c2f3356ecb5c145d51cb414008b280b">getCpuLoad</a>() &gt; 0.8){
+<a name="l00091"></a>00091                         cout &lt;&lt; <span class="stringliteral">"Se crearon y reprodujeron "</span> &lt;&lt; i+1 &lt;&lt; <span class="stringliteral">" fuentes"</span> &lt;&lt; endl;
+<a name="l00092"></a>00092                         cout &lt;&lt; <span class="stringliteral">"Carga CPU: "</span> &lt;&lt; admin-&gt;<a class="code" href="classSoundAdminPortaudio.html#2c2f3356ecb5c145d51cb414008b280b">getCpuLoad</a>() &lt;&lt; endl;
+<a name="l00093"></a>00093                         end = <span class="keyword">true</span>;
+<a name="l00094"></a>00094                 }
+<a name="l00095"></a>00095                 i++;
+<a name="l00096"></a>00096         }
+<a name="l00097"></a>00097         
+<a name="l00098"></a>00098 }
+</pre></div> <hr size="1"><address style="align: right;"><small>Generado el Tue Jan 15 15:01:24 2008 para SoundAdminPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

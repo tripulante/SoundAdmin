@@ -1,0 +1,1174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminPortaudio: Referencia de la Clase SoundAdminPortaudio</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase SoundAdminPortaudio</h1><!-- doxytag: class="SoundAdminPortaudio" -->Clase principal del sistema. Se encarga de la inicializaciÃ³n del sistema, la creaciÃ³n y manejo de fuentes y de la escucha y la comunicaciÃ³n con el API de salida de audio (Portaudio), asÃ­ como con los archivos.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="SoundAdminPortaudio_8h-source.html">SoundAdminPortaudio.h</a>&gt;</code>
+<p>
+Diagrama de colaboración para SoundAdminPortaudio:<p><center><img src="classSoundAdminPortaudio__coll__graph.png" border="0" usemap="#SoundAdminPortaudio__coll__map" alt="Collaboration graph"></center>
+<map name="SoundAdminPortaudio__coll__map">
+<area href="classAudioFileLoader.html" shape="rect" coords="5,98,133,122" alt="">
+<area href="classVbap.html" shape="rect" coords="157,98,213,122" alt="">
+<area href="classSpeaker.html" shape="rect" coords="148,7,223,31" alt="">
+<area href="classListener.html" shape="rect" coords="283,98,357,122" alt="">
+</map>
+<center><font size="2">[<a href="graph_legend.html">leyenda</a>]</font></center><a href="classSoundAdminPortaudio-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Tipos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#26db4fc1dc741cf01b173270d0ed7f8a">SampleRate</a> { <br>
+&nbsp;&nbsp;<b>SR_8000_HZ</b>, 
+<b>SR_11025_HZ</b>, 
+<b>SR_16000_HZ</b>, 
+<b>SR_22050_HZ</b>, 
+<br>
+&nbsp;&nbsp;<b>SR_44100_HZ</b>, 
+<b>SR_48000_HZ</b>, 
+<b>SR_96000_HZ</b>
+<br>
+ }</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">SoundDistribution</a> { <b>MONO</b>, 
+<b>STEREO</b>, 
+<b>DISTRIBUTED</b>
+ }</td></tr>
+
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#cf9b765af493345927752d3ac08d791f">~SoundAdminPortaudio</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#008cfb924650055a9d96758a8ebc3407">setConfiguration</a> (<a class="el" href="classSoundAdminPortaudio.html#26db4fc1dc741cf01b173270d0ed7f8a">SampleRate</a> sr, int numSpeak, const char *configFile, <a class="el" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">SoundDistribution</a> distr)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#2118e86787ad7e259435d91fdd8ce3f6">createSource</a> (string id, string fileDesc=&quot;&quot;, bool amb=false)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#95036cb4625436d1924b544d7af13b11">destroySource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#5d52ecd97acfd9f87d5d61d64095f94a">playSource</a> (string id, bool loop=true)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#1e1e56635744c07b619436f151f7a761">isPlaying</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#62f24d2c840c6f6d5146eb2c977828a1">pauseSource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#048d5c2f78df2cdd1f173d811e2fadc0">stopSource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#be9c200b28334df0993d263a24ec7968">loopSource</a> (string id, bool loop)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#851003ef4b756821366f6b324141622f">isLooped</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#f6a65365c3f4d2a80174e21cf4aadf06">detachSource</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#35155c23e238a71e9fefb9e3c4ab9a4d">attachSource</a> (string id, string desc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#8b8e7fe67e424ddc15c66b08f3754229">useSourceAsAmbient</a> (string id, bool ambient)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#483e5ac17e1a48556462eaf7806c155a">isAmbient</a> (string id)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#33a0890c9ed09df943164420e170df32">updateSource</a> (string id, float x, float y, float z)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#b997d46746216cdf19787e990ab5843a">getSourcePosition</a> (string id, float &amp;x, float &amp;y, float &amp;z)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#bfa6f3ac4b92c207fb53eb4ae145faca">updateListener</a> (Vec3f pos, Vec3f up)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#74447ab77d227e94941ea9720827b8dd">getListenerInfo</a> (Vec3f &amp;pos, Vec3f &amp;up)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#0e5d7efdf8f4758604b0fd4275612828">setPitchBend</a> (string id, float bend)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#94bcc727ca2f53344f1615d0b220661d">getPitchBend</a> (string id, float &amp;bend)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#14e3ddfba7b9df7b87cff2409ef36f7d">setVolume</a> (string id, float gain)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#bbc0008eb4018389514326089147a313">getVolume</a> (string id, float &amp;gain)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#5ea76f4ec44c3106771148adf7eb6459">addFile</a> (string desc, string fileRoute)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#580cff808436bab69263e2d6132a72d9">deleteFile</a> (string desc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">vector&lt; string &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#e649aa7031601061daeb06ed2ee684ae">getSourceIds</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">vector&lt; string &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#5bb58652b8c0496d0cc4e1f92d751bc9">getFileDescriptions</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#1dca4caf8c044a40d1958a6620ce60e5">soundAdminCallback</a> (void *outputBuffer, unsigned long framesPerBuffer)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#2c2f3356ecb5c145d51cb414008b280b">getCpuLoad</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Métodos públicos estáticos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#85b8c3b8ff8dc16ecce4367ef9ccf52b">getSoundAdminInstance</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Amigas</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundAdminPortaudio.html#0659390b1a52653311d29aa4b46f5916">portaudioCallback</a> (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase principal del sistema. Se encarga de la inicializaciÃ³n del sistema, la creaciÃ³n y manejo de fuentes y de la escucha y la comunicaciÃ³n con el API de salida de audio (Portaudio), asÃ­ como con los archivos. 
+<p>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo (<a href="mailto:joh-palm@uniandes.edu.co">joh-palm@uniandes.edu.co</a> - <a href="mailto:tripulante@gmail.com">tripulante@gmail.com</a>) </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+
+<p>
+<a class="el" href="DifferentFileSource_8cpp-example.html#_a0">DifferentFileSource.cpp</a>, <a class="el" href="movement_8cpp-example.html#_a0">movement.cpp</a>, <a class="el" href="MultipleSources_8cpp-example.html#_a0">MultipleSources.cpp</a>, <a class="el" href="TestLooped_8cpp-example.html#_a0">TestLooped.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#_a0">TestTracker.cpp</a>.</dl>
+<p>
+<hr><h2>Documentación de las enumeraciones miembro de la clase</h2>
+<a class="anchor" name="26db4fc1dc741cf01b173270d0ed7f8a"></a><!-- doxytag: member="SoundAdminPortaudio::SampleRate" ref="26db4fc1dc741cf01b173270d0ed7f8a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classSoundAdminPortaudio.html#26db4fc1dc741cf01b173270d0ed7f8a">SoundAdminPortaudio::SampleRate</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Describe los sample rate a ser usados por el sistema 
+</div>
+</div><p>
+<a class="anchor" name="0567b2f87f61eeb5547058a127913da5"></a><!-- doxytag: member="SoundAdminPortaudio::SoundDistribution" ref="0567b2f87f61eeb5547058a127913da5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">SoundAdminPortaudio::SoundDistribution</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Valores que indican cÃ³mo va a usarse el sonido en el sistema 
+</div>
+</div><p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="cf9b765af493345927752d3ac08d791f"></a><!-- doxytag: member="SoundAdminPortaudio::~SoundAdminPortaudio" ref="cf9b765af493345927752d3ac08d791f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SoundAdminPortaudio::~SoundAdminPortaudio           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="85b8c3b8ff8dc16ecce4367ef9ccf52b"></a><!-- doxytag: member="SoundAdminPortaudio::getSoundAdminInstance" ref="85b8c3b8ff8dc16ecce4367ef9ccf52b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSoundAdminPortaudio.html">SoundAdminPortaudio</a> * SoundAdminPortaudio::getSoundAdminInstance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+FunciÃ³n que retorna la instancia Ãºnica (Singleton) <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Ãšnica instancia del sistema para </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a1">DifferentFileSource.cpp</a>, <a class="el" href="movement_8cpp-example.html#a1">movement.cpp</a>, <a class="el" href="MultipleSources_8cpp-example.html#a1">MultipleSources.cpp</a>, <a class="el" href="TestLooped_8cpp-example.html#a1">TestLooped.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#a5">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="008cfb924650055a9d96758a8ebc3407"></a><!-- doxytag: member="SoundAdminPortaudio::setConfiguration" ref="008cfb924650055a9d96758a8ebc3407" args="(SampleRate sr, int numSpeak, const char *configFile, SoundDistribution distr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::setConfiguration           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSoundAdminPortaudio.html#26db4fc1dc741cf01b173270d0ed7f8a">SampleRate</a>&nbsp;</td>
+          <td class="paramname"> <em>sr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>numSpeak</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>configFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSoundAdminPortaudio.html#0567b2f87f61eeb5547058a127913da5">SoundDistribution</a>&nbsp;</td>
+          <td class="paramname"> <em>distr</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Se encarga de configurar el sistema de acuerdo a lo que se va a usar <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>sr</em>&nbsp;</td><td>Sample Rate del programa </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>numSpeak</em>&nbsp;</td><td>NÃºmero de parlantes a usar <img class="formulaInl" alt="$(numSpeak \geq 2)$" src="form_9.png"> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>configFile</em>&nbsp;</td><td>Archivo de configuraciÃ³n a usar con los parlantes </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>distr</em>&nbsp;</td><td>ConfiguraciÃ³n de salida del sonido </td></tr>
+  </table>
+</dl>
+<dl class="note" compact><dt><b>Nota:</b></dt><dd>Si <img class="formulaInl" alt="$numSpeak = 2$" src="form_11.png"> la salida serÃ¡ <em>Stereo</em>, aÃºn si <em>distr</em> es Distributed. Ã‰sto no afecta la distribuciÃ³n Mono </dd></dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>Mensaje en caso que el archivo de configuraciÃ³n no exista </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>Mensaje en caso que no se pueda crear correctamente el sistema. Esto implica lo siguiente:<dl>
+<dt><img class="formulaInl" alt="$\to$" src="form_10.png"> No existe un dispositivo capaz de manejar el sample rate solicitado y/o el nÃºmero de canales solicitado </dt>
+<dd></dd>
+<dt><img class="formulaInl" alt="$\to$" src="form_10.png"> El archivo de configuraciÃ³n es incorrecto </dt>
+<dd></dd>
+</dl>
+</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a2">DifferentFileSource.cpp</a>, <a class="el" href="movement_8cpp-example.html#a2">movement.cpp</a>, <a class="el" href="MultipleSources_8cpp-example.html#a2">MultipleSources.cpp</a>, <a class="el" href="TestLooped_8cpp-example.html#a2">TestLooped.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#a8">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="2118e86787ad7e259435d91fdd8ce3f6"></a><!-- doxytag: member="SoundAdminPortaudio::createSource" ref="2118e86787ad7e259435d91fdd8ce3f6" args="(string id, string fileDesc=&quot;&quot;, bool amb=false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::createSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>fileDesc</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>amb</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea una fuente puntual en el origen asociada al archivo indicado por fileDesc. La fuente se asocia a una descripciÃ³n del archivo asociada desde la carga <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la nueva fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fileDesc</em>&nbsp;</td><td>DescripciÃ³n del identificador </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>amb</em>&nbsp;</td><td>bool que indica si la fuente es ambiente o no </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a4">DifferentFileSource.cpp</a>, <a class="el" href="movement_8cpp-example.html#a4">movement.cpp</a>, <a class="el" href="MultipleSources_8cpp-example.html#a4">MultipleSources.cpp</a>, <a class="el" href="TestLooped_8cpp-example.html#a4">TestLooped.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#a7">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="95036cb4625436d1924b544d7af13b11"></a><!-- doxytag: member="SoundAdminPortaudio::destroySource" ref="95036cb4625436d1924b544d7af13b11" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::destroySource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruye la fuente. En este caso la separa del objeto audio con el que estÃ© asociada y la elimina <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a eliminar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>false si no hay una fuente con ese id o no se pudo eliminar </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a12">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="5d52ecd97acfd9f87d5d61d64095f94a"></a><!-- doxytag: member="SoundAdminPortaudio::playSource" ref="5d52ecd97acfd9f87d5d61d64095f94a" args="(string id, bool loop=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::playSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>loop</em> = <code>true</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Indica que la fuente con id <b>id</b> debe empezar a sonar Si la fuente estÃ¡ sonando o no existe, el comando no hace nada <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente que se quiere hacer sonar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>loop</em>&nbsp;</td><td>Indica si el sonido debe ser reproducido constantemente </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a5">DifferentFileSource.cpp</a>, <a class="el" href="movement_8cpp-example.html#a5">movement.cpp</a>, <a class="el" href="MultipleSources_8cpp-example.html#a5">MultipleSources.cpp</a>, <a class="el" href="TestLooped_8cpp-example.html#a5">TestLooped.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#a3">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="1e1e56635744c07b619436f151f7a761"></a><!-- doxytag: member="SoundAdminPortaudio::isPlaying" ref="1e1e56635744c07b619436f151f7a761" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::isPlaying           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Consulta si la fuente estÃ¡ detenida o no <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a consultar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si la fuente estÃ¡ detenida, false de lo contrario </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a9">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="62f24d2c840c6f6d5146eb2c977828a1"></a><!-- doxytag: member="SoundAdminPortaudio::pauseSource" ref="62f24d2c840c6f6d5146eb2c977828a1" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::pauseSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Detiene la reproducciÃ³n de una fuente en el momento actual <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a pausar. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a10">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="048d5c2f78df2cdd1f173d811e2fadc0"></a><!-- doxytag: member="SoundAdminPortaudio::stopSource" ref="048d5c2f78df2cdd1f173d811e2fadc0" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::stopSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Detiene la reproducciÃ³n de una fuente. En el momento que se decida resumir la reproducciÃ³n la fuente empieza desde el principio <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a detener </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a13">TestLooped.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#a2">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="be9c200b28334df0993d263a24ec7968"></a><!-- doxytag: member="SoundAdminPortaudio::loopSource" ref="be9c200b28334df0993d263a24ec7968" args="(string id, bool loop)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::loopSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>loop</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Cambia la reproducciÃ³n de la fuente a un loop <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a cambiar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>loop</em>&nbsp;</td><td>Booleano que indica si la fuente se reproduce en ciclo (loop) o no </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a14">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="851003ef4b756821366f6b324141622f"></a><!-- doxytag: member="SoundAdminPortaudio::isLooped" ref="851003ef4b756821366f6b324141622f" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::isLooped           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Consulta si la fuente estÃ¡ reproduciendose en ciclo o no <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a consultar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si la fuente estÃ¡ en ciclo, false de lo contrario </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a11">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="f6a65365c3f4d2a80174e21cf4aadf06"></a><!-- doxytag: member="SoundAdminPortaudio::detachSource" ref="f6a65365c3f4d2a80174e21cf4aadf06" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::detachSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Libera la fuente del archivo fuente que estÃ¡ usando en el momento como fuente sonora <br>
+ post: La fuente es detenida y asociada a un archivo <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a7">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="35155c23e238a71e9fefb9e3c4ab9a4d"></a><!-- doxytag: member="SoundAdminPortaudio::attachSource" ref="35155c23e238a71e9fefb9e3c4ab9a4d" args="(string id, string desc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::attachSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+reasigna a la fuente el archivo seÃ±alado por <em>desc</em><br>
+ post: La fuente es detenida y asociada a un archivo. <dl class="note" compact><dt><b>Nota:</b></dt><dd>No hace nada si el archivo no existe </dd></dl>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>Ruta al archivo a hacer el attachment </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a6">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="8b8e7fe67e424ddc15c66b08f3754229"></a><!-- doxytag: member="SoundAdminPortaudio::useSourceAsAmbient" ref="8b8e7fe67e424ddc15c66b08f3754229" args="(string id, bool ambient)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::useSourceAsAmbient           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>ambient</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Asocia una fuente a la escucha de manera que se mueve con ella y tiene la misma amplitud en todos los puntos. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a asociar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ambient</em>&nbsp;</td><td>Indica si la fuente es ambiente o no </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestTracker_8cpp-example.html#a4">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="483e5ac17e1a48556462eaf7806c155a"></a><!-- doxytag: member="SoundAdminPortaudio::isAmbient" ref="483e5ac17e1a48556462eaf7806c155a" args="(string id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::isAmbient           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Permite consultar si una fuente es ambiente o no <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente a consultar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si la fuente es ambiente o false si no o no existe </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="33a0890c9ed09df943164420e170df32"></a><!-- doxytag: member="SoundAdminPortaudio::updateSource" ref="33a0890c9ed09df943164420e170df32" args="(string id, float x, float y, float z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::updateSource           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>z</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Actualiza la ubicaciÃ³n de una fuente en el espacio. Si la fuente no existe no hace nada <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>PosiciÃ³n nueva de la fuente en x </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>PosiciÃ³n nueva de la fuente en y </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>z</em>&nbsp;</td><td>PosiciÃ³n nueva de la fuente en z </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a8">DifferentFileSource.cpp</a>, <a class="el" href="movement_8cpp-example.html#a7">movement.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#a1">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="b997d46746216cdf19787e990ab5843a"></a><!-- doxytag: member="SoundAdminPortaudio::getSourcePosition" ref="b997d46746216cdf19787e990ab5843a" args="(string id, float &amp;x, float &amp;y, float &amp;z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::getSourcePosition           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&nbsp;</td>
+          <td class="paramname"> <em>z</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtiene la ubicaciÃ³n de la fuente en el espacio. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>PosiciÃ³n de la fuente en x </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>PosiciÃ³n de la fuente en y </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>z</em>&nbsp;</td><td>PosiciÃ³n de la fuente en z </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si la fuente existe </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a7">DifferentFileSource.cpp</a>, y <a class="el" href="movement_8cpp-example.html#a6">movement.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="bfa6f3ac4b92c207fb53eb4ae145faca"></a><!-- doxytag: member="SoundAdminPortaudio::updateListener" ref="bfa6f3ac4b92c207fb53eb4ae145faca" args="(Vec3f pos, Vec3f up)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::updateListener           </td>
+          <td>(</td>
+          <td class="paramtype">Vec3f&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vec3f&nbsp;</td>
+          <td class="paramname"> <em>up</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Actualiza la ubicaciÃ³n del listener en el espacio <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>PosiciÃ³n de la fuente en el espacio </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>up</em>&nbsp;</td><td>OrientaciÃ³n: Hacia dÃ³nde estÃ¡ mirando la escucha </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="74447ab77d227e94941ea9720827b8dd"></a><!-- doxytag: member="SoundAdminPortaudio::getListenerInfo" ref="74447ab77d227e94941ea9720827b8dd" args="(Vec3f &amp;pos, Vec3f &amp;up)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::getListenerInfo           </td>
+          <td>(</td>
+          <td class="paramtype">Vec3f &amp;&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vec3f &amp;&nbsp;</td>
+          <td class="paramname"> <em>up</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Permite obtener la informaciÃ³n de la escucha <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>Referencia en la cual se guardarÃ¡ el valor de la posiciÃ³n </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>up</em>&nbsp;</td><td>Referencia en la cual se guardarÃ¡ el valor de la orientaciÃ³n </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0e5d7efdf8f4758604b0fd4275612828"></a><!-- doxytag: member="SoundAdminPortaudio::setPitchBend" ref="0e5d7efdf8f4758604b0fd4275612828" args="(string id, float bend)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::setPitchBend           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>bend</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Cambia la altura (pitch) de la fuente <br>
+ TODO TodavÃ­a no tiene uso adecuado <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bend</em>&nbsp;</td><td>cantidad en la que se va a hacer el cambio de altura <img class="formulaInl" alt="$(0.0 < bend < 2.0)$" src="form_7.png"> </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="94bcc727ca2f53344f1615d0b220661d"></a><!-- doxytag: member="SoundAdminPortaudio::getPitchBend" ref="94bcc727ca2f53344f1615d0b220661d" args="(string id, float &amp;bend)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::getPitchBend           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&nbsp;</td>
+          <td class="paramname"> <em>bend</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtiene la altura (pitch) de la fuente <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>Identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bend</em>&nbsp;</td><td>Referencia en la que va a quedar la altura actual de la fuente </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si la fuente existe </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="14e3ddfba7b9df7b87cff2409ef36f7d"></a><!-- doxytag: member="SoundAdminPortaudio::setVolume" ref="14e3ddfba7b9df7b87cff2409ef36f7d" args="(string id, float gain)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundAdminPortaudio::setVolume           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>gain</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Cambia el nivel de la fuente Aplica sÃ³lamente para fuentes ambiente <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>gain</em>&nbsp;</td><td>Nueva ganancia de la fuente <img class="formulaInl" alt="$(0.0 \leq gain \leq 1.0)$" src="form_8.png"> </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="bbc0008eb4018389514326089147a313"></a><!-- doxytag: member="SoundAdminPortaudio::getVolume" ref="bbc0008eb4018389514326089147a313" args="(string id, float &amp;gain)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::getVolume           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&nbsp;</td>
+          <td class="paramname"> <em>gain</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtiene el nivel (volumen) de la fuente <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>identificador de la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>gain</em>&nbsp;</td><td>Referencia en la que va a quedar la ganancia actual de la fuente </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si la fuente existe </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5ea76f4ec44c3106771148adf7eb6459"></a><!-- doxytag: member="SoundAdminPortaudio::addFile" ref="5ea76f4ec44c3106771148adf7eb6459" args="(string desc, string fileRoute)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::addFile           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>fileRoute</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Se encarga de agregar un archivo para usarse en reproducciÃ³n <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescripciÃ³n a la que va a estar asociado el archivo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fileRoute</em>&nbsp;</td><td>Ruta del archivo </td></tr>
+  </table>
+</dl>
+<dl class="note" compact><dt><b>Nota:</b></dt><dd>El archivo no se agrega si ya existe otro con la misma descripciÃ³n </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a3">DifferentFileSource.cpp</a>, <a class="el" href="movement_8cpp-example.html#a3">movement.cpp</a>, <a class="el" href="MultipleSources_8cpp-example.html#a3">MultipleSources.cpp</a>, <a class="el" href="TestLooped_8cpp-example.html#a3">TestLooped.cpp</a>, y <a class="el" href="TestTracker_8cpp-example.html#a6">TestTracker.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="580cff808436bab69263e2d6132a72d9"></a><!-- doxytag: member="SoundAdminPortaudio::deleteFile" ref="580cff808436bab69263e2d6132a72d9" args="(string desc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundAdminPortaudio::deleteFile           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Se encarga de borrar un archivo y eliminar las referencias a Ã©ste desde las fuentes <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescripciÃ³n de la fuente del archivo </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si el archivo se pudo borrar exitosamente <p>
+false si el archivo no se pudo borrar <p>
+true si el archivo no existe </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="TestLooped_8cpp-example.html#a8">TestLooped.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="e649aa7031601061daeb06ed2ee684ae"></a><!-- doxytag: member="SoundAdminPortaudio::getSourceIds" ref="e649aa7031601061daeb06ed2ee684ae" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; * SoundAdminPortaudio::getSourceIds           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Retorna los id de todas las fuentes actualmente en el sistema <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>vector con todos los id de las fuentes. Puede estar vacÃ­o en caso de no haber fuentes creadas todavÃ­a </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="DifferentFileSource_8cpp-example.html#a6">DifferentFileSource.cpp</a>.</dl>
+</div>
+</div><p>
+<a class="anchor" name="5bb58652b8c0496d0cc4e1f92d751bc9"></a><!-- doxytag: member="SoundAdminPortaudio::getFileDescriptions" ref="5bb58652b8c0496d0cc4e1f92d751bc9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; * SoundAdminPortaudio::getFileDescriptions           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo que retorna las descripciones de los archivos cargados <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Lista con las descirpciones de los archivos. Puede ser una lista vacÃ­a en caso de no habrse cargado nada </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1dca4caf8c044a40d1958a6620ce60e5"></a><!-- doxytag: member="SoundAdminPortaudio::soundAdminCallback" ref="1dca4caf8c044a40d1958a6620ce60e5" args="(void *outputBuffer, unsigned long framesPerBuffer)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SoundAdminPortaudio::soundAdminCallback           </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>outputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&nbsp;</td>
+          <td class="paramname"> <em>framesPerBuffer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+FunciÃ³n encargada de la reproducciÃ³n de las fuentes sonoras. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>outputBuffer</em>&nbsp;</td><td>Buffer de salida usado por PortAudio </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>framesPerBuffer</em>&nbsp;</td><td>frames de salida del sistema </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>paComplete al terminar la funciÃ³n </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2c2f3356ecb5c145d51cb414008b280b"></a><!-- doxytag: member="SoundAdminPortaudio::getCpuLoad" ref="2c2f3356ecb5c145d51cb414008b280b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SoundAdminPortaudio::getCpuLoad           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Carga de CPU del sistema actual </dd></dl>
+<dl compact><dt><b>Ejemplos: </b></dt><dd>
+<a class="el" href="MultipleSources_8cpp-example.html#a6">MultipleSources.cpp</a>.</dl>
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones relacionadas y clases amigas</h2>
+<a class="anchor" name="0659390b1a52653311d29aa4b46f5916"></a><!-- doxytag: member="SoundAdminPortaudio::portaudioCallback" ref="0659390b1a52653311d29aa4b46f5916" args="(const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int portaudioCallback           </td>
+          <td>(</td>
+          <td class="paramtype">const void *&nbsp;</td>
+          <td class="paramname"> <em>inputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>outputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&nbsp;</td>
+          <td class="paramname"> <em>framesPerBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PaStreamCallbackTimeInfo *&nbsp;</td>
+          <td class="paramname"> <em>timeInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PaStreamCallbackFlags&nbsp;</td>
+          <td class="paramname"> <em>statusFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>userData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+FunciÃ³n estÃ¡tica de callback usada por Portaudio para el stream 
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="SoundAdminPortaudio_8h-source.html">SoundAdminPortaudio.h</a><li>SoundAdminPortaudio.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Tue Jan 15 15:01:24 2008 para SoundAdminPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

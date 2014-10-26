@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminPortaudio: Referencia de la Clase AudioFileLoader</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Clases</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+    <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+  </ul></div>
+<h1>Referencia de la Clase AudioFileLoader</h1><!-- doxytag: class="AudioFileLoader" -->Se encarga de la carga de archivos y su lectura.  
+<a href="#_details">Más...</a>
+<p>
+<code>#include &lt;<a class="el" href="AudioFileLoader_8h-source.html">AudioFileLoader.h</a>&gt;</code>
+<p>
+<a href="classAudioFileLoader-members.html">Lista de todos los miembros.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioFileLoader.html#b8edb5291953df870b44292e928444ac">AudioFileLoader</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioFileLoader.html#c03f1fd4a5c2829bf568bdadb36a48a3">~AudioFileLoader</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioFileLoader.html#99bd194ef4744df26152270d7d46b7a3">loadFile</a> (string desc, string file)  throw (string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioFileLoader.html#24f128e49b707256cf606d40eda38e3d">deleteFile</a> (string desc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioFileLoader.html#216b67b8b7646b8a857b71fcf6fdb1c1">readFromFile</a> (float *buffer, string desc, int *pos, int framesToRead, bool loop)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioFileLoader.html#eb38cb05b44e383dfbe7e50f07588c3a">fileExists</a> (string desc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">vector&lt; string &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioFileLoader.html#5d468e5454bfded904140e5a07f76fdb">getFileDescriptions</a> ()</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Se encarga de la carga de archivos y su lectura. 
+<p>
+<dl class="author" compact><dt><b>Autor:</b></dt><dd>John Jairo Palma Robayo </dd></dl>
+
+<p>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="b8edb5291953df870b44292e928444ac"></a><!-- doxytag: member="AudioFileLoader::AudioFileLoader" ref="b8edb5291953df870b44292e928444ac" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioFileLoader::AudioFileLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor de la clase 
+</div>
+</div><p>
+<a class="anchor" name="c03f1fd4a5c2829bf568bdadb36a48a3"></a><!-- doxytag: member="AudioFileLoader::~AudioFileLoader" ref="c03f1fd4a5c2829bf568bdadb36a48a3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioFileLoader::~AudioFileLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destructor de la clase 
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="99bd194ef4744df26152270d7d46b7a3"></a><!-- doxytag: member="AudioFileLoader::loadFile" ref="99bd194ef4744df26152270d7d46b7a3" args="(string desc, string file)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioFileLoader::loadFile           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>file</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%">  throw (string)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo encargado de cargar un archivo. <dl class="note" compact><dt><b>Nota:</b></dt><dd>No se permiten descripciones con la cadena vacÃ­a (""); </dd></dl>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescripciÃ³n del archivo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>Ruta al archivo. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>Si el archivo no se puede abrir. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>Si el archivo no se pudo cargar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>Si la descripciÃ³n es invÃ¡lida (""); </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="24f128e49b707256cf606d40eda38e3d"></a><!-- doxytag: member="AudioFileLoader::deleteFile" ref="24f128e49b707256cf606d40eda38e3d" args="(string desc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AudioFileLoader::deleteFile           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo encargado de borrar un archivo <pre> Existe un archivo con esa descripciÃ³n </pre> <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescriciÃ³n del archivo a borrar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true Si el archivo fue borrado exitosamente <p>
+false Si no se pudo borrar el archivo </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="216b67b8b7646b8a857b71fcf6fdb1c1"></a><!-- doxytag: member="AudioFileLoader::readFromFile" ref="216b67b8b7646b8a857b71fcf6fdb1c1" args="(float *buffer, string desc, int *pos, int framesToRead, bool loop)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AudioFileLoader::readFromFile           </td>
+          <td>(</td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>framesToRead</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>loop</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Lee los contenidos de un archivo y los mete un un buffer <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>buffer</em>&nbsp;</td><td>Buffer en el que se colocarÃ¡n los contenidos leÃ­dos </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescripciÃ³n del archivo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>PosiciÃ³n a partir de la cual se leerÃ¡ el archivo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>framesToRead</em>&nbsp;</td><td>Cantidad de datos a leer </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>loop</em>&nbsp;</td><td>Booleano que indica si la fuente debe reproducirse en loop o no </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Cantidad de datos leÃ­dos efectivamente </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eb38cb05b44e383dfbe7e50f07588c3a"></a><!-- doxytag: member="AudioFileLoader::fileExists" ref="eb38cb05b44e383dfbe7e50f07588c3a" args="(string desc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AudioFileLoader::fileExists           </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+verifica que haya un archivo asociado a una descripciÃ³n <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>DescripciÃ³n a verificar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>true si existe un archivo asociado a esa descipciÃ³n </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5d468e5454bfded904140e5a07f76fdb"></a><!-- doxytag: member="AudioFileLoader::getFileDescriptions" ref="5d468e5454bfded904140e5a07f76fdb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; * AudioFileLoader::getFileDescriptions           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+MÃ©todo que retorna las descripciones de los archivos cargados <dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Lista con los archivos. Puede ser una lista vacÃ­a en caso de no haberse cargado nada </dd></dl>
+
+</div>
+</div><p>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="AudioFileLoader_8h-source.html">AudioFileLoader.h</a><li>AudioFileLoader.cpp</ul>
+<hr size="1"><address style="align: right;"><small>Generado el Tue Jan 15 15:01:24 2008 para SoundAdminPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

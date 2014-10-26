@@ -1,0 +1,6 @@
+;alive:/root/joh-palm/audioTestFiles/sine_44.wav
+;exit:/root/joh-palm/audioTestFiles/out.wav
+;otrodrum:/root/joh-palm/audioTestFiles/drums.aiff
+;loop:/root/joh-palm/audioTestFiles/808loop.wav
+drum:/root/joh-palm/audioTestFiles/free_drumloop_44.wav
+;drum:/root/joh-palm/audioTestFiles/free_drumloop_44.ogg

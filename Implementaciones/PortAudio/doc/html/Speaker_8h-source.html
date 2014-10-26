@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>SoundAdminPortaudio: Fichero Fuente Speaker.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="annotated.html"><span>Clases</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="examples.html"><span>Ejemplos</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>Speaker.h</h1><a href="Speaker_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SPEAKER_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SPEAKER_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &lt;gmtl/gmtl.h&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;gmtl/Vec.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;gmtl/Math.h&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;iostream&gt;</span> 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keyword">using namespace </span>gmtl;
+<a name="l00010"></a>00010 <span class="keyword">using namespace </span>gmtl::Math;
+<a name="l00011"></a>00011 <span class="keyword">using namespace </span>std;
+<a name="l00017"></a><a class="code" href="classSpeaker.html">00017</a> <span class="keyword">class </span><a class="code" href="classSpeaker.html">Speaker</a>{
+<a name="l00018"></a>00018         
+<a name="l00019"></a>00019 <span class="keyword">private</span>:
+<a name="l00020"></a>00020         
+<a name="l00024"></a>00024         <span class="keywordtype">float</span> azimuth;
+<a name="l00025"></a>00025         
+<a name="l00029"></a>00029         <span class="keywordtype">float</span> elevation;
+<a name="l00033"></a>00033         <span class="keywordtype">int</span> numspeaker;
+<a name="l00034"></a>00034         
+<a name="l00038"></a>00038         Vec3f vector;
+<a name="l00039"></a>00039         
+<a name="l00040"></a>00040 <span class="comment">//      mÃ©todos privados</span>
+<a name="l00041"></a>00041         
+<a name="l00048"></a>00048         <span class="keywordtype">void</span> createVectorFromAngles(){
+<a name="l00049"></a>00049 <span class="comment">//              Convertimos a radianes</span>
+<a name="l00050"></a>00050                 <span class="comment">//TODO Terminar de revisar la implementaciÃ³n de los Ã¡ngulos</span>
+<a name="l00051"></a>00051 <span class="comment">//              float x = cos(deg2Rad(azimuth))*cos(deg2Rad(elevation));</span>
+<a name="l00052"></a>00052 <span class="comment">//              float y = sin(deg2Rad(azimuth))*cos(deg2Rad(elevation));</span>
+<a name="l00053"></a>00053 <span class="comment">//              float z = sin(deg2Rad(elevation));</span>
+<a name="l00054"></a>00054                 <span class="keywordtype">float</span> x = cos(deg2Rad(azimuth))*cos(deg2Rad(elevation));
+<a name="l00055"></a>00055                 <span class="keywordtype">float</span> y = sin(deg2Rad(elevation));
+<a name="l00056"></a>00056                 <span class="keywordtype">float</span> z = sin(deg2Rad(azimuth))*cos(deg2Rad(elevation));
+<a name="l00057"></a>00057                 <span class="comment">//vector</span>
+<a name="l00058"></a>00058                 vector[0] = (abs(x) &gt; (1e-06f)) ? x : 0.0; <span class="comment">// x;</span>
+<a name="l00059"></a>00059                 vector[1] = (abs(y) &gt; (1e-06f)) ? y : 0.0; <span class="comment">// y;</span>
+<a name="l00060"></a>00060                 vector[2] = (abs(z) &gt; (1e-06f)) ? z : 0.0; <span class="comment">// z;</span>
+<a name="l00061"></a>00061         }
+<a name="l00062"></a>00062 <span class="keyword">public</span>:
+<a name="l00063"></a>00063         
+<a name="l00070"></a><a class="code" href="classSpeaker.html#607097ab94ebcf981d642987c856a3bf">00070</a>         <a class="code" href="classSpeaker.html#607097ab94ebcf981d642987c856a3bf">Speaker</a>(<span class="keywordtype">float</span> nuAz, <span class="keywordtype">float</span> nuElev, <span class="keywordtype">int</span> num){
+<a name="l00071"></a>00071                 azimuth = nuAz;
+<a name="l00072"></a>00072                 elevation = nuElev;
+<a name="l00073"></a>00073                 numspeaker = num;
+<a name="l00074"></a>00074                 createVectorFromAngles();
+<a name="l00075"></a>00075         }
+<a name="l00079"></a><a class="code" href="classSpeaker.html#e0cad720264e011e9911337f2403a495">00079</a>         <span class="keyword">virtual</span> <a class="code" href="classSpeaker.html#e0cad720264e011e9911337f2403a495">~Speaker</a>(){
+<a name="l00080"></a>00080                 azimuth = elevation = 0.0;
+<a name="l00081"></a>00081                 numspeaker = -1;
+<a name="l00082"></a>00082         }
+<a name="l00083"></a>00083         
+<a name="l00089"></a><a class="code" href="classSpeaker.html#685bcd62744d3b1e617b27d62489ae45">00089</a>         <span class="keywordtype">void</span> <a class="code" href="classSpeaker.html#685bcd62744d3b1e617b27d62489ae45">setAngles</a>(<span class="keywordtype">float</span> nuAz, <span class="keywordtype">float</span> nuElev){
+<a name="l00090"></a>00090                 azimuth = nuAz;
+<a name="l00091"></a>00091                 elevation = nuElev;
+<a name="l00092"></a>00092                 createVectorFromAngles();
+<a name="l00093"></a>00093         }
+<a name="l00094"></a>00094         
+<a name="l00098"></a><a class="code" href="classSpeaker.html#6a3c27a06f219c128909c3bb610f41a3">00098</a>         Vec3f <a class="code" href="classSpeaker.html#6a3c27a06f219c128909c3bb610f41a3">getVector</a>(){
+<a name="l00099"></a>00099                 <span class="keywordflow">return</span> vector;
+<a name="l00100"></a>00100         }
+<a name="l00101"></a>00101         
+<a name="l00105"></a><a class="code" href="classSpeaker.html#cef2db27357d5d5f43c086eee1fe1f04">00105</a>         <span class="keywordtype">int</span> <a class="code" href="classSpeaker.html#cef2db27357d5d5f43c086eee1fe1f04">getSpeakerNumber</a>(){
+<a name="l00106"></a>00106                 <span class="keywordflow">return</span> numspeaker;
+<a name="l00107"></a>00107         }
+<a name="l00108"></a>00108         
+<a name="l00112"></a><a class="code" href="classSpeaker.html#f46f2e35daef73decc6735535b9d9e9b">00112</a>         string <a class="code" href="classSpeaker.html#f46f2e35daef73decc6735535b9d9e9b">toString</a>(){
+<a name="l00113"></a>00113                 stringstream sstream(<span class="stringliteral">""</span>);
+<a name="l00114"></a>00114                 sstream &lt;&lt; <span class="stringliteral">"Speaker No. "</span> &lt;&lt; numspeaker+1 &lt;&lt; <span class="stringliteral">" Vector: "</span> &lt;&lt; vector &lt;&lt; endl;
+<a name="l00115"></a>00115                 <span class="keywordflow">return</span> sstream.str();
+<a name="l00116"></a>00116         }
+<a name="l00117"></a>00117         
+<a name="l00118"></a>00118 };
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 <span class="preprocessor">#endif </span><span class="comment">/*SPEAKER_H_*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Tue Jan 15 15:01:24 2008 para SoundAdminPortaudio por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>
